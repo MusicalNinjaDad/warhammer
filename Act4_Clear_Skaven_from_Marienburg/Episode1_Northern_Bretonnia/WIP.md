@@ -631,3 +631,74 @@ This lively greeting invites Eliot (and the whole party) to share a moment of lo
 ---
 
 This character offers a brief yet vivid interaction for Eliot—one that enhances the flavor of the village and sparks curiosity about the local legends. Feel free to tweak any details to better match your running narrative or to add more local specifics as your players wander further into Bretonnian life!
+
+## Stats
+
+Below are a couple of ready-to-use stat blocks for key NPCs that might spark dice-rolling during your travel to the village in Caucy. You can adjust numbers to keep things balanced for family play. These blocks follow a simplified version of WFRP1e’s attributes (WS, BS, S, T, Ag, Int, WP, Fel) and include a few narrative notes to help guide role-play.
+
+---
+
+### 1. The Bridge Knight  
+
+*This knight emerges as the party is crossing a narrow bridge—a test of Bretonnian etiquette and honor. His demeanor changes depending on whether a character (e.g., Eliot) sports a new shoe or not.*
+
+**Name:** Sir Kervin Boucheron
+
+| Attribute        | Value | Description/Notes                                     |
+|------------------|-------|-------------------------------------------------------|
+| **WS (Weapon Skill)**       | 40    | A seasoned fighter with honed combat skills.      |
+| **BS (Ballistic Skill)**    | 35    | Competent with ranged or thrown weapons if needed. |
+| **Strength (S)**            | 35    | Slightly above average, enough to handle heavy arms. |
+| **Toughness (T)**           | 45    | Muscular and durable from many campaigns.         |
+| **Agility (Ag)**            | 35    | Adept at maneuvering, both on-foot and on-horse.    |
+| **Intelligence (Int)**      | 30    | Practical, if not scholarly.                        |
+| **Willpower (WP)**          | 40    | Steadfast in his adherence to honor and duty.       |
+| **Fellowship (Fel)**        | 30    | Gruff and elitist—shows little warmth to commoners. |
+
+**Skills & Special Abilities:**
+
+- **Riding:** Handles his steed with ease.
+- **Intimidation:** Uses his commanding presence to enforce local customs.
+- **Honor Check:** When challenged (especially if a party member’s appearance raises questions of respect—like missing or new shoes), call for an Honorable Roll.  
+  - *If Eliot is without proper footwear:** He declares sharply, “I would not besmirch my honor or that of my liege lord by sharing a path with one so ill-equipped. Step aside!”  
+  - *If corrected by a new shoe:** He concedes with a rigid nod, “You clearly have tried to mend your honor—move along, but remember, true nobility begins with respect.”
+
+---
+
+### 2. The Rebel Villager (Potential Seeds of Rebellion Contact)  
+
+*A local dissident whose quiet defiance hints at the brewing desire for change. He might be the one to plant the first seeds of rebellion or simply share rumors of injustice.*
+
+**Name:** Emmanuel “Le Brave” DelaRue
+
+| Attribute        | Value | Description/Notes                                    |
+|------------------|-------|------------------------------------------------------|
+| **WS (Weapon Skill)**       | 30    | No professional training; relies on raw determination.        |
+| **BS (Ballistic Skill)**    | 25    | Not adept with ranged weapons.                   |
+| **Strength (S)**            | 30    | Average build for a laborer.                      |
+| **Toughness (T)**           | 35    | Hardy from years of farm life and hardship.         |
+| **Agility (Ag)**            | 30    | Nimble enough for quick escapes or farm work.         |
+| **Intelligence (Int)**      | 35    | Keen to spot the injustices in his world.         |
+| **Willpower (WP)**          | 40    | Driven by a burning desire for equality and justice.   |
+| **Fellowship (Fel)**        | 45    | Charismatic in a rough-hewn, approachable manner; often rallies others with his sincerity. |
+
+**Skills & Special Abilities:**
+
+- **Persuasion:** Gains a bonus when rallying villagers or critiquing unjust taxation.
+- **Outdoor Survival:** Knows the local terrain well, important for secret meetings or escapes.
+- **Leadership:** Can inspire a small group of like-minded villagers to quietly defy oppressive measures.
+- **Secret Signal:** When circumstances call for subtle dissension, ask for a “Rebellion Roll” to see if his words spark a hidden gathering of discontent.
+
+---
+
+### How to Use These Stat Blocks
+
+- **Bridge Encounter:** Use Sir Kervin’s block during the narrow bridge crossing. Roll an Honor Check when Eliot’s footwear (or lack thereof) becomes a conversational pivot. This provides a fun mix of role-play and dice-rolling for the players.
+- **Seeds of Rebellion:** When the party nears the village in Caucy, Emmanuel “Le Brave” DelaRue might stage a brief, charged encounter in the market or near a secret meeting place. His Persuasion or Leadership rolls could signal the first open dissent, giving your players tempting alternatives in how they approach local politics.
+
+### Optional Notes
+
+- **Adjustment for Family Play:** You might simplify the dice rolling further with single d100 rolls and pre-determined difficulty thresholds (e.g., Honor Check difficulty 45, Persuasion check difficulty 40).  
+- **Narrative Flourish:** Consider how Robert or another NPC might weigh in with commentary when these dice rolls are made—helping to reinforce Bretonnia’s unique cultural and political flavor.
+
+With these stat blocks on hand, you'll be ready to throw the dice and let your players influence the course of events in Caucy. If you need more NPC blocks or further tweaks based on how the session goes, feel free to reach out. Enjoy your epic family adventure!
