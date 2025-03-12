@@ -79,9 +79,15 @@ mindmap
       roads still well maintained but the farmhouses and buildings in the villages seem less well cared for
       people shopping in markets seem to hang their heads more they appear thinner and less energetic
     {{tax collectors: you see knights with a fat man in a beautifully embroidered tunic riding into the fields}}
+    ((Arrival at "Seeds of rebellion"))
+      **rising sun behind a metal chain**
+        graffiti?
+        paper note in street?
+        scratched into door / market stall
+      **I** & **WP** for Eliot to notice
 ```
 
-## Q1: Background details
+## Background details
 
 I have a few questions and would like to go through them in groups. First - the background details:
 
@@ -143,7 +149,7 @@ Second Region (Guy de Caucy)
  ____________________________________
 |                                    |
 |     SILVER background              |
-|        ─────────── (blue wave)      |
+|        ─────────── (blue wave)     |
 |          [Golden Anchor]           |
 |     [Crossed sabres optional]      |
 |____________________________________|
@@ -251,8 +257,6 @@ Gaston Rieu embodies the everyday challenges of assimilation into Bretonnian cul
 With Gaston, a brief but pointed encounter turns into a lesson in respect and survival in a world where local customs are as vital as any weapon or skill. This small interaction can serve both as comic relief and as an educational moment for your players.
 
 If you need additional quirks, other interactions, or ideas for how Gaston might reappear later in the story, let me know—I’ve plenty more ideas to help deepen your world!
-
-On to how to introduce the right feeling
 
 ## Shallya
 
