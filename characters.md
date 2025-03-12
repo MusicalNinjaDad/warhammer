@@ -101,4 +101,4 @@ As there are only 2 players, I play a few NPCs to help balance the party and add
 
 - New character, not yet properly introduced to the group
 - The creation of B (who plays Raya) and will likely become a second PC for her to play
-- Is a Fey (a fully made up creature) pretending to be human with illusion powers and elemental powers (water) but a fear of the other elements
+- Is a Fey (a fully made up creature) pretending to be human with illusion powers and elemental powers (earth) but a fear of the other elements (fire, water, wind)
