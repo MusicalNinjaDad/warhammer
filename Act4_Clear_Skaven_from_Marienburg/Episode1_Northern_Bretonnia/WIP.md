@@ -101,7 +101,7 @@ Below are some background detail suggestions that you can adapt and expand as ne
 
 ---
 
-### 1. Lord of the First Region
+### 1. Lord of the First Region (Lord Baudouin de Sanglier)
 
 **Name:** **Lord Baudouin de Sanglier**  
 **Emblem:** A brilliant red boar's head set against a lush field of green.  
