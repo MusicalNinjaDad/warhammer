@@ -272,6 +272,10 @@ To help with improvising and providing an immersive atmosphere I need a few idea
 
 ### Les Ombres de la Rose (The Shadows of the Rose)
 
+#### Link to Madame de la Beaucourt & Marcel?
+
+Her daughter's shoe has a prominent flower on it - just like their symbol
+
 #### Positioning in Society
 
 - Operates under the guise of a merchant's cooperative and message delivery service
@@ -282,7 +286,6 @@ To help with improvising and providing an immersive atmosphere I need a few idea
 #### Goals
 
 - Primary Goal: Maintain balance between noble/merchant interests to ensure stable commerce
-Current Operation: Tracking suspicious rat-like creatures in town cellars (potential Skaven tie-in)
 - Immediate Task: Gathering intelligence on Baron Philippe de Turenne's true purpose in town
 
 #### Rules and Customs
