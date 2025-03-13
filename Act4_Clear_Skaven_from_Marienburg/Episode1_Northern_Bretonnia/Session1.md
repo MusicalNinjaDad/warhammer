@@ -1,6 +1,4 @@
-# WIP Ideas
-
-[[TOC]]
+# Session 1
 
 That's great - thanks.
 I think I will montage the majority of the travel and throw in a few individual scenes for flavour. I would like to paint the first part of Bretonnia in a reasonably good light to add contrast to the region where Robert comes from.
