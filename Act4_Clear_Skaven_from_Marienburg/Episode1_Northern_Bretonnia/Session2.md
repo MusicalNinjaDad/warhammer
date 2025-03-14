@@ -66,7 +66,7 @@ You might pick one or two of these for Ellis to target during a market stroll:
 
 ---
 
-## Hugues “L’Ombre” Lavallée- The Local Thieves Guild Contact
+## Hugues “L’Ombre” Lavallée - The Local Thieves Guild Contact
 
 Meet **Hugues “L’Ombre” Lavallée**, the local contact who keeps quiet tabs on all underhand dealings in the market and is ready to spring into action if Ellis finds herself in a tight spot.
 
@@ -308,7 +308,7 @@ Her daughter's shoe has a prominent flower on it - just like their symbol
 
 Front: A flower shop near the market
 Reality: Guild's main meeting point
-Run by "Madame Rose" - guild leader
+Run by "Madame Rose" - a Halfling
 
 ##### The Thorned Cup**
 

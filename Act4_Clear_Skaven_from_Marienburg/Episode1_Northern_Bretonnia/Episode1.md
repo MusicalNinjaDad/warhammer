@@ -1,4 +1,4 @@
-# Plothooks for Bretonnian travel
+# Episode 1 - Overview
 
 [Chat link](https://copilot.microsoft.com/chats/eVDErQyKv1MhX3itewQ5y)
 
