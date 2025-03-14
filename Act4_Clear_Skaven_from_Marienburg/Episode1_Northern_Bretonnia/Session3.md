@@ -81,3 +81,78 @@ We ran out of time yesterday and left it at a cliffhanger with the kids unsure o
 - "My dears, perhaps we can find a more... civilized resolution? L'Ombre's enthusiasm sometimes exceeds his judgment, but we need not let this unpleasantness spoil future possibilities."
 - "The gardens need tending, and I'm sure our guests have their own affairs to attend to. L'Ombre, I believe you've learned what you needed about our visitors' capabilities?"
 - **"Should you return to our little town (or any of the others where we are represented), you'll find the Rose's thorns can be quite useful when properly aligned with mutual interests."**
+
+## Crossing into Caucy
+
+### Emblem
+
+```txt
+ ____________________________________
+|                                    |
+|         SILVER background          |
+|       ─────────── (blue wave)      |
+|         [Golden Anchor]            |
+|      [Crossed sabres - NEW!!]      |
+|____________________________________|
+```
+
+### Knights on bridge - just after crossing into Robert's home region
+
+- party is almost across a narrow bridge with Eliot in the lead
+- a knight rides up with two more behind him and starts crossing
+  - when you don't stop and retreat he begins to shout at you in Bretonnian
+    - first reaction to agression from Eliot: "you clearly do not know our ways - so I will let this challenge to my honour pass but you _will_ move out of the way and allow me to pass"
+  - Ellis doesn't like water
+
+### After passing the bridge you notice
+
+- new colours on knights
+- roads still well maintained but the farmhouses and buildings in the villages seem less well cared for
+- people shopping in markets seem to hang their heads more they appear thinner and less energetic
+
+### tax collectors
+
+- you see knights with a fat man in a beautifully embroidered tunic riding into the fields
+
+### Arrival at "Seeds of rebellion"
+
+- **rising sun behind a metal chain**
+  - graffiti?
+  - paper note in street?
+  - scratched into door / market stall
+- also notice rose petal symbol in places
+
+### Places
+
+- Chênemorte ("Dead Oak") - reflecting both oppression and resilience
+- Soufflecœur ("Heart's Sigh") - suggesting both weariness and hope
+- Chaînefleur ("Chain Flower") - subtly referencing the rebellion symbol
+- Griseforge ("Grey Forge") - hinting at industrial exploitation
+
+### Sights
+
+- A massive, gnarled oak tree in the town square - branches reaching like grasping hands
+- Faded murals of Shallyan healing scenes, some partially covered by newer tax notices
+- Empty market stalls with "SEIZED" notices nailed to them
+- Shadowy alleyways where people quickly disappear when knights pass
+
+### Sounds
+
+- The constant rhythmic pounding from overtaxed forges
+- Hushed conversations that stop when strangers approach
+- A lone flute playing melancholy Bretonnian folk tunes at dusk
+- The heavy tread of armored tax collectors' horses
+
+### Smells
+
+- Smoke from overworked forges mixing with morning mist
+- Stale bread from the bakery (using lower quality flour after taxation)
+- The sweet scent of wildflowers growing through cracks in the cobblestones
+- The musty smell of damp thatch from poorly maintained roofs
+
+### Key Locations
+
+- The Dead Oak Inn (obvious meeting spot for dissidents)
+- A dilapidated Shallyan shrine that doubles as a secret message drop
+- The tax collector's office - a renovated noble house that stands out against the worn buildings
+- A hidden cellar beneath the blacksmith's forge where rebels gather
