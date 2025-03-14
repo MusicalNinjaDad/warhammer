@@ -51,3 +51,33 @@ We ran out of time yesterday and left it at a cliffhanger with the kids unsure o
 - I guess Ellis will start by ensnaring L'Ombre
 - He will most likely try to avoid getting hurt further but also needs to save face - his head is bleeding and bruised but so far no one, except Madame Rose, has seen him be overpowered
 - Karge could threaten him: "It looks to me like you have two options: one, and this is the one that "Fluffy" likes - I remove that head of yours and then the bump won't matter any more; two - you leave us in peace, help us if we maybe need it in the future and I can arrange for our friend to maybe heal you so you don't need to lose face ... or any other body parts"
+
+### Madame Rose
+
+#### Motivation
+
+##### Short Term: Time for mid-afternoon snack
+
+##### Maintain Business Stability
+
+- Her flower shop is likely a legitimate front for the Shadows
+- She needs to keep appearances normal for regular customers
+- Violence or obvious criminal activity would damage her reputation
+
+##### Balance of Power
+
+- She appears to be a more senior figure than L'Ombre
+- Would want to maintain the Shadows' influence without drawing unwanted attention
+- Needs to prevent escalation that could attract guards or nobles' interest
+
+##### Information Gathering
+
+- The conversation about Fae caught her attention (she let Eliot overhear it)
+- May be genuinely interested in supernatural/magical knowledge
+- Could see the party as potential future sources of valuable information
+
+#### Potential dialogue hooks
+
+- "My dears, perhaps we can find a more... civilized resolution? L'Ombre's enthusiasm sometimes exceeds his judgment, but we need not let this unpleasantness spoil future possibilities."
+- "The gardens need tending, and I'm sure our guests have their own affairs to attend to. L'Ombre, I believe you've learned what you needed about our visitors' capabilities?"
+- **"Should you return to our little town (or any of the others where we are represented), you'll find the Rose's thorns can be quite useful when properly aligned with mutual interests."**
