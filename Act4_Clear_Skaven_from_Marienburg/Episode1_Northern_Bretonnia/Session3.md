@@ -50,7 +50,7 @@ We ran out of time yesterday and left it at a cliffhanger with the kids unsure o
 - Ellis (and obviously Karga) are unlikely to be co-operative.
 - I guess Ellis will start by ensnaring L'Ombre
 - He will most likely try to avoid getting hurt further but also needs to save face - his head is bleeding and bruised but so far no one, except Madame Rose, has seen him be overpowered
-- Karge could threaten him: "It looks to me like you have two options: one, and this is the one that "Fluffy" likes - I remove that head of yours and then the bump won't matter any more; two - you leave us in peace, help us if we maybe need it in the future and I can arrange for our friend to maybe heal you so you don't need to lose face ... or any other body parts"
+- Karga could threaten him: "It looks to me like you have two options: one, and this is the one that "Fluffy" likes - I remove that head of yours and then the bump won't matter any more; two - you leave us in peace, help us if we maybe need it in the future and I can arrange for our friend to maybe heal you so you don't need to lose face ... or any other body parts"
 
 ### Madame Rose
 
