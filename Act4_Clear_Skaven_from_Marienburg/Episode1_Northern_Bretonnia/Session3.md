@@ -101,7 +101,7 @@ We ran out of time yesterday and left it at a cliffhanger with the kids unsure o
 - party is almost across a narrow bridge with Eliot in the lead
 - a knight rides up with two more behind him and starts crossing
   - when you don't stop and retreat he begins to shout at you in Bretonnian
-    - first reaction to agression from Eliot: "you clearly do not know our ways - so I will let this challenge to my honour pass but you _will_ move out of the way and allow me to pass"
+    - first reaction to agression from Eliot: "you clearly do not know our ways - so I will let this challenge to my honour pass but you *will* move out of the way and allow me to pass"
   - Ellis doesn't like water
 
 ### After passing the bridge you notice
