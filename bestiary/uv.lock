@@ -2620,6 +2620,7 @@ cov = [
     { name = "pytest-doctest-mkdocstrings" },
 ]
 dev = [
+    { name = "beautifulsoup4" },
     { name = "jupyter" },
     { name = "mkdocs" },
     { name = "mkdocs-material" },
@@ -2628,6 +2629,7 @@ dev = [
     { name = "pytest-cov" },
     { name = "pytest-doctest-mkdocstrings" },
     { name = "pytype", marker = "python_full_version < '3.13'" },
+    { name = "requests" },
     { name = "ruff" },
     { name = "typing-extensions" },
 ]
@@ -2639,6 +2641,10 @@ doc = [
 ]
 lint = [
     { name = "ruff" },
+]
+scraper = [
+    { name = "beautifulsoup4" },
+    { name = "requests" },
 ]
 test = [
     { name = "pytest" },
@@ -2661,6 +2667,7 @@ cov = [
     { name = "pytest-doctest-mkdocstrings" },
 ]
 dev = [
+    { name = "beautifulsoup4", specifier = ">=4.13.3" },
     { name = "jupyter" },
     { name = "mkdocs" },
     { name = "mkdocs-material" },
@@ -2669,6 +2676,7 @@ dev = [
     { name = "pytest-cov" },
     { name = "pytest-doctest-mkdocstrings" },
     { name = "pytype", marker = "python_full_version < '3.13'" },
+    { name = "requests", specifier = ">=2.32.3" },
     { name = "ruff" },
     { name = "typing-extensions" },
 ]
@@ -2679,6 +2687,10 @@ doc = [
     { name = "ruff" },
 ]
 lint = [{ name = "ruff" }]
+scraper = [
+    { name = "beautifulsoup4", specifier = ">=4.13.3" },
+    { name = "requests", specifier = ">=2.32.3" },
+]
 test = [
     { name = "pytest" },
     { name = "pytest-doctest-mkdocstrings" },
