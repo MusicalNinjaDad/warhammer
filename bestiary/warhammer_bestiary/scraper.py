@@ -14,10 +14,13 @@ BEASTIARY_STARTING_PAGE = "/wiki/Category:Bestiary"
 OUTPUT_FILE = Path("beasts.json")
 LOG_FILE = Path("beasts.log")
 
-log = logging.getLogger("Scrapper")
+log = logging.getLogger("BeastScraper")
 logfile = logging.FileHandler(LOG_FILE)
+logfile.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(levelname)s: %(message)s")
+logfile.setFormatter(formatter)
 log.addHandler(logfile)
-log.setLevel("INFO")
+log.setLevel(logging.INFO)
 
 def get_and_parse(uri: str) -> BeautifulSoup:  # noqa: D103
     full_uri = f"{URI_ROOT}{uri}"
