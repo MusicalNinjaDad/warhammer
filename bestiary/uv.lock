@@ -2247,6 +2247,18 @@ wheels = [
 ]
 
 [[package]]
+name = "requests-file"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/72/97/bf44e6c6bd8ddbb99943baf7ba8b1a8485bcd2fe0e55e5708d7fee4ff1ae/requests_file-2.1.0.tar.gz", hash = "sha256:0f549a3f3b0699415ac04d167e9cb39bccfb730cb832b4d20be3d9867356e658", size = 6891 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d7/25/dd878a121fcfdf38f52850f11c512e13ec87c2ea72385933818e5b6c15ce/requests_file-2.1.0-py2.py3-none-any.whl", hash = "sha256:cf270de5a4c5874e84599fc5778303d496c10ae5e870bfa378818f35d21bda5c", size = 4244 },
+]
+
+[[package]]
 name = "rfc3339-validator"
 version = "0.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -2617,6 +2629,7 @@ cov = [
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "pytest-doctest-mkdocstrings" },
+    { name = "requests-file" },
 ]
 dev = [
     { name = "beautifulsoup4" },
@@ -2629,6 +2642,7 @@ dev = [
     { name = "pytest-doctest-mkdocstrings" },
     { name = "pytype", marker = "python_full_version < '3.13'" },
     { name = "requests" },
+    { name = "requests-file" },
     { name = "ruff" },
     { name = "typing-extensions" },
 ]
@@ -2648,11 +2662,13 @@ scraper = [
 test = [
     { name = "pytest" },
     { name = "pytest-doctest-mkdocstrings" },
+    { name = "requests-file" },
 ]
 typing = [
     { name = "pytest" },
     { name = "pytest-doctest-mkdocstrings" },
     { name = "pytype", marker = "python_full_version < '3.13'" },
+    { name = "requests-file" },
     { name = "typing-extensions" },
 ]
 
@@ -2664,6 +2680,7 @@ cov = [
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "pytest-doctest-mkdocstrings" },
+    { name = "requests-file", specifier = ">=2.0.0" },
 ]
 dev = [
     { name = "beautifulsoup4", specifier = ">=4.13.3" },
@@ -2676,6 +2693,7 @@ dev = [
     { name = "pytest-doctest-mkdocstrings" },
     { name = "pytype", marker = "python_full_version < '3.13'" },
     { name = "requests", specifier = ">=2.32.3" },
+    { name = "requests-file", specifier = ">=2.0.0" },
     { name = "ruff" },
     { name = "typing-extensions" },
 ]
@@ -2693,11 +2711,13 @@ scraper = [
 test = [
     { name = "pytest" },
     { name = "pytest-doctest-mkdocstrings" },
+    { name = "requests-file", specifier = ">=2.0.0" },
 ]
 typing = [
     { name = "pytest" },
     { name = "pytest-doctest-mkdocstrings" },
     { name = "pytype", marker = "python_full_version < '3.13'" },
+    { name = "requests-file", specifier = ">=2.0.0" },
     { name = "typing-extensions" },
 ]
 

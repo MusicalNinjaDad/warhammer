@@ -52,7 +52,8 @@
     test = [
         "pytest",
         "pytest-doctest-mkdocstrings",
-        ]
+        "requests-file>=2.0.0",
+]
     cov = [
         {include-group = "test"},
         "pytest-cov",

@@ -22,9 +22,11 @@ logfile.setFormatter(formatter)
 log.addHandler(logfile)
 log.setLevel(logging.INFO)
 
-def get_and_parse(uri: str) -> BeautifulSoup:  # noqa: D103
-    full_uri = f"{URI_ROOT}{uri}"
-    _raw = requests.get(full_uri, timeout=10)
+session = requests.Session()
+
+def get_and_parse(uri: str, uri_root: str = URI_ROOT, session: requests.Session = session) -> BeautifulSoup:  # noqa: D103
+    full_uri = f"{uri_root}{uri}"
+    _raw = session.get(full_uri, timeout=10)
     log.debug("Parsing %s", full_uri)
     return BeautifulSoup(_raw.text, features="html.parser")
 
