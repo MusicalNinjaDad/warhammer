@@ -1,0 +1,222 @@
+2025-03-16 09:04:47,275 - INFO: Parsing Beastiary
+2025-03-16 09:04:47,483 - INFO: Found 162 beasts.
+2025-03-16 09:05:19,216 - INFO: Getting Amoeba
+2025-03-16 09:05:19,220 - INFO: Getting Amphisbaena
+2025-03-16 09:05:19,224 - INFO: Getting Artisan's Apprentice (NPC)
+2025-03-16 09:05:19,227 - INFO: Getting Basilisk
+2025-03-16 09:05:19,231 - INFO: Getting Bat
+2025-03-16 09:05:19,234 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="M">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Movement" title="Movement">M</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,235 - INFO: Getting Bear
+2025-03-16 09:05:19,239 - INFO: Getting Beast Of Nurgle
+2025-03-16 09:05:19,244 - ERROR: Error invalid literal for int() with base 10: 'D6' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font">D6</div>
+</div>
+2025-03-16 09:05:19,244 - INFO: Getting Beggar (NPC)
+2025-03-16 09:05:19,248 - INFO: Getting Bestiary
+2025-03-16 09:05:19,252 - INFO: Getting Black Orc
+2025-03-16 09:05:19,256 - INFO: Getting Bloodletter
+2025-03-16 09:05:19,260 - INFO: Getting Bloodsedge
+2025-03-16 09:05:19,264 - INFO: Getting Bloodthirster
+2025-03-16 09:05:19,267 - INFO: Getting Boar
+2025-03-16 09:05:19,273 - INFO: Getting Boatman (NPC)
+2025-03-16 09:05:19,278 - INFO: Getting Bodyguard (NPC)
+2025-03-16 09:05:19,283 - INFO: Getting Bog Octopus
+2025-03-16 09:05:19,288 - INFO: Getting Bounty Hunter (NPC)
+2025-03-16 09:05:19,292 - INFO: Getting Bunko Artist (NPC)
+2025-03-16 09:05:19,296 - INFO: Getting Carnivorous Snapper
+2025-03-16 09:05:19,301 - INFO: Getting Carrion
+2025-03-16 09:05:19,309 - INFO: Getting Cat
+2025-03-16 09:05:19,314 - ERROR: Error invalid literal for int() with base 10: '3/5' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font">3/5</div>
+</div>
+2025-03-16 09:05:19,315 - INFO: Getting Chameleoleech
+2025-03-16 09:05:19,321 - INFO: Getting Chaos Beastman
+2025-03-16 09:05:19,328 - INFO: Getting Charlatan (NPC)
+2025-03-16 09:05:19,331 - INFO: Getting Chimera
+2025-03-16 09:05:19,335 - INFO: Getting Coachman (NPC)
+2025-03-16 09:05:19,338 - INFO: Getting Cold One
+2025-03-16 09:05:19,343 - INFO: Getting Cold One Warhound
+2025-03-16 09:05:19,348 - INFO: Getting Cook (NPC)
+2025-03-16 09:05:19,352 - INFO: Getting Daemonette
+2025-03-16 09:05:19,358 - INFO: Getting Daemonic Servant
+2025-03-16 09:05:19,363 - INFO: Getting Daemonic Steed
+2025-03-16 09:05:19,368 - INFO: Getting Daemons
+2025-03-16 09:05:19,374 - INFO: Getting Discs
+2025-03-16 09:05:19,379 - INFO: Getting Dog
+2025-03-16 09:05:19,383 - INFO: Getting Doppelganger
+2025-03-16 09:05:19,387 - INFO: Getting Dragon
+2025-03-16 09:05:19,391 - INFO: Getting Dragon Turtle
+2025-03-16 09:05:19,395 - INFO: Getting Dryad
+2025-03-16 09:05:19,399 - INFO: Getting Dwarf
+2025-03-16 09:05:19,403 - INFO: Getting Dwarven Engineer (NPC)
+2025-03-16 09:05:19,406 - INFO: Getting Eagle
+2025-03-16 09:05:19,410 - INFO: Getting Elementals
+2025-03-16 09:05:19,414 - INFO: Getting Elf
+2025-03-16 09:05:19,419 - INFO: Getting Exciseman (NPC)
+2025-03-16 09:05:19,422 - INFO: Getting Fen Worm
+2025-03-16 09:05:19,427 - INFO: Getting Fiend Of Slaanesh
+2025-03-16 09:05:19,432 - INFO: Getting Fimir
+2025-03-16 09:05:19,436 - INFO: Getting Fisherman (NPC)
+2025-03-16 09:05:19,441 - INFO: Getting Flamer
+2025-03-16 09:05:19,445 - INFO: Getting Fleshhound
+2025-03-16 09:05:19,450 - INFO: Getting Fox
+2025-03-16 09:05:19,455 - INFO: Getting Frog
+2025-03-16 09:05:19,459 - INFO: Getting Fungus And Mould
+2025-03-16 09:05:19,462 - INFO: Getting Gambler (NPC)
+2025-03-16 09:05:19,465 - INFO: Getting Ghost
+2025-03-16 09:05:19,469 - INFO: Getting Ghoul
+2025-03-16 09:05:19,474 - INFO: Getting Giant
+2025-03-16 09:05:19,478 - INFO: Getting Giant Bat
+2025-03-16 09:05:19,481 - INFO: Getting Giant Beetle
+2025-03-16 09:05:19,485 - INFO: Getting Giant Leech
+2025-03-16 09:05:19,489 - INFO: Getting Giant Scorpion
+2025-03-16 09:05:19,493 - INFO: Getting Giant Spider
+2025-03-16 09:05:19,498 - INFO: Getting Gnome
+2025-03-16 09:05:19,502 - INFO: Getting Goblin
+2025-03-16 09:05:19,507 - INFO: Getting Goldworm
+2025-03-16 09:05:19,512 - INFO: Getting Grave Robber (NPC)
+2025-03-16 09:05:19,515 - INFO: Getting Great Unclean One
+2025-03-16 09:05:19,520 - INFO: Getting Greater Daemon
+2025-03-16 09:05:19,524 - INFO: Getting Griffon
+2025-03-16 09:05:19,528 - INFO: Getting Guardian Spirit
+2025-03-16 09:05:19,532 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,532 - INFO: Getting Halfling
+2025-03-16 09:05:19,537 - INFO: Getting Harpy
+2025-03-16 09:05:19,540 - INFO: Getting Hawk
+2025-03-16 09:05:19,544 - INFO: Getting Herbalist (NPC)
+2025-03-16 09:05:19,547 - INFO: Getting Herd Animal
+2025-03-16 09:05:19,551 - INFO: Getting High Elf Mage
+2025-03-16 09:05:19,555 - INFO: Getting Hippogriff
+2025-03-16 09:05:19,559 - INFO: Getting Hobgoblin
+2025-03-16 09:05:19,563 - INFO: Getting Horrors
+2025-03-16 09:05:19,569 - INFO: Getting Horse
+2025-03-16 09:05:19,575 - ERROR: Error invalid literal for int() with base 10: '2-5' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="S">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Strength" title="Strength">S</a></h3>
+<div class="pi-data-value pi-font">2-5</div>
+</div>
+2025-03-16 09:05:19,576 - ERROR: Error invalid literal for int() with base 10: '5/11' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="W">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Wounds" title="Wounds">W</a></h3>
+<div class="pi-data-value pi-font">5/11</div>
+</div>
+2025-03-16 09:05:19,576 - ERROR: Error invalid literal for int() with base 10: '0/1' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font">0/1</div>
+</div>
+2025-03-16 09:05:19,577 - INFO: Getting Human
+2025-03-16 09:05:19,580 - INFO: Getting Hunter (NPC)
+2025-03-16 09:05:19,583 - INFO: Getting Hydra
+2025-03-16 09:05:19,588 - ERROR: Error invalid literal for int() with base 10: '8-10' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font">8-10</div>
+</div>
+2025-03-16 09:05:19,588 - INFO: Getting Instability
+2025-03-16 09:05:19,591 - INFO: Getting Jabberwock
+2025-03-16 09:05:19,595 - INFO: Getting Judicial Champion (NPC)
+2025-03-16 09:05:19,598 - INFO: Getting Juggernaut
+2025-03-16 09:05:19,602 - INFO: Getting Keeper Of Secrets
+2025-03-16 09:05:19,606 - INFO: Getting Labourer (NPC)
+2025-03-16 09:05:19,608 - INFO: Getting Lashworm
+2025-03-16 09:05:19,613 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="I">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Initiative" title="Initiative">I</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,613 - INFO: Getting Lesser Daemon
+2025-03-16 09:05:19,617 - INFO: Getting Liche
+2025-03-16 09:05:19,621 - INFO: Getting Lizardman
+2025-03-16 09:05:19,624 - INFO: Getting Lord Of Change
+2025-03-16 09:05:19,628 - INFO: Getting Manticore
+2025-03-16 09:05:19,632 - INFO: Getting Marine (NPC)
+2025-03-16 09:05:19,635 - INFO: Getting Marshlight
+2025-03-16 09:05:19,639 - INFO: Getting Minotaur
+2025-03-16 09:05:19,642 - INFO: Getting Mount Of Slaanesh
+2025-03-16 09:05:19,647 - INFO: Getting Mummy
+2025-03-16 09:05:19,651 - INFO: Getting Mutant
+2025-03-16 09:05:19,656 - INFO: Getting Noble (NPC)
+2025-03-16 09:05:19,659 - INFO: Getting Nurglings
+2025-03-16 09:05:19,663 - INFO: Getting Ogre
+2025-03-16 09:05:19,667 - INFO: Getting Orc
+2025-03-16 09:05:19,671 - INFO: Getting Otter
+2025-03-16 09:05:19,674 - INFO: Getting Owl
+2025-03-16 09:05:19,680 - INFO: Getting Pedlar (NPC)
+2025-03-16 09:05:19,682 - INFO: Getting Pegasus
+2025-03-16 09:05:19,686 - INFO: Getting Physician (NPC)
+2025-03-16 09:05:19,690 - INFO: Getting Pirate (NPC)
+2025-03-16 09:05:19,693 - INFO: Getting Pit Fighter (NPC)
+2025-03-16 09:05:19,697 - INFO: Getting Plaguebearer
+2025-03-16 09:05:19,701 - INFO: Getting Prospector (NPC)
+2025-03-16 09:05:19,704 - INFO: Getting Rabbit
+2025-03-16 09:05:19,708 - INFO: Getting Ram
+2025-03-16 09:05:19,711 - INFO: Getting Rat
+2025-03-16 09:05:19,717 - INFO: Getting Raven
+2025-03-16 09:05:19,721 - INFO: Getting Razorbill
+2025-03-16 09:05:19,725 - INFO: Getting Roadwarden (NPC)
+2025-03-16 09:05:19,728 - INFO: Getting Sand Clam
+2025-03-16 09:05:19,731 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="S">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Strength" title="Strength">S</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,732 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="I">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Initiative" title="Initiative">I</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,732 - INFO: Getting Scholar (NPC)
+2025-03-16 09:05:19,736 - INFO: Getting Servant (NPC)
+2025-03-16 09:05:19,739 - INFO: Getting Skaven
+2025-03-16 09:05:19,743 - INFO: Getting Skeleton
+2025-03-16 09:05:19,747 - INFO: Getting Small Animals
+2025-03-16 09:05:19,750 - INFO: Getting Smuggler (NPC)
+2025-03-16 09:05:19,754 - INFO: Getting Snake
+2025-03-16 09:05:19,762 - INFO: Getting Snotling
+2025-03-16 09:05:19,767 - INFO: Getting Soldiers
+2025-03-16 09:05:19,777 - INFO: Getting Spectre
+2025-03-16 09:05:19,782 - INFO: Getting Spellcaster (NPC)
+2025-03-16 09:05:19,785 - INFO: Getting Squirrel
+2025-03-16 09:05:19,790 - INFO: Getting Stoat
+2025-03-16 09:05:19,794 - INFO: Getting Sunworm
+2025-03-16 09:05:19,800 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,800 - INFO: Getting Swarm
+2025-03-16 09:05:19,807 - INFO: Getting Thief (NPC)
+2025-03-16 09:05:19,812 - INFO: Getting Thugs
+2025-03-16 09:05:19,819 - INFO: Getting Toll-Keeper (NPC)
+2025-03-16 09:05:19,823 - INFO: Getting Townsperson (NPC)
+2025-03-16 09:05:19,827 - INFO: Getting Treeman
+2025-03-16 09:05:19,833 - INFO: Getting Troglodyte
+2025-03-16 09:05:19,839 - INFO: Getting Troll
+2025-03-16 09:05:19,843 - INFO: Getting Tutor (NPC)
+2025-03-16 09:05:19,847 - INFO: Getting Undead
+2025-03-16 09:05:19,852 - INFO: Getting Unicorn
+2025-03-16 09:05:19,857 - INFO: Getting Vampire
+2025-03-16 09:05:19,862 - INFO: Getting Viydagg
+2025-03-16 09:05:19,867 - INFO: Getting War Dog
+2025-03-16 09:05:19,873 - INFO: Getting Warrior Of Chaos
+2025-03-16 09:05:19,878 - INFO: Getting Watchman (NPC)
+2025-03-16 09:05:19,883 - INFO: Getting Werecreature
+2025-03-16 09:05:19,887 - INFO: Getting Wight
+2025-03-16 09:05:19,891 - ERROR: Error int() argument must be a string, a bytes-like object or a real number, not 'Tag' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="S">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Strength" title="Strength">S</a></h3>
+<div class="pi-data-value pi-font"><ul><li class="mw-empty-elt"></li></ul></div>
+</div>
+2025-03-16 09:05:19,893 - INFO: Getting Wild Cat
+2025-03-16 09:05:19,898 - ERROR: Error invalid literal for int() with base 10: '3/5' when parsing <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="A">
+<h3 class="pi-data-label pi-secondary-font"><a href="/wiki/Attacks" title="Attacks">A</a></h3>
+<div class="pi-data-value pi-font">3/5</div>
+</div>
+2025-03-16 09:05:19,899 - INFO: Getting Wolf
+2025-03-16 09:05:19,905 - INFO: Getting Wraith
+2025-03-16 09:05:19,909 - INFO: Getting Wyvern
+2025-03-16 09:05:19,914 - INFO: Getting Yokel (NPC)
+2025-03-16 09:05:19,918 - INFO: Getting Zoat
+2025-03-16 09:05:19,922 - INFO: Getting Zombie
+2025-03-16 09:05:19,926 - INFO: Got 162 beasts
+2025-03-16 09:05:19,927 - INFO: Written data to beasts.json
