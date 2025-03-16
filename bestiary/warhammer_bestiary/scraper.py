@@ -86,5 +86,5 @@ if __name__ == "__main__":
     log.info("Got %i beasts", len(beasts))
     log.debug("Got: %r", beasts)
 
-    OUTPUT_FILE.write_text(json.dumps(beasts))
+    OUTPUT_FILE.write_text(json.dumps(beasts, indent=2))
     log.info("Written data to %s", OUTPUT_FILE)
