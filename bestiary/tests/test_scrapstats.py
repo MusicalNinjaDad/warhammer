@@ -73,6 +73,28 @@ def test_parse_block(amoeba: BeautifulSoup):
             },
             id="amoeba",
         ),
+        pytest.param(
+            Path("tests/assets/bat.html").resolve(),
+            {
+                "Basic Profile": {
+                    "M": 0,
+                    "WS": 59,
+                    "BS": 0,
+                    "S": 0,
+                    "T": 1,
+                    "W": 1,
+                    "I": 30,
+                    "A": 1,
+                    "Dex": 0,
+                    "Ld": 14,
+                    "Int": 5,
+                    "Cl": 29,
+                    "WP": 29,
+                    "Fel": 0,
+                },
+            },
+            id="bat",
+        ),
     ],
     indirect=["soup"],
 )
