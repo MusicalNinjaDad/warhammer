@@ -75,7 +75,10 @@ if __name__ == "__main__":
  
     log.debug("Parsed all pages")
 
-    beasts = {beast: get_stats(beast_page) for beast, beast_page in beast_page_contents.items()}
+    beasts = {
+        log.info("Getting %s", beast) or beast: get_stats(beast_page)
+        for beast, beast_page in beast_page_contents.items()
+    }
 
     log.info("Got %i beasts", len(beasts))
     log.debug("Got: %r", beasts)
