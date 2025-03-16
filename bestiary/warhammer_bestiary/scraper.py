@@ -47,9 +47,12 @@ def parse_statblock(block: BeautifulSoup) -> dict[str, int]:  # noqa: D103
         else:
             try:
                 val = int(stat)
-            except (TypeError, ValueError) as e:
-                log.error("Error %s when parsing %s", e, div)  # noqa: TRY400
+            except TypeError as e:
+                log.error("TypeError %s when parsing %s", e, div)  # noqa: TRY400
                 val = 0
+            except ValueError as e:
+                log.error("ValueError %s when parsing %s", e, div)  # noqa: TRY400
+                val = str(stat)
         return val
     
     return {stat["data-source"]: parse_stat(stat) for stat in stats}
