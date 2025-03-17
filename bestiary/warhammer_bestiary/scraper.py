@@ -82,9 +82,9 @@ class NPC:
 
     @classmethod
     def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
-        """"""
+        """Stat Blocks are in tables of class `article-table`."""
         log.debug("Getting statblocks for: %s", page)
-        return page.find_all("table", class_="type-stat")
+        return page.find_all("table", class_="article-table")
 
 
 if __name__ == "__main__":
