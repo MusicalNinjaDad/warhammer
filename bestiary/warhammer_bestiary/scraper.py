@@ -3,6 +3,7 @@
 import json
 import logging
 from pathlib import Path
+from typing import Final
 
 import requests
 from bs4 import BeautifulSoup
@@ -73,6 +74,17 @@ class Beast:
         return {
             block.find(class_="pi-header").contents[0]: cls.parse_statblock(block) for block in cls.get_statblocks(page)
         }
+
+class NPC:
+    """NPCs have stat blocks in a horizontal table in the text."""
+
+    STARTING_PAGE: Final = "/wiki/Category:NPCs"
+
+    @classmethod
+    def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
+        """"""
+        log.debug("Getting statblocks for: %s", page)
+        return page.find_all("table", class_="type-stat")
 
 
 if __name__ == "__main__":

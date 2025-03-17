@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from requests_file import FileAdapter
 
-from warhammer_bestiary import Beast, get_and_parse
+from warhammer_bestiary import NPC, Beast, get_and_parse
 
 
 @pytest.fixture(scope="session")
@@ -71,6 +71,29 @@ parametrized = pytest.mark.parametrize(
                 },
             },
             id="bat",
+        ),
+        pytest.param(
+            Path("tests/assets/NPC-artisans_apprentice.html").resolve(),
+            NPC,
+            {
+                "Basic Profile": {
+                    "M": 4,
+                    "WS": 31,
+                    "BS": 25,
+                    "S": 3,
+                    "T": 3,
+                    "W": 6,
+                    "I": 40,
+                    "A": 1,
+                    "Dex": 39,
+                    "Ld": 29,
+                    "Int": 29,
+                    "Cl": 29,
+                    "WP": 29,
+                    "Fel": 29,
+                },
+            },
+            id="NPC",
         ),
     ],
     indirect=["soup"],
