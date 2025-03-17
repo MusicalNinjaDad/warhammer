@@ -5,8 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from requests_file import FileAdapter
 
-from warhammer_bestiary import get_statblocks, get_stats, parse_statblock
-from warhammer_bestiary.scraper import get_and_parse
+from warhammer_bestiary import Beast, get_and_parse
 
 
 @pytest.fixture(scope="session")
@@ -25,12 +24,12 @@ def soup(requests_session: requests.Session, request: pytest.FixtureRequest) -> 
     return get_and_parse(str(request.param), uri_root="file://", session=requests_session)
 
 def test_get_statblocks(amoeba: BeautifulSoup):
-    statblocks = get_statblocks(amoeba)
+    statblocks = Beast.get_statblocks(amoeba)
     assert len(statblocks) == 1
 
 def test_parse_block(amoeba: BeautifulSoup):
-    statblock = get_statblocks(amoeba)[0]
-    assert parse_statblock(statblock) == {
+    statblock = Beast.get_statblocks(amoeba)[0]
+    assert Beast.parse_statblock(statblock) == {
         "M": 4,
         "WS": 33,
         "BS": 0,
@@ -47,12 +46,12 @@ def test_parse_block(amoeba: BeautifulSoup):
         "Fel": 0,
     }
 
-
-@pytest.mark.parametrize(
-    ["soup", "stats"],
+parametrized = pytest.mark.parametrize(
+    ["soup", "pageclass", "stats"],
     [
         pytest.param(
             Path("tests/assets/amoeba.html").resolve(),
+            Beast,
             {
                 "Basic Profile": {
                     "M": 4,
@@ -75,6 +74,7 @@ def test_parse_block(amoeba: BeautifulSoup):
         ),
         pytest.param(
             Path("tests/assets/bat.html").resolve(),
+            Beast,
             {
                 "Basic Profile": {
                     "M": 0,
@@ -98,6 +98,8 @@ def test_parse_block(amoeba: BeautifulSoup):
     ],
     indirect=["soup"],
 )
-def test_get_stats(soup: BeautifulSoup, stats):
-    assert get_stats(soup) == stats
+
+@parametrized
+def test_get_stats(soup: BeautifulSoup, pageclass: type, stats):
+    assert pageclass.get_stats(soup) == stats
     
