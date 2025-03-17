@@ -116,6 +116,14 @@ class NPC:
             for statname, statvalue in zip(table[0], table[1], strict=True)
             if statname != "\n"
         }
+    
+    @classmethod
+    def get_stats(cls, page: BeautifulSoup) -> dict[str, dict[str, int]]:
+        """No stat block title."""
+        blocks = cls.get_statblocks(page)
+        if len(blocks) > 1:
+            log.error("Too many statblocks (%i) for %s", len(blocks), page.find("title").string)
+        return {"Basic Profile": cls.parse_statblock(blocks[0])}
 
 
 if __name__ == "__main__":
