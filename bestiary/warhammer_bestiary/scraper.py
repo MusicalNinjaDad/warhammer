@@ -58,11 +58,11 @@ class Beast:
                     val = int(stat)
                 except TypeError as e:
                     # This occurs if `-` was identified as an empty `<ul>`
-                    log.error("TypeError %s when parsing %s", e, div)  # noqa: TRY400
+                    log.warning("TypeError %s when parsing %s", e, div)
                     val = 0
                 except ValueError as e:
                     # E.g. "d6" or "3-5"
-                    log.error("ValueError %s when parsing %s", e, div)  # noqa: TRY400
+                    log.warning("ValueError %s when parsing %s", e, div)
                     val = str(stat)
             return val
         
@@ -101,11 +101,11 @@ class NPC:
                     val = int(value)
                 except TypeError as e:
                     # This occurs if `-` was identified as an empty `<ul>`
-                    log.error("TypeError %s when parsing %s", e, value)  # noqa: TRY400
+                    log.warning("TypeError %s when parsing %s", e, value)
                     val = 0
                 except ValueError as e:
                     # E.g. "d6" or "3-5"
-                    log.error("ValueError %s when parsing %s", e, value)  # noqa: TRY400
+                    log.warning("ValueError %s when parsing %s", e, value)
                     val = str(value)
             return val
         
