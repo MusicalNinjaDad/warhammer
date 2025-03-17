@@ -81,24 +81,10 @@ def test_get_statblocks(soup: BeautifulSoup, pageclass: type, stats):
     statblocks = pageclass.get_statblocks(soup)
     assert len(statblocks) == len(stats)
 
-def test_parse_block(amoeba: BeautifulSoup):
-    statblock = Beast.get_statblocks(amoeba)[0]
-    assert Beast.parse_statblock(statblock) == {
-        "M": 4,
-        "WS": 33,
-        "BS": 0,
-        "S": 3,
-        "T": 5,
-        "W": 11,
-        "I": 30,
-        "A": 3,
-        "Dex": 0,
-        "Ld": 0,
-        "Int": 0,
-        "Cl": 0,
-        "WP": 0,
-        "Fel": 0,
-    }
+@parametrized
+def test_parse_block(soup: BeautifulSoup, pageclass: type, stats):
+    statblock = pageclass.get_statblocks(soup)[0]
+    assert pageclass.parse_statblock(statblock) == stats["Basic Profile"]
 
 
 @parametrized
