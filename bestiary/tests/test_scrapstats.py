@@ -23,29 +23,6 @@ def amoeba(requests_session: requests.Session) -> BeautifulSoup:
 def soup(requests_session: requests.Session, request: pytest.FixtureRequest) -> BeautifulSoup:
     return get_and_parse(str(request.param), uri_root="file://", session=requests_session)
 
-def test_get_statblocks(amoeba: BeautifulSoup):
-    statblocks = Beast.get_statblocks(amoeba)
-    assert len(statblocks) == 1
-
-def test_parse_block(amoeba: BeautifulSoup):
-    statblock = Beast.get_statblocks(amoeba)[0]
-    assert Beast.parse_statblock(statblock) == {
-        "M": 4,
-        "WS": 33,
-        "BS": 0,
-        "S": 3,
-        "T": 5,
-        "W": 11,
-        "I": 30,
-        "A": 3,
-        "Dex": 0,
-        "Ld": 0,
-        "Int": 0,
-        "Cl": 0,
-        "WP": 0,
-        "Fel": 0,
-    }
-
 parametrized = pytest.mark.parametrize(
     ["soup", "pageclass", "stats"],
     [
@@ -98,6 +75,31 @@ parametrized = pytest.mark.parametrize(
     ],
     indirect=["soup"],
 )
+
+@parametrized
+def test_get_statblocks(soup: BeautifulSoup, pageclass: type, stats):
+    statblocks = pageclass.get_statblocks(soup)
+    assert len(statblocks) == len(stats)
+
+def test_parse_block(amoeba: BeautifulSoup):
+    statblock = Beast.get_statblocks(amoeba)[0]
+    assert Beast.parse_statblock(statblock) == {
+        "M": 4,
+        "WS": 33,
+        "BS": 0,
+        "S": 3,
+        "T": 5,
+        "W": 11,
+        "I": 30,
+        "A": 3,
+        "Dex": 0,
+        "Ld": 0,
+        "Int": 0,
+        "Cl": 0,
+        "WP": 0,
+        "Fel": 0,
+    }
+
 
 @parametrized
 def test_get_stats(soup: BeautifulSoup, pageclass: type, stats):
