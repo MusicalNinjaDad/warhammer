@@ -83,8 +83,39 @@ class NPC:
     @classmethod
     def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
         """Stat Blocks are in tables of class `article-table`."""
-        log.debug("Getting statblocks for: %s", page)
+        log.debug("Getting statblocks for: %s", page.find("title").contents)
         return page.find_all("table", class_="article-table")
+    
+    @classmethod
+    def parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
+        """No tags - need to parse table."""
+        log.debug("Parsing statblock %s", block)
+        
+        def parse_stat(value: str) -> int:
+            """Handle cases where values may be missing or given as dice rolls etc."""
+            log.debug("Parsing Stat: %s", value)
+            if value == "-":
+                val = 0
+            else:
+                try:
+                    val = int(value)
+                except TypeError as e:
+                    # This occurs if `-` was identified as an empty `<ul>`
+                    log.error("TypeError %s when parsing %s", e, value)  # noqa: TRY400
+                    val = 0
+                except ValueError as e:
+                    # E.g. "d6" or "3-5"
+                    log.error("ValueError %s when parsing %s", e, value)  # noqa: TRY400
+                    val = str(value)
+            return val
+        
+        table = [list(row.strings) for row in block.find_all("tr")]
+
+        return {
+            statname: parse_stat(statvalue)
+            for statname, statvalue in zip(table[0], table[1], strict=True)
+            if statname != "\n"
+        }
 
 
 if __name__ == "__main__":
