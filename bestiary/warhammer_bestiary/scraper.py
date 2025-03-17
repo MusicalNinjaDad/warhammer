@@ -15,7 +15,7 @@ BEASTIARY_STARTING_PAGE = "/wiki/Category:Bestiary"
 OUTPUT_FILE = Path("beasts.json")
 LOG_FILE = Path("beasts.log")
 
-log = logging.getLogger("BeastScraper")
+log = logging.getLogger(__name__)
 logfile = logging.FileHandler(LOG_FILE)
 logfile.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s - %(levelname)s: %(message)s")
