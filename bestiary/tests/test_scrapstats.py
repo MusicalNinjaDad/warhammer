@@ -113,4 +113,3 @@ def test_parse_block(soup: BeautifulSoup, pageclass: type, stats):
 @parametrized
 def test_get_stats(soup: BeautifulSoup, pageclass: type, stats):
     assert pageclass.get_stats(soup) == stats
-    
