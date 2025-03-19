@@ -38,12 +38,24 @@ class WikiPage:
     Subclass this for each page category and provide concrete implementations of:
     - `is_statblock` - how to identify a statblock in the page soup
     - `parse_statblock` - how to find the title and stats from the soup of a statblock
+    - `CATEGORY_INDEX` - the category index uri
+    - `is_page_link` - a filter function to apply when parsing `CATEGORY_INDEX`
 
     All other methods & properties should work out of the box.
     """
 
-    STARTING_PAGE: ClassVar[str]
+    CATEGORY_INDEX: ClassVar[str]
     """URI of the contents page for this type of information."""
+
+    @classmethod
+    def is_page_link(cls, tag: BeautifulSoup) -> bool:
+        """
+        How to recognise a valid page link. Returns `True` if a tag links to a page of interest.
+
+        Varies based on category, must be defined in each Subclass, but probably needs to include `name`=="a".
+        """
+        msg = f"{cls.__name__} has not defined `is_page_link`."
+        raise NotImplementedError(msg)
 
     def is_statblock(self, soup: BeautifulSoup) -> bool:
         """
@@ -84,6 +96,21 @@ class WikiPage:
         """The Soup for each stat block."""
         return self.soup.find_all(self.is_statblock)
 
+    @property
+    def statblocks(self) -> dict[str, dict[str, int | str]]:
+        """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
+        return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
+    
+
+
+    @classmethod
+    def get_page_uris(cls, session: requests.Session | None) -> dict[str, str]:
+        """List the relevant uris from the `CATGEORY_INDEX`."""
+        session = requests.Session() if session is None else session
+        indexsoup = get_and_parse(cls.CATEGORY_INDEX, session)
+        return {link.attrs["title"]: link.attrs["href"] for link in indexsoup.find_all(cls.is_page_link)}
+
+
     @classmethod
     def parse_stat(cls, val: str) -> int | str:
         """Handle cases where values may be missing or given as dice rolls etc."""
@@ -95,14 +122,20 @@ class WikiPage:
             # E.g. "d6" or "3-5"
             return val
 
-    @property
-    def statblocks(self) -> dict[str, dict[str, int | str]]:
-        """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
-        return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
-
 
 class Beast(WikiPage):
     """A page for a normal member of the bestiary, with the stat block shown vertically at the side of the page."""
+
+    CATEGORY_INDEX: Final = "https://wfrp1e.fandom.com/wiki/Category:Bestiary"
+
+    @classmethod
+    def is_page_link(cls, tag: BeautifulSoup) -> bool:
+        """Beast_pages = beastiary.find_all("a", class_="category-page__member-link")."""
+        return (
+            tag.name == "a"
+            and "category-page__member-link" in tag.get("class", "")
+            and "(NPC)" not in tag.attrs["title"]
+        )
 
     def is_statblock(self, soup: BeautifulSoup) -> bool:
         """Statblocks are in an `aside` tag with class `type-stat`."""
