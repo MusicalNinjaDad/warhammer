@@ -96,39 +96,14 @@ class Beast(WikiPage):
         return "type-stat" in soup.get("class", "")
 
     @classmethod
-    def parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
         """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
-        log.debug("Parsing statblock %s", block)
-        stats = block.find_all(class_="pi-data")
-        log.debug("Found %i statblocks", len(stats))
-
-        def parse_stat(div: BeautifulSoup) -> int:
-            """Handle cases where values may be missing or given as dice rolls etc."""
-            log.debug("Parsing Stat: %s", div)
-            stat = div.find(class_="pi-data-value").contents[0]
-            if div.find(class_="pi-data-value").contents[0] == "-":
-                val = 0
-            else:
-                try:
-                    val = int(stat)
-                except TypeError as e:
-                    # This occurs if `-` was identified as an empty `<ul>`
-                    log.warning("TypeError %s when parsing %s", e, div)
-                    val = 0
-                except ValueError as e:
-                    # E.g. "d6" or "3-5"
-                    log.warning("ValueError %s when parsing %s", e, div)
-                    val = str(stat)
-            return val
-
-        return {stat["data-source"]: parse_stat(stat) for stat in stats}
-
-    @classmethod
-    def get_stats(cls, page: BeautifulSoup) -> dict[str, dict[str, int]]:
-        """Stat block title is in a `h2` block of class `pi-header`."""
-        return {
-            block.find(class_="pi-header").contents[0]: cls.parse_statblock(block) for block in cls.get_statblocks(page)
+        title = blocksoup.find(class_="pi-header").getText()
+        stats = {
+            stat["data-source"]: cls.parse_stat(stat.find(class_="pi-data-value").getText())
+            for stat in blocksoup.find_all(class_="pi-data")
         }
+        return title, stats
 
 
 class NPC(WikiPage):
