@@ -121,6 +121,10 @@ class NPC(WikiPage):
 
     STARTING_PAGE: Final = "/wiki/Category:NPCs"
 
+    def is_statblock(self, soup: BeautifulSoup) -> bool:
+        """Stat Blocks are in tables of class `article-table`."""
+        return soup.name == "table" and "article-table" in soup.get("class", "")
+
     @classmethod
     def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
         """Stat Blocks are in tables of class `article-table`."""
