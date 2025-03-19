@@ -121,4 +121,4 @@ def test_parse_block(page: WikiPage, stats: dict[str,dict[str,int]]):
 
 @parametrized
 def test_get_stats(page: WikiPage, stats):
-    assert page.stats == stats
+    assert page.statblocks == stats
