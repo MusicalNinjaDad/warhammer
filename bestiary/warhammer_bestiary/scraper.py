@@ -76,6 +76,16 @@ class WikiPage:
         except ValueError:
             # E.g. "d6" or "3-5"
             return val
+        
+    @property
+    def statblocks(self) -> dict[str,dict[str,int|str]]:
+        """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
+        return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
+    
+    @classmethod
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
+        """Return the title and parsed block. Must be implemented by each subclass."""
+        raise NotImplementedError
 
 
 class Beast(WikiPage):
