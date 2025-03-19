@@ -85,7 +85,8 @@ class WikiPage:
     @classmethod
     def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
         """Return the title and parsed block. Must be implemented by each subclass."""
-        raise NotImplementedError
+        msg = f"{cls.__name__} has not defined `parse_statblock`."
+        raise NotImplementedError(msg)
 
 
 class Beast(WikiPage):
@@ -116,7 +117,19 @@ class NPC(WikiPage):
         return soup.name == "table" and "article-table" in soup.get("class", "")
 
     @classmethod
-    def parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
+        """No tags and no title. Need to parse a table & provide `''` as title."""
+        title = ""
+        tablerows = blocksoup.find_all("tr")
+        # TODO: add some kind of check that we only have two rows ...
+        statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
+        statvalues = [cls.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
+        stats = dict(zip(statnames, statvalues, strict = True))
+        return title, stats
+
+
+    @classmethod
+    def _parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
         """No tags - need to parse table."""
         log.debug("Parsing statblock %s", block)
 
