@@ -37,6 +37,14 @@ def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
             r"/wiki/Artisan%27s_Apprentice_(NPC)",
             id = "Beastiary",
         ),
+        pytest.param(
+            NPC,
+            Path("tests/assets/npcs.html").absolute(),
+            38,
+            ("Artisan's Apprentice (NPC)", r"/wiki/Artisan%27s_Apprentice_(NPC)"),
+            "/wiki/Bat",
+            id = "NPC",
+        ),
     ],
 )
 def test_get_page_uris(  # noqa: PLR0913

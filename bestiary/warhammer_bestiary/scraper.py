@@ -169,7 +169,12 @@ class Beast(WikiPage):
 class NPC(WikiPage):
     """NPCs have stat blocks in a horizontal table in the text."""
 
-    STARTING_PAGE: Final = "/wiki/Category:NPCs"
+    CATEGORY_INDEX: Final = "https://wfrp1e.fandom.com/wiki/Category:NPCs"
+
+    @classmethod
+    def is_page_link(cls, tag: BeautifulSoup) -> bool:
+        """No need to filter out any results."""
+        return tag.name == "a" and "category-page__member-link" in tag.get("class", "")
 
     def is_statblock(self, soup: BeautifulSoup) -> bool:
         """Stat Blocks are in tables of class `article-table`."""
