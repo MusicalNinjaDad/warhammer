@@ -32,10 +32,37 @@ def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa
 
 
 class WikiPage:
-    """A https://wfrp1e.fandom.com page that contains statblocks."""
+    """
+    A https://wfrp1e.fandom.com page that contains statblocks.
+    
+    Subclass this for each page category and provide concrete implementations of:
+    - `is_statblock` - how to identify a statblock in the page soup
+    - `parse_statblock` - how to find the title and stats from the soup of a statblock
+
+    All other methods & properties should work out of the box.
+    """
 
     STARTING_PAGE: ClassVar[str]
     """URI of the contents page for this type of information."""
+
+    def is_statblock(self, soup: BeautifulSoup) -> bool:
+        """
+        How to recognise a statblock. Returns `True` if a tag represents a statblock.
+
+        Varies based on page design, must be defined in each Subclass.
+        """
+        msg = f"{type(self)} has not defined `statblocks`."
+        raise NotImplementedError(msg)
+    
+    @classmethod
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
+        """
+        Parse a block of soup and return the statblock title and a dict of the parsed stats.
+        
+        The form of `soupblock` varies based on page design, so this must be defined in each Subclass.
+        """
+        msg = f"{cls.__name__} has not defined `parse_statblock`."
+        raise NotImplementedError(msg)
 
     def __init__(self, uri: str, session: requests.Session | None) -> None:
         """Initialise WikiPage for a given `uri`."""
@@ -57,15 +84,6 @@ class WikiPage:
         """The Soup for each stat block."""
         return self.soup.find_all(self.is_statblock)
 
-    def is_statblock(self, soup: BeautifulSoup) -> bool:
-        """
-        How to recognise a statblock. Returns `True` if a tag represents a statblock.
-
-        Varies by page, must be defined in each Subclass.
-        """
-        msg = f"{type(self)} has not defined `statblocks`."
-        raise NotImplementedError(msg)
-
     @classmethod
     def parse_stat(cls, val: str) -> int | str:
         """Handle cases where values may be missing or given as dice rolls etc."""
@@ -81,12 +99,6 @@ class WikiPage:
     def statblocks(self) -> dict[str, dict[str, int | str]]:
         """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
         return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
-
-    @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
-        """Return the title and parsed block. Must be implemented by each subclass."""
-        msg = f"{cls.__name__} has not defined `parse_statblock`."
-        raise NotImplementedError(msg)
 
 
 class Beast(WikiPage):
