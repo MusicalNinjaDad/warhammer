@@ -2,7 +2,6 @@
 
 import json
 import logging
-import urllib
 import urllib.parse
 from functools import cached_property
 from pathlib import Path
