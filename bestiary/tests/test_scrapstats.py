@@ -54,6 +54,9 @@ def test_get_page_uris(  # noqa: PLR0913
     assert contains in links.items()
     assert absent not in links.values()
 
+def test_absolute():
+    assert Beast.absolute("/wiki/Bat") == "https://wfrp1e.fandom.com/wiki/Bat"
+
 parametrized = pytest.mark.parametrize(
     ["page", "stats"],
     [
