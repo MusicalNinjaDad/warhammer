@@ -10,11 +10,6 @@ from typing import ClassVar, Final
 import requests
 from bs4 import BeautifulSoup
 
-URI_ROOT = "https://wfrp1e.fandom.com"
-
-BEASTIARY_STARTING_PAGE = "/wiki/Category:Bestiary"
-
-OUTPUT_FILE = Path("beasts.json")
 LOG_FILE = Path("beasts.log")
 
 log = logging.getLogger(__name__)
@@ -77,7 +72,7 @@ class WikiPage:
         msg = f"{cls.__name__} has not defined `parse_statblock`."
         raise NotImplementedError(msg)
 
-    def __init__(self, uri: str, session: requests.Session | None) -> None:
+    def __init__(self, uri: str, session: requests.Session | None = None) -> None:
         """Initialise WikiPage for a given `uri`."""
         self.uri = uri
         self.session = session or requests.Session()
@@ -117,7 +112,7 @@ class WikiPage:
         return absuri.geturl()
 
     @classmethod
-    def get_page_uris(cls, session: requests.Session | None) -> dict[str, str]:
+    def get_page_uris(cls, session: requests.Session | None = None) -> dict[str, str]:
         """List the relevant uris from the `CATGEORY_INDEX`."""
         session = requests.Session() if session is None else session
         indexsoup = get_and_parse(cls.CATEGORY_INDEX, session)
@@ -192,28 +187,7 @@ class NPC(WikiPage):
 
 
 if __name__ == "__main__":
-    log.info("Parsing Beastiary")
-
-    beastiary = get_and_parse(BEASTIARY_STARTING_PAGE)
-
-    log.debug("Got Beastiary Index")
-
-    beast_pages = beastiary.find_all("a", class_="category-page__member-link")
-
-    log.info("Found %i beasts.", len(beast_pages))
-    log.debug("Beast content pages: %r", beast_pages)
-
-    beast_page_contents = {link.attrs["title"]: get_and_parse(link.attrs["href"]) for link in beast_pages}
-
-    log.debug("Parsed all pages")
-
-    beasts = {
-        log.info("Getting %s", beast) or beast: Beast.get_stats(beast_page)
-        for beast, beast_page in beast_page_contents.items()
-    }
-
-    log.info("Got %i beasts", len(beasts))
-    log.debug("Got: %r", beasts)
-
-    OUTPUT_FILE.write_text(json.dumps(beasts, indent=2))
-    log.info("Written data to %s", OUTPUT_FILE)
+    beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris()]
+    beasts = [Beast(page) for page in beast_pages]
+    beastfile = Path("beasts.json")
+    beastfile.write_text(json.dumps({beast.title: beast.statblocks for beast in beasts}, indent=2))

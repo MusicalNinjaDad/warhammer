@@ -35,7 +35,6 @@
       "Fel": 0
     }
   },
-  "Artisan's Apprentice (NPC)": {},
   "Basilisk": {
     "Basic Profile": {
       "M": 4,
@@ -108,7 +107,6 @@
       "Fel": 0
     }
   },
-  "Beggar (NPC)": {},
   "Bestiary": {},
   "Black Orc": {
     "Basic Profile": {
@@ -200,8 +198,6 @@
       "Fel": 0
     }
   },
-  "Boatman (NPC)": {},
-  "Bodyguard (NPC)": {},
   "Bog Octopus": {
     "Basic Profile": {
       "M": 3,
@@ -220,8 +216,6 @@
       "Fel": 0
     }
   },
-  "Bounty Hunter (NPC)": {},
-  "Bunko Artist (NPC)": {},
   "Carnivorous Snapper": {
     "Basic Profile": {
       "M": 7,
@@ -312,7 +306,6 @@
       "Fel": 10
     }
   },
-  "Charlatan (NPC)": {},
   "Chimera": {
     "Basic Profile": {
       "M": 5,
@@ -331,7 +324,6 @@
       "Fel": 0
     }
   },
-  "Coachman (NPC)": {},
   "Cold One": {
     "Basic Profile": {
       "M": 8,
@@ -368,7 +360,6 @@
       "Fel": 0
     }
   },
-  "Cook (NPC)": {},
   "Daemonette": {
     "Basic Profile": {
       "M": 4,
@@ -533,7 +524,6 @@
       "Fel": 24
     }
   },
-  "Dwarven Engineer (NPC)": {},
   "Eagle": {
     "Basic Profile": {
       "M": 2,
@@ -588,7 +578,6 @@
       "Fel": 43
     }
   },
-  "Exciseman (NPC)": {},
   "Fen Worm": {
     "Basic Profile": {
       "M": 6,
@@ -643,7 +632,6 @@
       "Fel": 11
     }
   },
-  "Fisherman (NPC)": {},
   "Flamer": {
     "Basic Profile": {
       "M": 9,
@@ -717,7 +705,6 @@
     }
   },
   "Fungus And Mould": {},
-  "Gambler (NPC)": {},
   "Ghost": {
     "Basic Profile": {
       "M": 4,
@@ -916,7 +903,6 @@
       "Fel": 0
     }
   },
-  "Grave Robber (NPC)": {},
   "Great Unclean One": {
     "Basic Profile": {
       "M": 6,
@@ -1043,7 +1029,6 @@
       "Fel": 0
     }
   },
-  "Herbalist (NPC)": {},
   "Herd Animal": {
     "Basic Profile": {
       "M": 7,
@@ -1153,7 +1138,6 @@
       "Fel": 29
     }
   },
-  "Hunter (NPC)": {},
   "Hydra": {
     "Basic Profile": {
       "M": 6,
@@ -1191,7 +1175,6 @@
       "Fel": 0
     }
   },
-  "Judicial Champion (NPC)": {},
   "Juggernaut": {
     "Basic Profile": {
       "M": 7,
@@ -1228,7 +1211,6 @@
       "Fel": 18
     }
   },
-  "Labourer (NPC)": {},
   "Lashworm": {
     "Basic Profile": {
       "M": 0,
@@ -1337,7 +1319,6 @@
       "Fel": 0
     }
   },
-  "Marine (NPC)": {},
   "Marshlight": {
     "Basic Profile": {
       "M": 4,
@@ -1428,7 +1409,6 @@
       "Fel": 16
     }
   },
-  "Noble (NPC)": {},
   "Nurglings": {
     "Basic Profile": {
       "M": 4,
@@ -1519,7 +1499,6 @@
       "Fel": 0
     }
   },
-  "Pedlar (NPC)": {},
   "Pegasus": {
     "Basic Profile": {
       "M": 8,
@@ -1538,9 +1517,6 @@
       "Fel": 0
     }
   },
-  "Physician (NPC)": {},
-  "Pirate (NPC)": {},
-  "Pit Fighter (NPC)": {},
   "Plaguebearer": {
     "Basic Profile": {
       "M": 4,
@@ -1559,7 +1535,6 @@
       "Fel": 1
     }
   },
-  "Prospector (NPC)": {},
   "Rabbit": {
     "Basic Profile": {
       "M": 7,
@@ -1650,7 +1625,6 @@
       "Fel": 0
     }
   },
-  "Roadwarden (NPC)": {},
   "Sand Clam": {
     "Basic Profile": {
       "M": 0,
@@ -1669,8 +1643,6 @@
       "Fel": 0
     }
   },
-  "Scholar (NPC)": {},
-  "Servant (NPC)": {},
   "Skaven": {
     "Basic Profile": {
       "M": 5,
@@ -1708,7 +1680,6 @@
     }
   },
   "Small Animals": {},
-  "Smuggler (NPC)": {},
   "Snake": {
     "Basic Profile": {
       "M": 3,
@@ -1764,7 +1735,6 @@
       "Fel": 29
     }
   },
-  "Spellcaster (NPC)": {},
   "Squirrel": {
     "Basic Profile": {
       "M": 6,
@@ -1837,10 +1807,7 @@
       "Fel": 0
     }
   },
-  "Thief (NPC)": {},
   "Thugs": {},
-  "Toll-Keeper (NPC)": {},
-  "Townsperson (NPC)": {},
   "Treeman": {
     "Basic Profile": {
       "M": 6,
@@ -1895,7 +1862,6 @@
       "Fel": 6
     }
   },
-  "Tutor (NPC)": {},
   "Undead": {},
   "Unicorn": {
     "Basic Profile": {
@@ -1970,7 +1936,6 @@
       "Fel": 18
     }
   },
-  "Watchman (NPC)": {},
   "Werecreature": {},
   "Wight": {
     "Basic Profile": {
@@ -2062,7 +2027,6 @@
       "Fel": 0
     }
   },
-  "Yokel (NPC)": {},
   "Zoat": {
     "Basic Profile": {
       "M": 7,
