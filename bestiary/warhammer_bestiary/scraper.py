@@ -191,3 +191,7 @@ if __name__ == "__main__":
     beasts = [Beast(page) for page in beast_pages]
     beastfile = Path("beasts.json")
     beastfile.write_text(json.dumps({beast.title: beast.statblocks for beast in beasts}, indent=2))
+    npc_pages = [NPC.absolute(uri) for uri in NPC.get_page_uris()]
+    npcs = [NPC(page) for page in beast_pages]
+    npcfile = Path("npcs.json")
+    npcfile.write_text(json.dumps({npc.title: npc.statblocks for npc in npcs}, indent=2))
