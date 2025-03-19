@@ -2,6 +2,8 @@
 
 import json
 import logging
+import urllib
+import urllib.parse
 from functools import cached_property
 from pathlib import Path
 from typing import ClassVar, Final
@@ -100,8 +102,20 @@ class WikiPage:
     def statblocks(self) -> dict[str, dict[str, int | str]]:
         """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
         return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
-    
 
+    @classmethod
+    def absolute(cls, uri: str) -> str:
+        """Return dull URI for a partial address, using `CATEGORY_INDEX` as the root."""
+        root = urllib.parse.urlsplit(cls.CATEGORY_INDEX)
+        reluri = urllib.parse.urlsplit(uri)
+        absuri = urllib.parse.SplitResult(
+            scheme=root.scheme if reluri.scheme == "" else reluri.scheme,
+            netloc=root.netloc if reluri.netloc == "" else reluri.netloc,
+            path=reluri.path,
+            query=reluri.query,
+            fragment=reluri.fragment,
+        )
+        return absuri.geturl()
 
     @classmethod
     def get_page_uris(cls, session: requests.Session | None) -> dict[str, str]:

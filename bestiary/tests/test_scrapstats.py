@@ -33,13 +33,13 @@ def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
             Beast,
             Path("tests/assets/bestiary.html").absolute(),
             126, # Thugs and High Elf Mage are not labeled with "(NPC)"
-            ("Bat","https://wfrp1e.fandom.com/wiki/Bat"),
-            r"https://wfrp1e.fandom.com/wiki/Artisan%27s_Apprentice_(NPC)",
+            ("Bat","/wiki/Bat"),
+            r"/wiki/Artisan%27s_Apprentice_(NPC)",
             id = "Beastiary",
         ),
     ],
 )
-def test_get_page_uris(
+def test_get_page_uris(  # noqa: PLR0913
     page_type: type[WikiPage],
     contents_page: Path,
     num_links: int,
@@ -51,6 +51,8 @@ def test_get_page_uris(
     monkeypatch.setattr(page_type, "CATEGORY_INDEX", f"file://{contents_page}", raising=True)
     links = page_type.get_page_uris(requests_session)
     assert len(links) == num_links
+    assert contains in links.items()
+    assert absent not in links.values()
 
 parametrized = pytest.mark.parametrize(
     ["page", "stats"],
