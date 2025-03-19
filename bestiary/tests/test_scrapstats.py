@@ -98,7 +98,7 @@ parametrized = pytest.mark.parametrize(
 )
 
 @parametrized
-def test_get_statblocks(page: WikiPage, stats):
+def test_statblocksoup(page: WikiPage, stats):
     statblocks = page.statblocksoup
     assert len(statblocks) == len(stats)
 
