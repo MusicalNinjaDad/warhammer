@@ -116,7 +116,7 @@ def test_pagetitle(page: WikiPage, stats, request: pytest.FixtureRequest):  # no
 @parametrized
 def test_parse_block(page: WikiPage, stats: dict[str,dict[str,int]]):
     statblock = page.statblocksoup[0]
-    assert page.parse_statblock(statblock) == next(iter(stats.values()))
+    assert page.parse_statblock(statblock) == next(iter(stats.items()))
 
 
 @parametrized
