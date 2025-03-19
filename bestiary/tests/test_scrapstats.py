@@ -11,6 +11,7 @@ from warhammer_bestiary.scraper import NPC, Beast, WikiPage
 class PageParam(Protocol):
     param: tuple[type[WikiPage], Path]
 
+
 @pytest.fixture(scope="module")
 def requests_session() -> requests.Session:
     """Provide a `requests.Session` with `FileAdaptor?  and module-scoped cache."""
@@ -18,11 +19,13 @@ def requests_session() -> requests.Session:
     session.mount("file://", FileAdapter())
     return session
 
+
 @pytest.fixture
 def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
     pagetype = request.param[0]
     uri = request.param[1]
-    return pagetype(uri = f"file://{uri}", session = requests_session)
+    return pagetype(uri=f"file://{uri}", session=requests_session)
+
 
 parametrized = pytest.mark.parametrize(
     ["page", "stats"],
@@ -97,19 +100,22 @@ parametrized = pytest.mark.parametrize(
     indirect=["page"],
 )
 
+
 @parametrized
 def test_statblocksoup(page: WikiPage, stats):
     statblocks = page.statblocksoup
     assert len(statblocks) == len(stats)
+
 
 @parametrized
 def test_pagetitle(page: WikiPage, stats, request: pytest.FixtureRequest):  # noqa: ARG001
     """Should match test id."""
     assert page.title == request.node.callspec.id
 
+
 @parametrized
 def test_parse_block(page: WikiPage, stats):
-    statblock = page.statblocksoup [0]
+    statblock = page.statblocksoup[0]
     assert page.parse_statblock(statblock) == stats["Basic Profile"]
 
 
