@@ -10,7 +10,7 @@ from typing import ClassVar, Final
 import requests
 from bs4 import BeautifulSoup
 
-LOG_FILE = Path("beasts.log")
+LOG_FILE = Path("beast_scraper.log")
 
 log = logging.getLogger(__name__)
 logfile = logging.FileHandler(LOG_FILE)
@@ -74,6 +74,7 @@ class WikiPage:
 
     def __init__(self, uri: str, session: requests.Session | None = None) -> None:
         """Initialise WikiPage for a given `uri`."""
+        log.info("Initialising %s for %s", type(self), uri)
         self.uri = uri
         self.session = session or requests.Session()
 
@@ -95,6 +96,7 @@ class WikiPage:
     @property
     def statblocks(self) -> dict[str, dict[str, int | str]]:
         """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
+        log.info("Getting statblocks for %s", self.title)
         return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
 
     @classmethod
@@ -153,10 +155,13 @@ class Beast(WikiPage):
     def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
         """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
         title = blocksoup.find(class_="pi-header").getText()
-        stats = {
-            stat["data-source"]: cls.parse_stat(stat.find(class_="pi-data-value").getText())
-            for stat in blocksoup.find_all(class_="pi-data")
-        }
+        try:
+            stats = {
+                stat["data-source"]: cls.parse_stat(stat.find(class_="pi-data-value").getText())
+                for stat in blocksoup.find_all(class_="pi-data")
+            }
+        except Exception:
+            log.exception("Error parsing stats for %s - Blocksoup: %r", cls.__name__, blocksoup)
         return title, stats
 
 
@@ -182,16 +187,25 @@ class NPC(WikiPage):
         # TODO: add some kind of check that we only have two rows ...
         statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
         statvalues = [cls.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
-        stats = dict(zip(statnames, statvalues, strict=True))
+        try:
+            stats = dict(zip(statnames, statvalues, strict=True))
+        except ValueError:
+            log.exception("Error parsing stats for %s - Blocksoup: %r", cls.__name__, blocksoup)
         return title, stats
 
 
 if __name__ == "__main__":
+    
+    log.info("Begin scraping Beasts")
     beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris()]
     beasts = [Beast(page) for page in beast_pages]
     beastfile = Path("beasts.json")
     beastfile.write_text(json.dumps({beast.title: beast.statblocks for beast in beasts}, indent=2))
+    log.info("%i beasts written to %s", len(beasts), beastfile)
+
+    log.info("Begin scraping NPCs")
     npc_pages = [NPC.absolute(uri) for uri in NPC.get_page_uris()]
     npcs = [NPC(page) for page in npc_pages]
     npcfile = Path("npcs.json")
     npcfile.write_text(json.dumps({npc.title: npc.statblocks for npc in npcs}, indent=2))
+    log.info("%i NPCs written to %s", len(npcs), npcfile)
