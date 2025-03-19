@@ -1,21 +1,34 @@
 from pathlib import Path
+from typing import Protocol
 
 import pytest
+import requests
 from requests_file import FileAdapter
 
-import warhammer_bestiary.scraper
 from warhammer_bestiary import NPC, Beast, WikiPage
 
 
-def pytest_collection(session: pytest.Session) -> None:  # noqa: ARG001
-    warhammer_bestiary.scraper.session.mount("file://", FileAdapter())
-    warhammer_bestiary.scraper.URI_ROOT = f"file://{Path()}" 
+class PageParam(Protocol):
+    param: tuple[type[WikiPage], Path]
+
+@pytest.fixture(scope="module")
+def requests_session() -> requests.Session:
+    """Provide a `requests.Session` with `FileAdaptor?  and module-scoped cache."""
+    session = requests.Session()
+    session.mount("file://", FileAdapter())
+    return session
+
+@pytest.fixture
+def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
+    pagetype = request.param[0]
+    uri = request.param[1]
+    return pagetype(uri = f"file://{uri}", session = requests_session)
 
 parametrized = pytest.mark.parametrize(
     ["page", "stats"],
     [
         pytest.param(
-            Beast("tests/assets/amoeba.html"),
+            (Beast, Path("tests/assets/amoeba.html").absolute()),
             {
                 "Basic Profile": {
                     "M": 4,
@@ -37,7 +50,7 @@ parametrized = pytest.mark.parametrize(
             id="amoeba",
         ),
         pytest.param(
-            Beast("tests/assets/bat.html"),
+            (Beast, Path("tests/assets/bat.html").absolute()),
             {
                 "Basic Profile": {
                     "M": 0,
@@ -59,7 +72,7 @@ parametrized = pytest.mark.parametrize(
             id="bat",
         ),
         pytest.param(
-            NPC("tests/assets/NPC-artisans_apprentice.html"),
+            (NPC, Path("tests/assets/NPC-artisans_apprentice.html").absolute()),
             {
                 "Basic Profile": {
                     "M": 4,
@@ -81,6 +94,7 @@ parametrized = pytest.mark.parametrize(
             id="NPC",
         ),
     ],
+    indirect=["page"],
 )
 
 @parametrized
