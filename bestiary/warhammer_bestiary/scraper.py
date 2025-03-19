@@ -70,6 +70,10 @@ class WikiPage:
 class Beast(WikiPage):
     """A page for a normal member of the bestiary, with the stat block shown vertically at the side of the page."""
 
+    def is_statblock(self, soup: BeautifulSoup) -> bool:
+        """Statblocks are in an `aside` tag with class `type-stat`."""
+        return "type-stat" in soup.get("class", "")
+
     @classmethod
     def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
         """Statblocks are in an `aside` tag with class `type-stat`."""
