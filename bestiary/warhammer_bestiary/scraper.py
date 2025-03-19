@@ -65,6 +65,17 @@ class WikiPage:
         """
         msg = f"{type(self)} has not defined `statblocks`."
         raise NotImplementedError(msg)
+    
+    @classmethod
+    def parse_stat(cls, val: str) -> int | str:
+        """Handle cases where values may be missing or given as dice rolls etc."""
+        if not val or val == "-":
+            return 0
+        try:
+            return int(val)
+        except ValueError:
+            # E.g. "d6" or "3-5"
+            return val
 
 
 class Beast(WikiPage):
