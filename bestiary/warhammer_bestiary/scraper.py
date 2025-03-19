@@ -75,12 +75,6 @@ class Beast(WikiPage):
         return "type-stat" in soup.get("class", "")
 
     @classmethod
-    def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
-        """Statblocks are in an `aside` tag with class `type-stat`."""
-        log.debug("Getting statblocks for: %s", page)
-        return page.find_all(class_="type-stat")
-
-    @classmethod
     def parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
         """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
         log.debug("Parsing statblock %s", block)
@@ -124,12 +118,6 @@ class NPC(WikiPage):
     def is_statblock(self, soup: BeautifulSoup) -> bool:
         """Stat Blocks are in tables of class `article-table`."""
         return soup.name == "table" and "article-table" in soup.get("class", "")
-
-    @classmethod
-    def get_statblocks(cls, page: BeautifulSoup) -> list[BeautifulSoup]:
-        """Stat Blocks are in tables of class `article-table`."""
-        log.debug("Getting statblocks for: %s", page.find("title").contents)
-        return page.find_all("table", class_="article-table")
 
     @classmethod
     def parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
