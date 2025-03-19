@@ -47,7 +47,7 @@ parametrized = pytest.mark.parametrize(
                     "Fel": 0,
                 },
             },
-            id="amoeba",
+            id="Amoeba",
         ),
         pytest.param(
             (Beast, Path("tests/assets/bat.html").absolute()),
@@ -69,7 +69,7 @@ parametrized = pytest.mark.parametrize(
                     "Fel": 0,
                 },
             },
-            id="bat",
+            id="Bat",
         ),
         pytest.param(
             (NPC, Path("tests/assets/NPC-artisans_apprentice.html").absolute()),
@@ -91,7 +91,7 @@ parametrized = pytest.mark.parametrize(
                     "Fel": 29,
                 },
             },
-            id="NPC",
+            id="Artisan's Apprentice (NPC)",
         ),
     ],
     indirect=["page"],
@@ -101,6 +101,11 @@ parametrized = pytest.mark.parametrize(
 def test_statblocksoup(page: WikiPage, stats):
     statblocks = page.statblocksoup
     assert len(statblocks) == len(stats)
+
+@parametrized
+def test_pagetitle(page: WikiPage, stats, request: pytest.FixtureRequest):  # noqa: ARG001
+    """Should match test id."""
+    assert page.title == request.node.callspec.id
 
 @parametrized
 def test_parse_block(page: WikiPage, stats):

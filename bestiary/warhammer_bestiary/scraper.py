@@ -49,8 +49,8 @@ class WikiPage:
 
     @property
     def title(self) -> str:
-        """The page title."""
-        return self.soup.title.getText.split("|")[0].strip()
+        """The simple page title without the site details."""
+        return self.soup.title.getText().split("|")[0].strip()
 
     @property
     def statblocksoup(self) -> list[BeautifulSoup]:
