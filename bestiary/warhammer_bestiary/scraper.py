@@ -5,7 +5,6 @@ import logging
 from functools import cached_property
 from pathlib import Path
 from typing import ClassVar, Final
-from warnings import warn
 
 import requests
 from bs4 import BeautifulSoup
@@ -25,13 +24,12 @@ logfile.setFormatter(formatter)
 log.addHandler(logfile)
 log.setLevel(logging.INFO)
 
-session = requests.Session()
 
-def get_and_parse(uri: str, uri_root: str = URI_ROOT, session: requests.Session = session) -> BeautifulSoup:  # noqa: D103
-    full_uri = f"{uri_root}{uri}"
-    _raw = session.get(full_uri, timeout=10)
-    log.debug("Parsing %s", full_uri)
+def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa: D103
+    _raw = session.get(uri, timeout=10)
+    log.debug("Parsing %s", uri)
     return BeautifulSoup(_raw.text, features="html.parser")
+
 
 class WikiPage:
     """A https://wfrp1e.fandom.com page that contains statblocks."""
@@ -39,36 +37,35 @@ class WikiPage:
     STARTING_PAGE: ClassVar[str]
     """URI of the contents page for this type of information."""
 
-    def __init__(self, uri: str, uri_root: str = URI_ROOT, session: requests.Session = session) -> None:
+    def __init__(self, uri: str, session: requests.Session | None) -> None:
         """Initialise WikiPage for a given `uri`."""
-        self.uri = f"{uri_root}{uri}"
-        self.session = session
-    
+        self.uri = uri
+        self.session = session or requests.Session()
+
     @cached_property
     def soup(self) -> BeautifulSoup:
         """A BeautifulSoup of the page."""
-        return get_and_parse(self.uri, "", self.session)
-    
+        return get_and_parse(self.uri, self.session)
+
     @property
     def title(self) -> str:
         """The page title."""
         return self.soup.title.getText.split("|")[0].strip()
-    
+
     @property
     def statblocksoup(self) -> list[BeautifulSoup]:
         """The Soup for each stat block."""
         return self.soup.find_all(self.is_statblock)
-    
-    def is_statblock(self) -> bool:
+
+    def is_statblock(self, soup: BeautifulSoup) -> bool:
         """
         How to recognise a statblock. Returns `True` if a tag represents a statblock.
-        
+
         Varies by page, must be defined in each Subclass.
         """
         msg = f"{type(self)} has not defined `statblocks`."
         raise NotImplementedError(msg)
 
-    
 
 class Beast(WikiPage):
     """A page for a normal member of the bestiary, with the stat block shown vertically at the side of the page."""
@@ -85,7 +82,7 @@ class Beast(WikiPage):
         log.debug("Parsing statblock %s", block)
         stats = block.find_all(class_="pi-data")
         log.debug("Found %i statblocks", len(stats))
-        
+
         def parse_stat(div: BeautifulSoup) -> int:
             """Handle cases where values may be missing or given as dice rolls etc."""
             log.debug("Parsing Stat: %s", div)
@@ -104,7 +101,7 @@ class Beast(WikiPage):
                     log.warning("ValueError %s when parsing %s", e, div)
                     val = str(stat)
             return val
-        
+
         return {stat["data-source"]: parse_stat(stat) for stat in stats}
 
     @classmethod
@@ -113,6 +110,7 @@ class Beast(WikiPage):
         return {
             block.find(class_="pi-header").contents[0]: cls.parse_statblock(block) for block in cls.get_statblocks(page)
         }
+
 
 class NPC(WikiPage):
     """NPCs have stat blocks in a horizontal table in the text."""
@@ -124,12 +122,12 @@ class NPC(WikiPage):
         """Stat Blocks are in tables of class `article-table`."""
         log.debug("Getting statblocks for: %s", page.find("title").contents)
         return page.find_all("table", class_="article-table")
-    
+
     @classmethod
     def parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
         """No tags - need to parse table."""
         log.debug("Parsing statblock %s", block)
-        
+
         def parse_stat(value: str) -> int:
             """Handle cases where values may be missing or given as dice rolls etc."""
             log.debug("Parsing Stat: %s", value)
@@ -147,7 +145,7 @@ class NPC(WikiPage):
                     log.warning("ValueError %s when parsing %s", e, value)
                     val = str(value)
             return val
-        
+
         table = [list(row.strings) for row in block.find_all("tr")]
 
         return {
@@ -155,7 +153,7 @@ class NPC(WikiPage):
             for statname, statvalue in zip(table[0], table[1], strict=True)
             if statname != "\n"
         }
-    
+
     @classmethod
     def get_stats(cls, page: BeautifulSoup) -> dict[str, dict[str, int]]:
         """No stat block title."""
@@ -167,9 +165,9 @@ class NPC(WikiPage):
 
 if __name__ == "__main__":
     log.info("Parsing Beastiary")
-    
+
     beastiary = get_and_parse(BEASTIARY_STARTING_PAGE)
-    
+
     log.debug("Got Beastiary Index")
 
     beast_pages = beastiary.find_all("a", class_="category-page__member-link")
@@ -178,7 +176,7 @@ if __name__ == "__main__":
     log.debug("Beast content pages: %r", beast_pages)
 
     beast_page_contents = {link.attrs["title"]: get_and_parse(link.attrs["href"]) for link in beast_pages}
- 
+
     log.debug("Parsed all pages")
 
     beasts = {

@@ -5,7 +5,7 @@ import pytest
 import requests
 from requests_file import FileAdapter
 
-from warhammer_bestiary import NPC, Beast, WikiPage
+from warhammer_bestiary.scraper import NPC, Beast, WikiPage
 
 
 class PageParam(Protocol):
