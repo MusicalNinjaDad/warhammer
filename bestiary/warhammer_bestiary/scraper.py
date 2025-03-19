@@ -2,8 +2,10 @@
 
 import json
 import logging
+from functools import cached_property
 from pathlib import Path
-from typing import Final
+from typing import ClassVar, Final
+from warnings import warn
 
 import requests
 from bs4 import BeautifulSoup
@@ -31,7 +33,44 @@ def get_and_parse(uri: str, uri_root: str = URI_ROOT, session: requests.Session 
     log.debug("Parsing %s", full_uri)
     return BeautifulSoup(_raw.text, features="html.parser")
 
-class Beast:
+class WikiPage:
+    """A https://wfrp1e.fandom.com page that contains statblocks."""
+
+    STARTING_PAGE: ClassVar[str]
+    """URI of the contents page for this type of information."""
+
+    def __init__(self, uri: str, uri_root: str = URI_ROOT, session: requests.Session = session) -> None:
+        """Initialise WikiPage for a given `uri`."""
+        self.uri = f"{uri_root}{uri}"
+        self.session = session
+    
+    @cached_property
+    def soup(self) -> BeautifulSoup:
+        """A BeautifulSoup of the page."""
+        return get_and_parse(self.uri, "", self.session)
+    
+    @property
+    def title(self) -> str:
+        """The page title."""
+        return self.soup.title.getText.split("|")[0].strip()
+    
+    @property
+    def statblocksoup(self) -> list[BeautifulSoup]:
+        """The Soup for each stat block."""
+        return self.soup.find_all(self.is_statblock)
+    
+    def is_statblock(self) -> bool:
+        """
+        How to recognise a statblock. Returns `True` if a tag represents a statblock.
+        
+        Varies by page, must be defined in each Subclass.
+        """
+        msg = f"{type(self)} has not defined `statblocks`."
+        raise NotImplementedError(msg)
+
+    
+
+class Beast(WikiPage):
     """A page for a normal member of the bestiary, with the stat block shown vertically at the side of the page."""
 
     @classmethod
@@ -75,7 +114,7 @@ class Beast:
             block.find(class_="pi-header").contents[0]: cls.parse_statblock(block) for block in cls.get_statblocks(page)
         }
 
-class NPC:
+class NPC(WikiPage):
     """NPCs have stat blocks in a horizontal table in the text."""
 
     STARTING_PAGE: Final = "/wiki/Category:NPCs"

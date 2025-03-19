@@ -1,34 +1,21 @@
 from pathlib import Path
 
 import pytest
-import requests
-from bs4 import BeautifulSoup
 from requests_file import FileAdapter
 
-from warhammer_bestiary import NPC, Beast, get_and_parse
+import warhammer_bestiary.scraper
+from warhammer_bestiary import NPC, Beast, WikiPage
 
 
-@pytest.fixture(scope="session")
-def requests_session() -> requests.Session:
-    session = requests.Session()
-    session.mount("file://", FileAdapter())
-    return session
-
-@pytest.fixture
-def amoeba(requests_session: requests.Session) -> BeautifulSoup:
-    localcopy = Path("tests/assets/amoeba.html").resolve()
-    return get_and_parse(str(localcopy), uri_root="file://", session=requests_session)
-
-@pytest.fixture
-def soup(requests_session: requests.Session, request: pytest.FixtureRequest) -> BeautifulSoup:
-    return get_and_parse(str(request.param), uri_root="file://", session=requests_session)
+def pytest_collection(session: pytest.Session) -> None:  # noqa: ARG001
+    warhammer_bestiary.scraper.session.mount("file://", FileAdapter())
+    warhammer_bestiary.scraper.URI_ROOT = f"file://{Path()}" 
 
 parametrized = pytest.mark.parametrize(
-    ["soup", "pageclass", "stats"],
+    ["page", "stats"],
     [
         pytest.param(
-            Path("tests/assets/amoeba.html").resolve(),
-            Beast,
+            Beast("tests/assets/amoeba.html"),
             {
                 "Basic Profile": {
                     "M": 4,
@@ -50,8 +37,7 @@ parametrized = pytest.mark.parametrize(
             id="amoeba",
         ),
         pytest.param(
-            Path("tests/assets/bat.html").resolve(),
-            Beast,
+            Beast("tests/assets/bat.html"),
             {
                 "Basic Profile": {
                     "M": 0,
@@ -73,8 +59,7 @@ parametrized = pytest.mark.parametrize(
             id="bat",
         ),
         pytest.param(
-            Path("tests/assets/NPC-artisans_apprentice.html").resolve(),
-            NPC,
+            NPC("tests/assets/NPC-artisans_apprentice.html"),
             {
                 "Basic Profile": {
                     "M": 4,
@@ -96,20 +81,19 @@ parametrized = pytest.mark.parametrize(
             id="NPC",
         ),
     ],
-    indirect=["soup"],
 )
 
 @parametrized
-def test_get_statblocks(soup: BeautifulSoup, pageclass: type, stats):
-    statblocks = pageclass.get_statblocks(soup)
+def test_get_statblocks(page: WikiPage, stats):
+    statblocks = page.statblocksoup
     assert len(statblocks) == len(stats)
 
 @parametrized
-def test_parse_block(soup: BeautifulSoup, pageclass: type, stats):
-    statblock = pageclass.get_statblocks(soup)[0]
-    assert pageclass.parse_statblock(statblock) == stats["Basic Profile"]
+def test_parse_block(page: WikiPage, stats):
+    statblock = page.statblocksoup [0]
+    assert page.parse_statblock(statblock) == stats["Basic Profile"]
 
 
 @parametrized
-def test_get_stats(soup: BeautifulSoup, pageclass: type, stats):
-    assert pageclass.get_stats(soup) == stats
+def test_get_stats(page: WikiPage, stats):
+    assert page.stats == stats
