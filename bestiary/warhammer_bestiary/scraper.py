@@ -65,7 +65,7 @@ class WikiPage:
         """
         msg = f"{type(self)} has not defined `statblocks`."
         raise NotImplementedError(msg)
-    
+
     @classmethod
     def parse_stat(cls, val: str) -> int | str:
         """Handle cases where values may be missing or given as dice rolls etc."""
@@ -76,14 +76,14 @@ class WikiPage:
         except ValueError:
             # E.g. "d6" or "3-5"
             return val
-        
+
     @property
-    def statblocks(self) -> dict[str,dict[str,int|str]]:
+    def statblocks(self) -> dict[str, dict[str, int | str]]:
         """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
         return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
-    
+
     @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
         """Return the title and parsed block. Must be implemented by each subclass."""
         msg = f"{cls.__name__} has not defined `parse_statblock`."
         raise NotImplementedError(msg)
@@ -97,7 +97,7 @@ class Beast(WikiPage):
         return "type-stat" in soup.get("class", "")
 
     @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
         """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
         title = blocksoup.find(class_="pi-header").getText()
         stats = {
@@ -117,55 +117,15 @@ class NPC(WikiPage):
         return soup.name == "table" and "article-table" in soup.get("class", "")
 
     @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str,dict[str,str|int]]:
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
         title = ""
         tablerows = blocksoup.find_all("tr")
         # TODO: add some kind of check that we only have two rows ...
         statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
         statvalues = [cls.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
-        stats = dict(zip(statnames, statvalues, strict = True))
+        stats = dict(zip(statnames, statvalues, strict=True))
         return title, stats
-
-
-    @classmethod
-    def _parse_statblock(cls, block: BeautifulSoup) -> dict[str, int]:
-        """No tags - need to parse table."""
-        log.debug("Parsing statblock %s", block)
-
-        def parse_stat(value: str) -> int:
-            """Handle cases where values may be missing or given as dice rolls etc."""
-            log.debug("Parsing Stat: %s", value)
-            if value == "-":
-                val = 0
-            else:
-                try:
-                    val = int(value)
-                except TypeError as e:
-                    # This occurs if `-` was identified as an empty `<ul>`
-                    log.warning("TypeError %s when parsing %s", e, value)
-                    val = 0
-                except ValueError as e:
-                    # E.g. "d6" or "3-5"
-                    log.warning("ValueError %s when parsing %s", e, value)
-                    val = str(value)
-            return val
-
-        table = [list(row.strings) for row in block.find_all("tr")]
-
-        return {
-            statname: parse_stat(statvalue)
-            for statname, statvalue in zip(table[0], table[1], strict=True)
-            if statname != "\n"
-        }
-
-    @classmethod
-    def get_stats(cls, page: BeautifulSoup) -> dict[str, dict[str, int]]:
-        """No stat block title."""
-        blocks = cls.get_statblocks(page)
-        if len(blocks) > 1:
-            log.error("Too many statblocks (%i) for %s", len(blocks), page.find("title").string)
-        return {"Basic Profile": cls.parse_statblock(blocks[0])}
 
 
 if __name__ == "__main__":
