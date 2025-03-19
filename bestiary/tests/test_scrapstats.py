@@ -77,7 +77,7 @@ parametrized = pytest.mark.parametrize(
         pytest.param(
             (NPC, Path("tests/assets/NPC-artisans_apprentice.html").absolute()),
             {
-                "Basic Profile": {
+                "0": {
                     "M": 4,
                     "WS": 31,
                     "BS": 25,
@@ -114,9 +114,9 @@ def test_pagetitle(page: WikiPage, stats, request: pytest.FixtureRequest):  # no
 
 
 @parametrized
-def test_parse_block(page: WikiPage, stats):
+def test_parse_block(page: WikiPage, stats: dict[str,dict[str,int]]):
     statblock = page.statblocksoup[0]
-    assert page.parse_statblock(statblock) == stats["Basic Profile"]
+    assert page.parse_statblock(statblock) == next(iter(stats.values()))
 
 
 @parametrized
