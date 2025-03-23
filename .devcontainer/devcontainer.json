@@ -64,5 +64,5 @@
         }
     },
     "onCreateCommand": "nbstripout --install",
-    "updateContentCommand": "uv sync --project bestiary -U"
+    "updateContentCommand": "uv sync --project bestiary -U && playwright install"
 }

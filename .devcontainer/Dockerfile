@@ -55,7 +55,27 @@ RUN dnf -y --setopt=install_weak_deps=False install \
     python3.12-devel
 
 # ollama
-RUN curl -fsSL https://ollama.com/install.sh | sh
+RUN curl -fsSL https://ollama.com/install.sh | sh \
+    && dnf -y --setopt=install_weak_deps=False install \
+        nss \
+        nspr \
+        dbus-libs \
+        at-spi2-atk \
+        at-spi2-core \
+        cups-libs \
+        libX11 \
+        libXcomposite \
+        libXdamage \
+        libXext \
+        libXfixes \
+        libXrandr \
+        mesa-libgbm \
+        libxcb \
+        libxkbcommon \
+        pango \
+        cairo \
+        alsa-lib \
+        at-spi2-core
 
 #uv for fast python package management
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
