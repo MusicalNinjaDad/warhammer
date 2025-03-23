@@ -15,8 +15,9 @@
         "Natural Language :: English",
     ]
     dependencies = [
+        "scrapegraphai>=1.43.1",
         "ttrpg-dice >= 0.2.0",
-    ]
+]
 
 [project.urls]
     # Homepage = ""
