@@ -70,36 +70,46 @@ A two-story stone house near the edge of Chaînefleur, deliberately set apart fr
 - Small decorative turret (more for show than function)
 - Iron-bound oak front door with oversized brass knocker
 - Small stable for 2 horses
-- Walled garden with imported ornamental plants
+
+- **Left**: stables; alley; other house
+- **Right**: alley; other house
+- **Opposite**: row of shops
+- **(Behind - hidden)**: small walled garden *(2 + d4) meters* deep with potted plants
+
+#### Entering
+
+- The front door (etc.) is **d6**
+  - 1-2: latched
+  - 3-4: locked
+  - 5-6: bolted inside
 
 #### Ground Floor Layout
 
 ```ascii
-    N
-    ^
-    |
 +-------------------+
 |   Kitchen    |St. |
 |          +---+    |
 |          |        |
-|  Dining  | Hall   |
+|  Dining  \ Hall   |
 |   Room   |        |
-|          +--------+
-|          | Entry  |
+|          +----- \-+
+|          | Entry  | <- Front door
 +----------+--------+
 ```
 
 #### First Floor Layout
 
+**STAIRS** - **I** test to *spot loose step*. On all fail: **Dex** test to see *who trips*
+
 ```ascii
 +-------------------+
 |  Master  | Stairs |
-| Bedroom  |        |
-|          |Storage |
-|Study/    |        |
-|Office    |Serv.   |
+| Bedroom  \        |
+|          |Stor|   |
+|-------/ -|    /   |
+|Office    |-----/ -|
+|          |Serv.   |
 |          |Room    |
-|          |        |
 +----------+--------+
 ```
 
