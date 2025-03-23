@@ -48,7 +48,7 @@ Last session, the players successfully resolved the situation with the shadows o
 
 ### Wandering Knight - Sir Laurent de la Verdière
 
-- **Appearance**: Well-maintained but plain armor, Shallyan mercy symbol discretely carved into shield
+- **Appearance**: Well-maintained but plain armor. Black shield.
 - **Short-term motivation**: Looking for allies to help reform Caucy's corrupt system
 - **Background**: Former court knight who left after witnessing too much corruption and cruelty
 - **Quirk**: Habitually touches the Shallyan symbol on his shield when troubled or thinking deeply
