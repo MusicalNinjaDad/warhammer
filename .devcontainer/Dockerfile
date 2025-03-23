@@ -54,6 +54,9 @@ RUN dnf -y --setopt=install_weak_deps=False install \
     python3.12 \
     python3.12-devel
 
+# ollama
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
 #uv for fast python package management
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
