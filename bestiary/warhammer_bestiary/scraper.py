@@ -164,7 +164,7 @@ class Beast(WikiPage):
         return cls.is_vertical_statblock(soup) or cls.is_horizontal_statblock(soup)
 
     @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
+    def parse_vertical_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
         """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
         title = blocksoup.find(class_="pi-header").getText()
         try:
@@ -175,6 +175,31 @@ class Beast(WikiPage):
         except Exception:
             log.exception("Error parsing stats for %s - Blocksoup: %r", cls.__name__, blocksoup)
         return title, stats
+    
+    @classmethod
+    def parse_horizontal_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
+        """No tags and no title. Need to parse a table & provide `''` as title."""
+        title = ""
+        tablerows = blocksoup.find_all("tr")
+        # TODO: add some kind of check that we only have two rows ...
+        statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
+        statvalues = [cls.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
+        try:
+            stats = dict(zip(statnames, statvalues, strict=True))
+        except ValueError:
+            log.exception("Error parsing stats for %s - Blocksoup: %r", cls.__name__, blocksoup)
+        return title, stats
+    
+    @classmethod
+    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
+        """Parse both types of statblock."""
+        if cls.is_vertical_statblock(blocksoup):
+            return cls.parse_vertical_statblock(blocksoup)
+        if cls.is_horizontal_statblock(blocksoup):
+            return cls.parse_horizontal_statblock(blocksoup)
+        log.warning("Can't parse as a statblock: %r", blocksoup)
+        return None
+        
 
 
 class NPC(WikiPage):
