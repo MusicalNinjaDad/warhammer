@@ -146,12 +146,22 @@ class Beast(WikiPage):
             and "category-page__member-link" in tag.get("class", "")
             and "(NPC)" not in tag.attrs["title"]
         )
+    
+        
+    @classmethod
+    def is_vertical_statblock(cls, soup: BeautifulSoup) -> bool:
+        """Vertical statblocks are on basic Beast pages in an `aside` tag with class `type-stat`."""
+        return "type-stat" in soup.get("class", "")
+    
+    @classmethod
+    def is_horizontal_statblock(cls, soup: BeautifulSoup) -> bool:
+        """Horizontal statblocks are on NPCs and beasts with multiple blocks, in tables of class `article-table`."""
+        return soup.name == "table" and "article-table" in soup.get("class", "")
 
-    def is_statblock(self, soup: BeautifulSoup) -> bool:
+    @classmethod
+    def is_statblock(cls, soup: BeautifulSoup) -> bool:
         """Statblocks are in an `aside` tag with class `type-stat`."""
-        return "type-stat" in soup.get("class", "") or (
-            soup.name == "table" and "article-table" in soup.get("class", "")
-        )
+        return cls.is_vertical_statblock(soup) or cls.is_horizontal_statblock(soup)
 
     @classmethod
     def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
