@@ -113,7 +113,7 @@ parametrized = pytest.mark.parametrize(
             id="Bat",
         ),
         pytest.param(
-            (NPC, Path("tests/assets/NPC-artisans_apprentice.html").absolute()),
+            (Beast, Path("tests/assets/NPC-artisans_apprentice.html").absolute()),
             {
                 "": {
                     "M": 4,

@@ -149,7 +149,9 @@ class Beast(WikiPage):
 
     def is_statblock(self, soup: BeautifulSoup) -> bool:
         """Statblocks are in an `aside` tag with class `type-stat`."""
-        return "type-stat" in soup.get("class", "")
+        return "type-stat" in soup.get("class", "") or (
+            soup.name == "table" and "article-table" in soup.get("class", "")
+        )
 
     @classmethod
     def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
