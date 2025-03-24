@@ -1459,7 +1459,7 @@ python = [
 
 [[package]]
 name = "mkdocstrings-python"
-version = "1.16.7"
+version = "1.16.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "griffe" },
@@ -1467,9 +1467,9 @@ dependencies = [
     { name = "mkdocstrings" },
     { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/52/e0/cc35acb47593c138efbfc9dc296ccc26b7ad4452e868fd309f05f6ba0ded/mkdocstrings_python-1.16.7.tar.gz", hash = "sha256:cdfc1a99fe5f6f0d90446a364ef7cac12014a4ef46114b2677a58cec84007117", size = 1475398 }
+sdist = { url = "https://files.pythonhosted.org/packages/8e/b8/62190ea298fdb1e84670ef548590748c633ab4e05b35bcf902e89f2f28c6/mkdocstrings_python-1.16.8.tar.gz", hash = "sha256:9453ccae69be103810c1cf6435ce71c8f714ae37fef4d87d16aa92a7c800fe1d", size = 205119 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ab/5e/dc978b9fd6331e2070369579ad8f52145e9ef22a69bfc2811110be95e6d4/mkdocstrings_python-1.16.7-py3-none-any.whl", hash = "sha256:a5589a5be247a28ba651287f83630c69524042f8055d93b5c203d804a3409333", size = 1998312 },
+    { url = "https://files.pythonhosted.org/packages/67/d0/ef6e82f7a68c7ac02e1a01815fbe88773f4f9e40728ed35bd1664a5d76f2/mkdocstrings_python-1.16.8-py3-none-any.whl", hash = "sha256:211b7aaf776cd45578ecb531e5ad0d3a35a8be9101a6bfa10de38a69af9d8fd8", size = 124116 },
 ]
 
 [[package]]
@@ -1954,11 +1954,11 @@ wheels = [
 
 [[package]]
 name = "pyparsing"
-version = "3.2.1"
+version = "3.2.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/8b/1a/3544f4f299a47911c2ab3710f534e52fea62a633c96806995da5d25be4b2/pyparsing-3.2.1.tar.gz", hash = "sha256:61980854fd66de3a90028d679a954d5f2623e83144b5afe5ee86f43d762e5f0a", size = 1067694 }
+sdist = { url = "https://files.pythonhosted.org/packages/55/f0/3a81fb395058f5fc84bccb0dc9ca09eddf69b3cc86ccab6729c680121912/pyparsing-3.2.2.tar.gz", hash = "sha256:2a857aee851f113c2de9d4bfd9061baea478cb0f1c7ca6cbf594942d6d111575", size = 1088193 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1c/a7/c8a2d361bf89c0d9577c934ebb7421b25dc84bf3a8e3ac0a40aed9acc547/pyparsing-3.2.1-py3-none-any.whl", hash = "sha256:506ff4f4386c4cec0590ec19e6302d3aedb992fdc02c761e90416f158dacf8e1", size = 107716 },
+    { url = "https://files.pythonhosted.org/packages/f9/83/80c17698f41131f7157a26ae985e2c1f5526db79f277c4416af145f3e12b/pyparsing-3.2.2-py3-none-any.whl", hash = "sha256:6ab05e1cb111cc72acc8ed811a3ca4c2be2af8d7b6df324347f04fd057d8d793", size = 111060 },
 ]
 
 [[package]]
@@ -2400,11 +2400,11 @@ wheels = [
 
 [[package]]
 name = "setuptools"
-version = "77.0.3"
+version = "78.0.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/81/ed/7101d53811fd359333583330ff976e5177c5e871ca8b909d1d6c30553aa3/setuptools-77.0.3.tar.gz", hash = "sha256:583b361c8da8de57403743e756609670de6fb2345920e36dc5c2d914c319c945", size = 1367236 }
+sdist = { url = "https://files.pythonhosted.org/packages/47/42/55a8f24bd1287676b23e56a6d94e416be390ca6e0ee30fa46a782d038f80/setuptools-78.0.1.tar.gz", hash = "sha256:4321d2dc2157b976dee03e1037c9f2bc5fea503c0c47d3c9458e0e8e49e659ce", size = 1367415 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a9/07/99f2cefae815c66eb23148f15d79ec055429c38fa8986edcc712ab5f3223/setuptools-77.0.3-py3-none-any.whl", hash = "sha256:67122e78221da5cf550ddd04cf8742c8fe12094483749a792d56cd669d6cf58c", size = 1255678 },
+    { url = "https://files.pythonhosted.org/packages/42/c8/3faed884acdb2c1f2eb353cbacdd1ee4943de89a199d1f622ebefb6170e5/setuptools-78.0.1-py3-none-any.whl", hash = "sha256:1cc9b32ee94f93224d6c80193cbb768004667aa2f2732a473d6949b0236c1d4e", size = 1255630 },
 ]
 
 [[package]]
