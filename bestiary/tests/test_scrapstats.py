@@ -9,7 +9,7 @@ from warhammer_bestiary.scraper import NPC, Beast, WikiPage
 
 
 class PageParam(Protocol):
-    param: tuple[type[WikiPage], Path]
+    param: Path
 
 
 @pytest.fixture(scope="module")
@@ -22,9 +22,8 @@ def requests_session() -> requests.Session:
 
 @pytest.fixture
 def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
-    pagetype = request.param[0]
-    uri = request.param[1]
-    return pagetype(uri=f"file://{uri}", session=requests_session)
+    uri = request.param
+    return WikiPage(uri=f"file://{uri}", session=requests_session)
 
 @pytest.mark.parametrize(
     ["page_type", "contents_page", "num_links", "contains", "absent"],
@@ -69,7 +68,7 @@ parametrized = pytest.mark.parametrize(
     ["page", "stats"],
     [
         pytest.param(
-            (Beast, Path("tests/assets/amoeba.html").absolute()),
+            Path("tests/assets/amoeba.html").absolute(),
             {
                 "Basic Profile": {
                     "M": 4,
@@ -91,7 +90,7 @@ parametrized = pytest.mark.parametrize(
             id="Amoeba",
         ),
         pytest.param(
-            (Beast, Path("tests/assets/bat.html").absolute()),
+            Path("tests/assets/bat.html").absolute(),
             {
                 "Basic Profile": {
                     "M": 0,
@@ -113,7 +112,7 @@ parametrized = pytest.mark.parametrize(
             id="Bat",
         ),
         pytest.param(
-            (Beast, Path("tests/assets/NPC-artisans_apprentice.html").absolute()),
+            Path("tests/assets/NPC-artisans_apprentice.html").absolute(),
             {
                 "": {
                     "M": 4,

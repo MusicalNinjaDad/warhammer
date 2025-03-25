@@ -53,25 +53,6 @@ class WikiPage:
         msg = f"{cls.__name__} has not defined `is_page_link`."
         raise NotImplementedError(msg)
 
-    def is_statblock(self, soup: BeautifulSoup) -> bool:
-        """
-        How to recognise a statblock. Returns `True` if a tag represents a statblock.
-
-        Varies based on page design, must be defined in each Subclass.
-        """
-        msg = f"{type(self)} has not defined `statblocks`."
-        raise NotImplementedError(msg)
-    
-    @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
-        """
-        Parse a block of soup and return the statblock title and a dict of the parsed stats.
-        
-        The form of `soupblock` varies based on page design, so this must be defined in each Subclass.
-        """
-        msg = f"{cls.__name__} has not defined `parse_statblock`."
-        raise NotImplementedError(msg)
-
     def __init__(self, uri: str, session: requests.Session | None = None) -> None:
         """Initialise WikiPage for a given `uri`."""
         log.info("Initialising %s for %s", type(self), uri)
@@ -131,22 +112,6 @@ class WikiPage:
         except ValueError:
             # E.g. "d6" or "3-5"
             return val
-
-
-class Beast(WikiPage):
-    """A page for a normal member of the bestiary, with the stat block shown vertically at the side of the page."""
-
-    CATEGORY_INDEX: Final = "https://wfrp1e.fandom.com/wiki/Category:Bestiary"
-
-    @classmethod
-    def is_page_link(cls, tag: BeautifulSoup) -> bool:
-        """Beast_pages = beastiary.find_all("a", class_="category-page__member-link")."""
-        return (
-            tag.name == "a"
-            and "category-page__member-link" in tag.get("class", "")
-            and "(NPC)" not in tag.attrs["title"]
-        )
-    
         
     @classmethod
     def is_vertical_statblock(cls, soup: BeautifulSoup) -> bool:
@@ -199,6 +164,21 @@ class Beast(WikiPage):
             return cls.parse_horizontal_statblock(blocksoup)
         log.warning("Can't parse as a statblock: %r", blocksoup)
         return None
+
+
+class Beast(WikiPage):
+    """A page for a normal member of the bestiary, with the stat block shown vertically at the side of the page."""
+
+    CATEGORY_INDEX: Final = "https://wfrp1e.fandom.com/wiki/Category:Bestiary"
+
+    @classmethod
+    def is_page_link(cls, tag: BeautifulSoup) -> bool:
+        """Beast_pages = beastiary.find_all("a", class_="category-page__member-link")."""
+        return (
+            tag.name == "a"
+            and "category-page__member-link" in tag.get("class", "")
+            and "(NPC)" not in tag.attrs["title"]
+        )
         
 
 
