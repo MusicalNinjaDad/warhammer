@@ -67,7 +67,7 @@ class HorizontalBlock(BlockParser):
 
     def parse(self) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
-        title = ""
+        title = "Basic Profile"
         tablerows = self.soup.find_all("tr")
         # TODO: add some kind of check that we only have two rows ...
         statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]

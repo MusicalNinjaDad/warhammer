@@ -114,7 +114,7 @@ parametrized = pytest.mark.parametrize(
         pytest.param(
             Path("tests/assets/NPC-artisans_apprentice.html").absolute(),
             {
-                "": {
+                "Basic Profile": {
                     "M": 4,
                     "WS": 31,
                     "BS": 25,
