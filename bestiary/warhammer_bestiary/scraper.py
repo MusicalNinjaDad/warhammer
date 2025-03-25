@@ -74,7 +74,7 @@ class UntitledBlock(BlockParser):
     def parse(self) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
         try:
-            title = self.soup.find_previous_sibling("h3").find("span")["id"]
+            title = self.soup.find_previous_sibling("h3").find("span", class_="mw-headline").getText(strip=True)
         except AttributeError:
             title = "Basic Profile"
         tablerows = self.soup.find_all("tr")
@@ -103,7 +103,7 @@ class TitledBlock(BlockParser):
     def parse(self) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
         try:
-            group = self.soup.find_previous_sibling("h3").find("span")["id"]
+            group = self.soup.find_previous_sibling("h3").find("span", class_="mw-headline").getText(strip=True)
         except AttributeError:
             group = ""
         tablerows = self.soup.find_all("tr")

@@ -152,7 +152,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 29,
                     "Fel": 29,
                 },
-                "Teamsters_or_Stevedores": {
+                "Teamsters or Stevedores": {
                     "M": 4,
                     "WS": 33,
                     "BS": 25,
@@ -174,7 +174,7 @@ parametrized = pytest.mark.parametrize(
         pytest.param(
             Path("tests/assets/soldiers.html").absolute(),
             {
-                "Generic_Soldier": {
+                "Generic Soldier": {
                     "M": 4,
                     "WS": 43,
                     "BS": 35,
@@ -190,7 +190,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 29,
                     "Fel": 29,
                 },
-                "The_Imperial_Guard.Cavalry Officer": {
+                "The Imperial Guard.Cavalry Officer": {
                     "M": 4,
                     "WS": 65,
                     "BS": 50,
@@ -206,7 +206,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 40,
                     "Fel": 50,
                 },
-                "The_Imperial_Guard.Cavalryman": {
+                "The Imperial Guard.Cavalryman": {
                     "M": 4,
                     "WS": 50,
                     "BS": 38,
@@ -222,7 +222,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 29,
                     "Fel": 30,
                 },
-                "The_Imperial_Guard.Officer": {
+                "The Imperial Guard.Officer": {
                     "M": 4,
                     "WS": 60,
                     "BS": 45,
@@ -238,7 +238,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 40,
                     "Fel": 50,
                 },
-                "The_Imperial_Guard.Soldier": {
+                "The Imperial Guard.Soldier": {
                     "M": 4,
                     "WS": "50♦",
                     "BS": "40♦",
@@ -254,7 +254,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 29,
                     "Fel": 30,
                 },
-                "The_Imperial_Guard.Mercenary Captain": {
+                "The Imperial Guard.Mercenary Captain": {
                     "M": 4,
                     "WS": 55,
                     "BS": 45,
@@ -270,7 +270,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 35,
                     "Fel": 45,
                 },
-                "The_Imperial_Guard.Mercenary Soldier": {
+                "The Imperial Guard.Mercenary Soldier": {
                     "M": 4,
                     "WS": 45,
                     "BS": 35,
@@ -286,7 +286,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 25,
                     "Fel": 30,
                 },
-                "The_Imperial_Guard.Templar": {
+                "The Imperial Guard.Templar": {
                     "M": 4,
                     "WS": 70,
                     "BS": 55,
@@ -302,7 +302,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 60,
                     "Fel": 59,
                 },
-                "The_Imperial_Guard.Halfling Infantry": {
+                "The Imperial Guard.Halfling Infantry": {
                     "M": 3,
                     "WS": 38,
                     "BS": 45,
@@ -318,7 +318,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 55,
                     "Fel": 53,
                 },
-                "Standing_Armies_In_The_Empire.Sergeant": {
+                "Standing Armies In The Empire.Sergeant": {
                     "M": 4,
                     "WS": 50,
                     "BS": 30,
@@ -334,7 +334,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 35,
                     "Fel": 40,
                 },
-                "Standing_Armies_In_The_Empire.Soldier": {
+                "Standing Armies In The Empire.Soldier": {
                     "M": 4,
                     "WS": 45,
                     "BS": 30,
@@ -350,7 +350,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 25,
                     "Fel": 30,
                 },
-                "Standing_Armies_In_The_Empire.Pikeman": {
+                "Standing Armies In The Empire.Pikeman": {
                     "M": 4,
                     "WS": 45,
                     "BS": 30,
@@ -366,7 +366,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 26,
                     "Fel": 29,
                 },
-                "Standing_Armies_In_The_Empire.Mercenary Crossbowman": {
+                "Standing Armies In The Empire.Mercenary Crossbowman": {
                     "M": 4,
                     "WS": 40,
                     "BS": 50,
@@ -382,7 +382,7 @@ parametrized = pytest.mark.parametrize(
                     "WP": 30,
                     "Fel": 35,
                 },
-                "Standing_Armies_In_The_Empire.Gunnery Captain": {
+                "Standing Armies In The Empire.Gunnery Captain": {
                     "M": 4,
                     "WS": 54,
                     "BS": 30,
