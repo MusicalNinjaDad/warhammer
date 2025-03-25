@@ -26,6 +26,39 @@ def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa
     log.debug("Parsing %s", uri)
     return BeautifulSoup(_raw.text, features="html.parser")
 
+class BlockParser:
+    """Identify, store and parse the soup for a StatBlock."""
+    
+    @classmethod
+    def filter(cls, soup: BeautifulSoup) -> bool:
+        """Filter to pass to `bs4.find_all` to identify this type of Block."""
+        msg = f"{cls} has not defined `filter`."
+        raise NotImplementedError(msg)
+
+    def parse(self) -> tuple[str, dict[str, int | str]]:
+        """Parse the block and return `(block_title, stats)`."""
+        msg = f"{type(self)} has not defined `parse`."
+        raise NotImplementedError(msg)
+    
+    def __init__(self, soup: BeautifulSoup) -> None:
+        """Store the soup."""
+        self.soup = soup
+
+class HorizontalBlock(BlockParser):
+    """Horizontal statblocks are on NPCs and beasts with multiple blocks."""
+
+    @classmethod
+    def filter(cls, soup: BeautifulSoup) -> bool:
+        """In tables of class `article-table`."""
+        return soup.name == "table" and "article-table" in soup.get("class", "")
+
+class VerticalBlock(BlockParser):
+    """Vertical statblocks are on basic Beast pages."""
+
+    @classmethod
+    def filter(cls, soup: BeautifulSoup) -> bool:
+        """In an `aside` tag with class `type-stat`."""
+        return "type-stat" in soup.get("class", "")
 
 class WikiPage:
     """
@@ -42,6 +75,7 @@ class WikiPage:
 
     CATEGORY_INDEX: ClassVar[str]
     """URI of the contents page for this type of information."""
+    parsers: ClassVar[list[BlockParser]] = [VerticalBlock, HorizontalBlock]
 
     @classmethod
     def is_page_link(cls, tag: BeautifulSoup) -> bool:
@@ -70,16 +104,11 @@ class WikiPage:
         return self.soup.title.getText().split("|")[0].strip()
 
     @property
-    def statblocksoup(self) -> list[BeautifulSoup]:
-        """The Soup for each stat block."""
-        return self.soup.find_all(self.is_statblock)
-
-    @property
-    def statblocks(self) -> dict[str, dict[str, int | str]]:
-        """All the page's statblocks, parsed by the class-specific `parse_statblock` method."""
+    def statblocks(self) -> list[BlockParser]:
+        """All the page's statblocks."""
         log.info("Getting statblocks for %s", self.title)
-        return dict(self.parse_statblock(blocksoup) for blocksoup in self.statblocksoup)
-
+        return [parser(blocksoup) for parser in self.parsers for blocksoup in self.soup.find_all(parser.filter)]
+    
     @classmethod
     def absolute(cls, uri: str) -> str:
         """Return dull URI for a partial address, using `CATEGORY_INDEX` as the root."""
@@ -100,21 +129,6 @@ class WikiPage:
         session = requests.Session() if session is None else session
         indexsoup = get_and_parse(cls.CATEGORY_INDEX, session)
         return {link.attrs["title"]: link.attrs["href"] for link in indexsoup.find_all(cls.is_page_link)}
-
-    @classmethod
-    def is_vertical_statblock(cls, soup: BeautifulSoup) -> bool:
-        """Vertical statblocks are on basic Beast pages in an `aside` tag with class `type-stat`."""
-        return "type-stat" in soup.get("class", "")
-
-    @classmethod
-    def is_horizontal_statblock(cls, soup: BeautifulSoup) -> bool:
-        """Horizontal statblocks are on NPCs and beasts with multiple blocks, in tables of class `article-table`."""
-        return soup.name == "table" and "article-table" in soup.get("class", "")
-
-    @classmethod
-    def is_statblock(cls, soup: BeautifulSoup) -> bool:
-        """Statblocks are in an `aside` tag with class `type-stat`."""
-        return cls.is_vertical_statblock(soup) or cls.is_horizontal_statblock(soup)
 
     @classmethod
     def parse_stat(cls, val: str) -> int | str:

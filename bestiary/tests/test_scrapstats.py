@@ -139,9 +139,8 @@ parametrized = pytest.mark.parametrize(
 
 
 @parametrized
-def test_statblocksoup(page: WikiPage, stats):
-    statblocks = page.statblocksoup
-    assert len(statblocks) == len(stats)
+def test_numstatblocks(page: WikiPage, stats):
+    assert len(page.statblocks) == len(stats)
 
 
 @parametrized
@@ -152,10 +151,10 @@ def test_pagetitle(page: WikiPage, stats, request: pytest.FixtureRequest):  # no
 
 @parametrized
 def test_parse_statblock(page: WikiPage, stats: dict[str, dict[str, int]]):
-    statblock = page.statblocksoup[0]
-    assert page.parse_statblock(statblock) == next(iter(stats.items()))
+    statblock = page.statblocks[0]
+    assert statblock.parse() == next(iter(stats.items()))
 
 
 @parametrized
 def test_statblocks(page: WikiPage, stats):
-    assert page.statblocks == stats
+    assert page.as_dict() == stats
