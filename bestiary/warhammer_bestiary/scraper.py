@@ -103,13 +103,13 @@ class TitledBlock(BlockParser):
     def parse(self) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
         try:
-            title = self.soup.find_previous_sibling("h3").find("span")["id"]
+            group = self.soup.find_previous_sibling("h3").find("span")["id"]
         except AttributeError:
-            title = "Basic Profile"
+            group = ""
         tablerows = self.soup.find_all("tr")
-        # TODO: add some kind of check that we only have two rows ...
-        statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
-        statvalues = [self.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
+        title = f"{group}.{tablerows[0].getText(strip=True)}"
+        statnames = [cell.get_text(strip=True) for cell in tablerows[1].find_all("td")]
+        statvalues = [self.parse_stat(cell.get_text(strip=True)) for cell in tablerows[2].find_all("td")]
         try:
             stats = dict(zip(statnames, statvalues, strict=True))
         except ValueError:
