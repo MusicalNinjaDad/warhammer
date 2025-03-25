@@ -1,0 +1,332 @@
+2025-03-25 19:50:07,387 - INFO: Begin scraping Beasts
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Amoeba
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Amphisbaena
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Basilisk
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bat
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bear
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Beast Of Nurgle
+2025-03-25 19:50:07,559 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bestiary
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Black Orc
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bloodletter
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bloodsedge
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bloodthirster
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Boar
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bog Octopus
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Carnivorous Snapper
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Carrion
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Cat
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Chameleoleech
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Chaos Beastman
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Chimera
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Cold One
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Cold One Warhound
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Daemonette
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Daemonic Servant
+2025-03-25 19:50:07,560 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Daemonic Steed
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Daemons
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Discs
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Dog
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Doppelganger
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Dragon
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Dragon Turtle
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Dryad
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Dwarf
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Eagle
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Elementals
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Elf
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fen Worm
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fiend Of Slaanesh
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fimir
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Flamer
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fleshhound
+2025-03-25 19:50:07,561 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fox
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Frog
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fungus And Mould
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Ghost
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Ghoul
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Giant
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Giant Bat
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Giant Beetle
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Giant Leech
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Giant Scorpion
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Giant Spider
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Gnome
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Goblin
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Goldworm
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Great Unclean One
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Greater Daemon
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Griffon
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Guardian Spirit
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Halfling
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Harpy
+2025-03-25 19:50:07,562 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Hawk
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Herd Animal
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/High Elf Mage
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Hippogriff
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Hobgoblin
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Horrors
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Horse
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Human
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Hydra
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Instability
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Jabberwock
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Juggernaut
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Keeper Of Secrets
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Lashworm
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Lesser Daemon
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Liche
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Lizardman
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Lord Of Change
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Manticore
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Marshlight
+2025-03-25 19:50:07,563 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Minotaur
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Mount Of Slaanesh
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Mummy
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Mutant
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Nurglings
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Ogre
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Orc
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Otter
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Owl
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Pegasus
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Plaguebearer
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Rabbit
+2025-03-25 19:50:07,564 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Ram
+2025-03-25 19:50:07,565 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Rat
+2025-03-25 19:50:07,565 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Raven
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Razorbill
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Sand Clam
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Skaven
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Skeleton
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Small Animals
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Snake
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Snotling
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Soldiers
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Spectre
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Squirrel
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Stoat
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Sunworm
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Swarm
+2025-03-25 19:50:07,570 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Thugs
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Treeman
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Troglodyte
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Troll
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Undead
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Unicorn
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Vampire
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Viydagg
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/War Dog
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Warrior Of Chaos
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Werecreature
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Wight
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Wild Cat
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Wolf
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Wraith
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Wyvern
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Zoat
+2025-03-25 19:50:07,571 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Zombie
+2025-03-25 19:50:08,236 - INFO: Getting statblocks for Amoeba
+2025-03-25 19:50:08,914 - INFO: Getting statblocks for Amphisbaena
+2025-03-25 19:50:09,680 - INFO: Getting statblocks for Basilisk
+2025-03-25 19:50:10,013 - INFO: Getting statblocks for Bat
+2025-03-25 19:50:10,647 - INFO: Getting statblocks for Bear
+2025-03-25 19:50:11,493 - INFO: Getting statblocks for Beast Of Nurgle
+2025-03-25 19:50:12,316 - INFO: Getting statblocks for Bestiary
+2025-03-25 19:50:13,052 - INFO: Getting statblocks for Black Orc
+2025-03-25 19:50:13,735 - INFO: Getting statblocks for Bloodletter
+2025-03-25 19:50:14,563 - INFO: Getting statblocks for Bloodsedge
+2025-03-25 19:50:15,373 - INFO: Getting statblocks for Bloodthirster
+2025-03-25 19:50:17,651 - INFO: Getting statblocks for Boar
+2025-03-25 19:50:18,219 - INFO: Getting statblocks for Bog Octopus
+2025-03-25 19:50:18,823 - INFO: Getting statblocks for Carnivorous Snapper
+2025-03-25 19:50:19,656 - INFO: Getting statblocks for Carrion
+2025-03-25 19:50:20,399 - INFO: Getting statblocks for Cat
+2025-03-25 19:50:21,239 - INFO: Getting statblocks for Chameleoleech
+2025-03-25 19:50:22,220 - INFO: Getting statblocks for Chaos Beastman
+2025-03-25 19:50:22,977 - INFO: Getting statblocks for Chimera
+2025-03-25 19:50:23,732 - INFO: Getting statblocks for Cold One
+2025-03-25 19:50:24,466 - INFO: Getting statblocks for Cold One Warhound
+2025-03-25 19:50:25,486 - INFO: Getting statblocks for Daemonette
+2025-03-25 19:50:26,258 - INFO: Getting statblocks for Daemonic Servant
+2025-03-25 19:50:27,075 - INFO: Getting statblocks for Daemonic Steed
+2025-03-25 19:50:27,870 - INFO: Getting statblocks for Daemons
+2025-03-25 19:50:28,862 - INFO: Getting statblocks for Discs
+2025-03-25 19:50:29,757 - INFO: Getting statblocks for Dog
+2025-03-25 19:50:30,638 - INFO: Getting statblocks for Doppelganger
+2025-03-25 19:50:31,618 - INFO: Getting statblocks for Dragon
+2025-03-25 19:50:32,496 - INFO: Getting statblocks for Dragon Turtle
+2025-03-25 19:50:33,170 - INFO: Getting statblocks for Dryad
+2025-03-25 19:50:33,770 - INFO: Getting statblocks for Dwarf
+2025-03-25 19:50:34,545 - INFO: Getting statblocks for Eagle
+2025-03-25 19:50:35,351 - INFO: Getting statblocks for Elementals
+2025-03-25 19:50:36,129 - INFO: Getting statblocks for Elf
+2025-03-25 19:50:36,900 - INFO: Getting statblocks for Fen Worm
+2025-03-25 19:50:37,669 - INFO: Getting statblocks for Fiend Of Slaanesh
+2025-03-25 19:50:38,417 - INFO: Getting statblocks for Fimir
+2025-03-25 19:50:39,203 - INFO: Getting statblocks for Flamer
+2025-03-25 19:50:40,115 - INFO: Getting statblocks for Fleshhound
+2025-03-25 19:50:40,904 - INFO: Getting statblocks for Fox
+2025-03-25 19:50:41,623 - INFO: Getting statblocks for Frog
+2025-03-25 19:50:42,460 - INFO: Getting statblocks for Fungus And Mould
+2025-03-25 19:50:43,256 - INFO: Getting statblocks for Ghost
+2025-03-25 19:50:44,197 - INFO: Getting statblocks for Ghoul
+2025-03-25 19:50:44,985 - INFO: Getting statblocks for Giant
+2025-03-25 19:50:45,785 - INFO: Getting statblocks for Giant Bat
+2025-03-25 19:50:46,556 - INFO: Getting statblocks for Giant Beetle
+2025-03-25 19:50:48,720 - INFO: Getting statblocks for Giant Leech
+2025-03-25 19:50:49,520 - INFO: Getting statblocks for Giant Scorpion
+2025-03-25 19:50:50,188 - INFO: Getting statblocks for Giant Spider
+2025-03-25 19:50:51,125 - INFO: Getting statblocks for Gnome
+2025-03-25 19:50:51,830 - INFO: Getting statblocks for Goblin
+2025-03-25 19:50:52,627 - INFO: Getting statblocks for Goldworm
+2025-03-25 19:50:53,394 - INFO: Getting statblocks for Great Unclean One
+2025-03-25 19:50:54,302 - INFO: Getting statblocks for Greater Daemon
+2025-03-25 19:50:55,032 - INFO: Getting statblocks for Griffon
+2025-03-25 19:50:55,779 - INFO: Getting statblocks for Guardian Spirit
+2025-03-25 19:50:56,467 - INFO: Getting statblocks for Halfling
+2025-03-25 19:50:57,392 - INFO: Getting statblocks for Harpy
+2025-03-25 19:50:58,141 - INFO: Getting statblocks for Hawk
+2025-03-25 19:50:58,854 - INFO: Getting statblocks for Herd Animal
+2025-03-25 19:50:59,697 - INFO: Getting statblocks for High Elf Mage
+2025-03-25 19:51:00,858 - INFO: Getting statblocks for Hippogriff
+2025-03-25 19:51:01,544 - INFO: Getting statblocks for Hobgoblin
+2025-03-25 19:51:02,316 - INFO: Getting statblocks for Horrors
+2025-03-25 19:51:03,164 - INFO: Getting statblocks for Horse
+2025-03-25 19:51:03,927 - INFO: Getting statblocks for Human
+2025-03-25 19:51:04,767 - INFO: Getting statblocks for Hydra
+2025-03-25 19:51:05,494 - INFO: Getting statblocks for Instability
+2025-03-25 19:51:06,187 - INFO: Getting statblocks for Jabberwock
+2025-03-25 19:51:06,948 - INFO: Getting statblocks for Juggernaut
+2025-03-25 19:51:07,515 - INFO: Getting statblocks for Keeper Of Secrets
+2025-03-25 19:51:08,211 - INFO: Getting statblocks for Lashworm
+2025-03-25 19:51:09,032 - INFO: Getting statblocks for Lesser Daemon
+2025-03-25 19:51:09,783 - INFO: Getting statblocks for Liche
+2025-03-25 19:51:10,500 - INFO: Getting statblocks for Lizardman
+2025-03-25 19:51:11,174 - INFO: Getting statblocks for Lord Of Change
+2025-03-25 19:51:11,865 - INFO: Getting statblocks for Manticore
+2025-03-25 19:51:12,822 - INFO: Getting statblocks for Marshlight
+2025-03-25 19:51:13,572 - INFO: Getting statblocks for Minotaur
+2025-03-25 19:51:14,336 - INFO: Getting statblocks for Mount Of Slaanesh
+2025-03-25 19:51:15,480 - INFO: Getting statblocks for Mummy
+2025-03-25 19:51:16,287 - INFO: Getting statblocks for Mutant
+2025-03-25 19:51:16,941 - INFO: Getting statblocks for Nurglings
+2025-03-25 19:51:17,600 - INFO: Getting statblocks for Ogre
+2025-03-25 19:51:18,369 - INFO: Getting statblocks for Orc
+2025-03-25 19:51:20,492 - INFO: Getting statblocks for Otter
+2025-03-25 19:51:21,270 - INFO: Getting statblocks for Owl
+2025-03-25 19:51:22,052 - INFO: Getting statblocks for Pegasus
+2025-03-25 19:51:22,787 - INFO: Getting statblocks for Plaguebearer
+2025-03-25 19:51:23,504 - INFO: Getting statblocks for Rabbit
+2025-03-25 19:51:24,360 - INFO: Getting statblocks for Ram
+2025-03-25 19:51:25,091 - INFO: Getting statblocks for Rat
+2025-03-25 19:51:25,850 - INFO: Getting statblocks for Raven
+2025-03-25 19:51:26,406 - INFO: Getting statblocks for Razorbill
+2025-03-25 19:51:27,234 - INFO: Getting statblocks for Sand Clam
+2025-03-25 19:51:27,994 - INFO: Getting statblocks for Skaven
+2025-03-25 19:51:28,692 - INFO: Getting statblocks for Skeleton
+2025-03-25 19:51:29,597 - INFO: Getting statblocks for Small Animals
+2025-03-25 19:51:30,419 - INFO: Getting statblocks for Snake
+2025-03-25 19:51:31,180 - INFO: Getting statblocks for Snotling
+2025-03-25 19:51:32,218 - INFO: Getting statblocks for Soldiers
+2025-03-25 19:51:33,099 - INFO: Getting statblocks for Spectre
+2025-03-25 19:51:33,890 - INFO: Getting statblocks for Squirrel
+2025-03-25 19:51:34,628 - INFO: Getting statblocks for Stoat
+2025-03-25 19:51:35,374 - INFO: Getting statblocks for Sunworm
+2025-03-25 19:51:36,035 - INFO: Getting statblocks for Swarm
+2025-03-25 19:51:36,789 - INFO: Getting statblocks for Thugs
+2025-03-25 19:51:37,166 - INFO: Getting statblocks for Treeman
+2025-03-25 19:51:37,954 - INFO: Getting statblocks for Troglodyte
+2025-03-25 19:51:39,276 - INFO: Getting statblocks for Troll
+2025-03-25 19:51:39,942 - INFO: Getting statblocks for Undead
+2025-03-25 19:51:40,429 - INFO: Getting statblocks for Unicorn
+2025-03-25 19:51:41,207 - INFO: Getting statblocks for Vampire
+2025-03-25 19:51:41,819 - INFO: Getting statblocks for Viydagg
+2025-03-25 19:51:42,761 - INFO: Getting statblocks for War Dog
+2025-03-25 19:51:43,443 - INFO: Getting statblocks for Warrior Of Chaos
+2025-03-25 19:51:44,125 - INFO: Getting statblocks for Werecreature
+2025-03-25 19:51:44,794 - INFO: Getting statblocks for Wight
+2025-03-25 19:51:45,569 - INFO: Getting statblocks for Wild Cat
+2025-03-25 19:51:46,390 - INFO: Getting statblocks for Wolf
+2025-03-25 19:51:47,037 - INFO: Getting statblocks for Wraith
+2025-03-25 19:51:47,718 - INFO: Getting statblocks for Wyvern
+2025-03-25 19:51:48,660 - INFO: Getting statblocks for Zoat
+2025-03-25 19:51:49,251 - INFO: Getting statblocks for Zombie
+2025-03-25 19:51:49,270 - INFO: 126 beasts written to beasts.json
+2025-03-25 19:51:49,270 - INFO: Begin scraping NPCs
+2025-03-25 19:51:49,737 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Artisan's Apprentice (NPC)
+2025-03-25 19:51:49,737 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Beggar (NPC)
+2025-03-25 19:51:49,737 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Boatman (NPC)
+2025-03-25 19:51:49,737 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bodyguard (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bounty Hunter (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Bunko Artist (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Charlatan (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Coachman (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Cook (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Dwarven Engineer (NPC)
+2025-03-25 19:51:49,738 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Exciseman (NPC)
+2025-03-25 19:51:49,739 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Fisherman (NPC)
+2025-03-25 19:51:49,739 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Gambler (NPC)
+2025-03-25 19:51:49,739 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Grave Robber (NPC)
+2025-03-25 19:51:49,739 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Herbalist (NPC)
+2025-03-25 19:51:49,739 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/High Elf Mage
+2025-03-25 19:51:49,740 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Hunter (NPC)
+2025-03-25 19:51:49,740 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Judicial Champion (NPC)
+2025-03-25 19:51:49,740 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Labourer (NPC)
+2025-03-25 19:51:49,740 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Marine (NPC)
+2025-03-25 19:51:49,741 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Noble (NPC)
+2025-03-25 19:51:49,741 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Pedlar (NPC)
+2025-03-25 19:51:49,741 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Physician (NPC)
+2025-03-25 19:51:49,741 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Pirate (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Pit Fighter (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Prospector (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Roadwarden (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Scholar (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Servant (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Smuggler (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Spellcaster (NPC)
+2025-03-25 19:51:49,742 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Thief (NPC)
+2025-03-25 19:51:49,743 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Thugs
+2025-03-25 19:51:49,743 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Toll-Keeper (NPC)
+2025-03-25 19:51:49,743 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Townsperson (NPC)
+2025-03-25 19:51:49,743 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Tutor (NPC)
+2025-03-25 19:51:49,743 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Watchman (NPC)
+2025-03-25 19:51:49,743 - INFO: Initialising <class '__main__.WikiPage'> for https://wfrp1e.fandom.com/Yokel (NPC)
+2025-03-25 19:51:51,767 - INFO: Getting statblocks for Artisan's Apprentice (NPC)
+2025-03-25 19:51:52,424 - INFO: Getting statblocks for Beggar (NPC)
+2025-03-25 19:51:53,258 - INFO: Getting statblocks for Boatman (NPC)
+2025-03-25 19:51:54,213 - INFO: Getting statblocks for Bodyguard (NPC)
+2025-03-25 19:51:54,934 - INFO: Getting statblocks for Bounty Hunter (NPC)
+2025-03-25 19:51:55,645 - INFO: Getting statblocks for Bunko Artist (NPC)
+2025-03-25 19:51:56,401 - INFO: Getting statblocks for Charlatan (NPC)
+2025-03-25 19:51:57,194 - INFO: Getting statblocks for Coachman (NPC)
+2025-03-25 19:51:58,087 - INFO: Getting statblocks for Cook (NPC)
+2025-03-25 19:51:58,962 - INFO: Getting statblocks for Dwarven Engineer (NPC)
+2025-03-25 19:51:59,703 - INFO: Getting statblocks for Exciseman (NPC)
+2025-03-25 19:52:00,611 - INFO: Getting statblocks for Fisherman (NPC)
+2025-03-25 19:52:01,117 - INFO: Getting statblocks for Gambler (NPC)
+2025-03-25 19:52:01,891 - INFO: Getting statblocks for Grave Robber (NPC)
+2025-03-25 19:52:02,790 - INFO: Getting statblocks for Herbalist (NPC)
+2025-03-25 19:52:04,082 - INFO: Getting statblocks for High Elf Mage
+2025-03-25 19:52:04,868 - INFO: Getting statblocks for Hunter (NPC)
+2025-03-25 19:52:05,703 - INFO: Getting statblocks for Judicial Champion (NPC)
+2025-03-25 19:52:06,590 - INFO: Getting statblocks for Labourer (NPC)
+2025-03-25 19:52:07,384 - INFO: Getting statblocks for Marine (NPC)
+2025-03-25 19:52:08,082 - INFO: Getting statblocks for Noble (NPC)
+2025-03-25 19:52:08,818 - INFO: Getting statblocks for Pedlar (NPC)
+2025-03-25 19:52:09,557 - INFO: Getting statblocks for Physician (NPC)
+2025-03-25 19:52:10,478 - INFO: Getting statblocks for Pirate (NPC)
+2025-03-25 19:52:11,215 - INFO: Getting statblocks for Pit Fighter (NPC)
+2025-03-25 19:52:12,032 - INFO: Getting statblocks for Prospector (NPC)
+2025-03-25 19:52:13,021 - INFO: Getting statblocks for Roadwarden (NPC)
+2025-03-25 19:52:13,794 - INFO: Getting statblocks for Scholar (NPC)
+2025-03-25 19:52:14,582 - INFO: Getting statblocks for Servant (NPC)
+2025-03-25 19:52:15,430 - INFO: Getting statblocks for Smuggler (NPC)
+2025-03-25 19:52:16,135 - INFO: Getting statblocks for Spellcaster (NPC)
+2025-03-25 19:52:16,862 - INFO: Getting statblocks for Thief (NPC)
+2025-03-25 19:52:17,068 - INFO: Getting statblocks for Thugs
+2025-03-25 19:52:17,843 - INFO: Getting statblocks for Toll-Keeper (NPC)
+2025-03-25 19:52:18,570 - INFO: Getting statblocks for Townsperson (NPC)
+2025-03-25 19:52:19,129 - INFO: Getting statblocks for Tutor (NPC)
+2025-03-25 19:52:20,085 - INFO: Getting statblocks for Watchman (NPC)
+2025-03-25 19:52:20,842 - INFO: Getting statblocks for Yokel (NPC)
+2025-03-25 19:52:20,847 - INFO: 38 NPCs written to npcs.json
