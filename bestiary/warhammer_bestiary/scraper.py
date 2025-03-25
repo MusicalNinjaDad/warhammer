@@ -30,6 +30,8 @@ def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa
 class BlockParser:
     """Identify, store and parse the soup for a StatBlock."""
 
+    MAGIC_STAT_STRING: Final[str] = "MWSBSSTWIADexLdIntClWPFel"
+
     @classmethod
     def filter(cls, soup: BeautifulSoup) -> bool:
         """Filter to pass to `bs4.find_all` to identify this type of Block."""
@@ -57,13 +59,17 @@ class BlockParser:
             return val
 
 
-class HorizontalBlock(BlockParser):
+class UntitledBlock(BlockParser):
     """Horizontal statblocks are on NPCs and beasts with multiple blocks."""
 
     @classmethod
     def filter(cls, soup: BeautifulSoup) -> bool:
         """In tables of class `article-table`."""
-        return soup.name == "table" and "article-table" in soup.get("class", "")
+        return (
+            soup.name == "table"
+            and "article-table" in soup.get("class", "")
+            and soup.find("tr").getText(strip=True) == cls.MAGIC_STAT_STRING
+        )
 
     def parse(self) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
@@ -118,7 +124,7 @@ class WikiPage:
 
     CATEGORY_INDEX: ClassVar[str]
     """URI of the contents page for this type of information."""
-    parsers: ClassVar[list[BlockParser]] = [VerticalBlock, HorizontalBlock]
+    parsers: ClassVar[list[BlockParser]] = [VerticalBlock, UntitledBlock]
 
     @classmethod
     def is_page_link(cls, tag: BeautifulSoup) -> bool:
