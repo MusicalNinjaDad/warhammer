@@ -138,17 +138,7 @@ class VerticalBlock(BlockParser):
 
 
 class WikiPage:
-    """
-    A https://wfrp1e.fandom.com page that contains statblocks.
-
-    Subclass this for each page category and provide concrete implementations of:
-    - `is_statblock` - how to identify a statblock in the page soup
-    - `parse_statblock` - how to find the title and stats from the soup of a statblock
-    - `CATEGORY_INDEX` - the category index uri
-    - `is_page_link` - a filter function to apply when parsing `CATEGORY_INDEX`
-
-    All other methods & properties should work out of the box.
-    """
+    """A https://wfrp1e.fandom.com page that contains statblocks."""
 
     CATEGORY_INDEX: ClassVar[str]
     """URI of the contents page for this type of information."""
