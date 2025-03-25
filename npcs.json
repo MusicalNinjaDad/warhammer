@@ -18,7 +18,7 @@
     }
   },
   "Beggar (NPC)": {
-    "Profile_1": {
+    "Profile 1": {
       "M": 4,
       "WS": 31,
       "BS": 35,
@@ -34,7 +34,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Profile_2": {
+    "Profile 2": {
       "M": 4,
       "WS": 33,
       "BS": 35,
@@ -68,7 +68,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Boatman_.28Captain.29": {
+    "Boatman (Captain)": {
       "M": 4,
       "WS": 40,
       "BS": 40,
@@ -86,7 +86,7 @@
     }
   },
   "Bodyguard (NPC)": {
-    "Profile_1": {
+    "Profile 1": {
       "M": 4,
       "WS": 41,
       "BS": 25,
@@ -102,7 +102,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Profile_2": {
+    "Profile 2": {
       "M": 4,
       "WS": 53,
       "BS": 25,
@@ -156,7 +156,7 @@
     }
   },
   "Charlatan (NPC)": {
-    "Medicine_Show_Charlatan": {
+    "Medicine Show Charlatan": {
       "M": 4,
       "WS": 43,
       "BS": 35,
@@ -192,7 +192,7 @@
     }
   },
   "Cook (NPC)": {
-    "Human_Cook": {
+    "Human Cook": {
       "M": 4,
       "WS": 31,
       "BS": 25,
@@ -208,7 +208,7 @@
       "WP": 39,
       "Fel": 29
     },
-    "Halfling_Cook": {
+    "Halfling Cook": {
       "M": 3,
       "WS": 25,
       "BS": 31,
@@ -422,7 +422,7 @@
       "WP": 30,
       "Fel": 30
     },
-    "Marine_Sergeant": {
+    "Marine Sergeant": {
       "M": 4,
       "WS": 50,
       "BS": 40,
@@ -458,7 +458,7 @@
     }
   },
   "Pedlar (NPC)": {
-    "Gypsy_Pedlar": {
+    "Gypsy Pedlar": {
       "M": 4,
       "WS": 40,
       "BS": 40,
@@ -494,7 +494,7 @@
     }
   },
   "Pirate (NPC)": {
-    "Wrecker.2FPirate": {
+    "Wrecker/Pirate": {
       "M": 4,
       "WS": 50,
       "BS": 40,
@@ -564,7 +564,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Roadwarden_Sergeant": {
+    "Roadwarden Sergeant": {
       "M": 4,
       "WS": 51,
       "BS": 45,
@@ -654,7 +654,7 @@
     }
   },
   "Thief (NPC)": {
-    "Generic_Thief": {
+    "Generic Thief": {
       "M": 4,
       "WS": 43,
       "BS": 35,
@@ -688,7 +688,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Teamsters_or_Stevedores": {
+    "Teamsters or Stevedores": {
       "M": 4,
       "WS": 33,
       "BS": 25,
@@ -740,7 +740,7 @@
     }
   },
   "Townsperson (NPC)": {
-    "Townsperson_.28Poor.29": {
+    "Townsperson (Poor)": {
       "M": 4,
       "WS": 23,
       "BS": 25,
@@ -756,7 +756,7 @@
       "WP": 30,
       "Fel": 30
     },
-    "Townsperson_.28Wealthy.29": {
+    "Townsperson (Wealthy)": {
       "M": 4,
       "WS": 23,
       "BS": 25,
@@ -808,7 +808,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Watch_Sergeant": {
+    "Watch Sergeant": {
       "M": 4,
       "WS": 51,
       "BS": 35,
@@ -826,7 +826,7 @@
     }
   },
   "Yokel (NPC)": {
-    "Profile_1": {
+    "Profile 1": {
       "M": 4,
       "WS": 31,
       "BS": 25,
@@ -842,7 +842,7 @@
       "WP": 29,
       "Fel": 29
     },
-    "Profile_2": {
+    "Profile 2": {
       "M": 4,
       "WS": 33,
       "BS": 25,
