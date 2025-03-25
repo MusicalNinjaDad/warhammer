@@ -148,6 +148,10 @@ class WikiPage:
         """All the page's statblocks."""
         log.info("Getting statblocks for %s", self.title)
         return [parser(blocksoup) for parser in self.parsers for blocksoup in self.soup.find_all(parser.filter)]
+    
+    def as_dict(self) -> dict[str, dict[str, int | str]]:
+        """The statblocks as a dict, indexed by statblock title."""
+        return dict(statblock.parse() for statblock in self.statblocks)
 
     @classmethod
     def absolute(cls, uri: str) -> str:
