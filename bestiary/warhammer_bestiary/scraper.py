@@ -60,7 +60,7 @@ class BlockParser:
 
 
 class UntitledBlock(BlockParser):
-    """Horizontal statblocks are on NPCs and beasts with multiple blocks."""
+    """Horizontal statblocks are on NPCs and beasts with multiple blocks, some have no title."""
 
     @classmethod
     def filter(cls, soup: BeautifulSoup) -> bool:
@@ -87,6 +87,34 @@ class UntitledBlock(BlockParser):
             log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
         return title, stats
 
+class TitledBlock(BlockParser):
+    """Horizontal statblocks are on NPCs and beasts with multiple blocks, some have a title."""
+
+    @classmethod
+    def filter(cls, soup: BeautifulSoup) -> bool:
+        """In tables of class `article-table`."""
+        return (
+            soup.name == "table"
+            and "article-table" in soup.get("class", "")
+            and soup.find("tr").getText(strip=True) != cls.MAGIC_STAT_STRING
+            and cls.MAGIC_STAT_STRING in [row.getText(strip=True) for row in soup.find_all("tr")]
+        )
+
+    def parse(self) -> tuple[str, dict[str, str | int]]:
+        """No tags and no title. Need to parse a table & provide `''` as title."""
+        try:
+            title = self.soup.find_previous_sibling("h3").find("span")["id"]
+        except AttributeError:
+            title = "Basic Profile"
+        tablerows = self.soup.find_all("tr")
+        # TODO: add some kind of check that we only have two rows ...
+        statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
+        statvalues = [self.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
+        try:
+            stats = dict(zip(statnames, statvalues, strict=True))
+        except ValueError:
+            log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
+        return title, stats
 
 class VerticalBlock(BlockParser):
     """Vertical statblocks are on basic Beast pages."""
@@ -124,7 +152,7 @@ class WikiPage:
 
     CATEGORY_INDEX: ClassVar[str]
     """URI of the contents page for this type of information."""
-    parsers: ClassVar[list[BlockParser]] = [VerticalBlock, UntitledBlock]
+    parsers: ClassVar[list[BlockParser]] = [VerticalBlock, UntitledBlock, TitledBlock]
 
     @classmethod
     def is_page_link(cls, tag: BeautifulSoup) -> bool:
