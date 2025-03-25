@@ -1,5 +1,6 @@
 """Scrap StatBlocks from https://wfrp1e.fandom.com/wiki/Category:Bestiary and save to file."""
 
+from ast import Attribute
 import json
 import logging
 import urllib.parse
@@ -67,7 +68,10 @@ class HorizontalBlock(BlockParser):
 
     def parse(self) -> tuple[str, dict[str, str | int]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
-        title = "Basic Profile"
+        try:
+            title = self.soup.find_previous_sibling("h3").find("span")["id"]
+        except AttributeError:
+            title = "Basic Profile"
         tablerows = self.soup.find_all("tr")
         # TODO: add some kind of check that we only have two rows ...
         statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
