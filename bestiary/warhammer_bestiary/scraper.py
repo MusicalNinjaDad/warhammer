@@ -26,9 +26,10 @@ def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa
     log.debug("Parsing %s", uri)
     return BeautifulSoup(_raw.text, features="html.parser")
 
+
 class BlockParser:
     """Identify, store and parse the soup for a StatBlock."""
-    
+
     @classmethod
     def filter(cls, soup: BeautifulSoup) -> bool:
         """Filter to pass to `bs4.find_all` to identify this type of Block."""
@@ -39,10 +40,22 @@ class BlockParser:
         """Parse the block and return `(block_title, stats)`."""
         msg = f"{type(self)} has not defined `parse`."
         raise NotImplementedError(msg)
-    
+
     def __init__(self, soup: BeautifulSoup) -> None:
         """Store the soup."""
         self.soup = soup
+
+    @classmethod
+    def parse_stat(cls, val: str) -> int | str:
+        """Handle cases where values may be missing or given as dice rolls etc."""
+        if not val or val == "-":
+            return 0
+        try:
+            return int(val)
+        except ValueError:
+            # E.g. "d6" or "3-5"
+            return val
+
 
 class HorizontalBlock(BlockParser):
     """Horizontal statblocks are on NPCs and beasts with multiple blocks."""
@@ -52,6 +65,20 @@ class HorizontalBlock(BlockParser):
         """In tables of class `article-table`."""
         return soup.name == "table" and "article-table" in soup.get("class", "")
 
+    def parse(self) -> tuple[str, dict[str, str | int]]:
+        """No tags and no title. Need to parse a table & provide `''` as title."""
+        title = ""
+        tablerows = self.soup.find_all("tr")
+        # TODO: add some kind of check that we only have two rows ...
+        statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
+        statvalues = [self.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
+        try:
+            stats = dict(zip(statnames, statvalues, strict=True))
+        except ValueError:
+            log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
+        return title, stats
+
+
 class VerticalBlock(BlockParser):
     """Vertical statblocks are on basic Beast pages."""
 
@@ -59,6 +86,19 @@ class VerticalBlock(BlockParser):
     def filter(cls, soup: BeautifulSoup) -> bool:
         """In an `aside` tag with class `type-stat`."""
         return "type-stat" in soup.get("class", "")
+
+    def parse(self) -> tuple[str, dict[str, int | str]]:
+        """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
+        title = self.soup.find(class_="pi-header").getText()
+        try:
+            stats = {
+                stat["data-source"]: self.parse_stat(stat.find(class_="pi-data-value").getText())
+                for stat in self.soup.find_all(class_="pi-data")
+            }
+        except Exception:
+            log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
+        return title, stats
+
 
 class WikiPage:
     """
@@ -108,7 +148,7 @@ class WikiPage:
         """All the page's statblocks."""
         log.info("Getting statblocks for %s", self.title)
         return [parser(blocksoup) for parser in self.parsers for blocksoup in self.soup.find_all(parser.filter)]
-    
+
     @classmethod
     def absolute(cls, uri: str) -> str:
         """Return dull URI for a partial address, using `CATEGORY_INDEX` as the root."""
@@ -129,54 +169,6 @@ class WikiPage:
         session = requests.Session() if session is None else session
         indexsoup = get_and_parse(cls.CATEGORY_INDEX, session)
         return {link.attrs["title"]: link.attrs["href"] for link in indexsoup.find_all(cls.is_page_link)}
-
-    @classmethod
-    def parse_stat(cls, val: str) -> int | str:
-        """Handle cases where values may be missing or given as dice rolls etc."""
-        if not val or val == "-":
-            return 0
-        try:
-            return int(val)
-        except ValueError:
-            # E.g. "d6" or "3-5"
-            return val
-
-    @classmethod
-    def parse_vertical_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
-        """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
-        title = blocksoup.find(class_="pi-header").getText()
-        try:
-            stats = {
-                stat["data-source"]: cls.parse_stat(stat.find(class_="pi-data-value").getText())
-                for stat in blocksoup.find_all(class_="pi-data")
-            }
-        except Exception:
-            log.exception("Error parsing stats for %s - Blocksoup: %r", cls.__name__, blocksoup)
-        return title, stats
-
-    @classmethod
-    def parse_horizontal_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
-        """No tags and no title. Need to parse a table & provide `''` as title."""
-        title = ""
-        tablerows = blocksoup.find_all("tr")
-        # TODO: add some kind of check that we only have two rows ...
-        statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
-        statvalues = [cls.parse_stat(cell.get_text(strip=True)) for cell in tablerows[1].find_all("td")]
-        try:
-            stats = dict(zip(statnames, statvalues, strict=True))
-        except ValueError:
-            log.exception("Error parsing stats for %s - Blocksoup: %r", cls.__name__, blocksoup)
-        return title, stats
-
-    @classmethod
-    def parse_statblock(cls, blocksoup: BeautifulSoup) -> tuple[str, dict[str, str | int]]:
-        """Parse both types of statblock."""
-        if cls.is_vertical_statblock(blocksoup):
-            return cls.parse_vertical_statblock(blocksoup)
-        if cls.is_horizontal_statblock(blocksoup):
-            return cls.parse_horizontal_statblock(blocksoup)
-        log.warning("Can't parse as a statblock: %r", blocksoup)
-        return None
 
 
 class Beast(WikiPage):
