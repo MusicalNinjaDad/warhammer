@@ -16,14 +16,12 @@ class PageParam(Protocol):
 
 @dataclass
 class TestCase:
-    htmlpage: Path
     beast: str
     stats: dict[str, int | str]
     statblock_class: list[str]
 
 
 amoeba = TestCase(
-    htmlpage = Path("tests/assets/amoeba.html").absolute(),
     beast = "Amoeba",
     stats = {
         "Basic Profile": {
@@ -123,24 +121,7 @@ parametrized = pytest.mark.parametrize(
     [
         pytest.param(
             Path("tests/assets/amoeba.html").absolute(),
-            {
-                "Basic Profile": {
-                    "M": 4,
-                    "WS": 33,
-                    "BS": 0,
-                    "S": 3,
-                    "T": 5,
-                    "W": 11,
-                    "I": 30,
-                    "A": 3,
-                    "Dex": 0,
-                    "Ld": 0,
-                    "Int": 0,
-                    "Cl": 0,
-                    "WP": 0,
-                    "Fel": 0,
-                },
-            },
+            amoeba.stats,
             id="Amoeba",
         ),
         pytest.param(
