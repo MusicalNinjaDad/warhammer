@@ -462,6 +462,10 @@ def test_parse_statblock(page: WikiPage, stats: dict[str, dict[str, int]]):
 def test_statblocks(page: WikiPage, stats):
     assert page.as_dict() == stats
 
-
-def test_generate_py():
-    assert generate_class(amoeba.beast, amoeba.stats) == amoeba.statblock_class
+@pytest.mark.parametrize(
+    "beast",
+    [amoeba],
+    ids=lambda beast: beast.beast,
+)
+def test_generate_py(beast: TestCase):
+    assert generate_class(beast.beast, beast.stats) == beast.statblock_class
