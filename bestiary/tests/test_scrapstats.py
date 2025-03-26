@@ -60,6 +60,77 @@ amoeba = TestCase(
     ],
 )
 
+thugs = TestCase(
+    beast = "Thugs",
+    stats = {
+        "Thug": {
+            "M": 4,
+            "WS": 31,
+            "BS": 25,
+            "S": 3,
+            "T": 4,
+            "W": 7,
+            "I": 30,
+            "A": 1,
+            "Dex": 29,
+            "Ld": 29,
+            "Int": 29,
+            "Cl": 29,
+            "WP": 29,
+            "Fel": 29,
+        },
+        "Teamsters or Stevedores": {
+            "M": 4,
+            "WS": 33,
+            "BS": 25,
+            "S": 3,
+            "T": 4,
+            "W": 8,
+            "I": 30,
+            "A": 1,
+            "Dex": 34,
+            "Ld": 28,
+            "Int": 33,
+            "Cl": 30,
+            "WP": 32,
+            "Fel": 29,
+        },
+    },
+    statblock_class=[
+        "class Thugs:",
+        "    class Thug(Warhammer):",
+        "        M = 4",
+        "        WS = 31",
+        "        BS = 25", 
+        "        S = 3",
+        "        T = 4",
+        "        W = 7",
+        "        I = 30",
+        "        A = 1",
+        "        Dex = 29",
+        "        Ld = 29",
+        "        Int = 29",
+        "        Cl = 29",
+        "        WP = 29",
+        "        Fel = 29",
+        "",
+        "    class Teamsters_or_Stevedores(Warhammer):",
+        "        M = 4",
+        "        WS = 33",
+        "        BS = 25",
+        "        S = 3",
+        "        T = 4",
+        "        W = 8",
+        "        I = 30",
+        "        A = 1",
+        "        Dex = 34",
+        "        Ld = 28",
+        "        Int = 33",
+        "        Cl = 30",
+        "        WP = 32",
+        "        Fel = 29",
+    ],
+)
 
 @pytest.fixture(scope="module")
 def requests_session() -> requests.Session:
@@ -464,7 +535,7 @@ def test_statblocks(page: WikiPage, stats):
 
 @pytest.mark.parametrize(
     "beast",
-    [amoeba],
+    [amoeba, thugs],
     ids=lambda beast: beast.beast,
 )
 def test_generate_py(beast: TestCase):

@@ -21,8 +21,16 @@ class Warhammer:
     WP = d(100)
     Fel = d(100)
 
-def generate_class(beast: str, stats: dict[str, dict[str, int | str]]) -> list[str]:
+def generate_class(beast: str, statblocks: dict[str, dict[str, int | str]]) -> list[str]:
     """Create a Warhammer StatBlock froma key, value pair of scraped results."""
-    return [f"class {beast}(Warhammer):"] + [
-        f"    {stat} = {val}" for stat, val in stats["Basic Profile"].items()
-    ]
+    if len(statblocks) == 1:
+        return [f"class {beast}(Warhammer):"] + [
+            f"    {stat} = {val}" for stat, val in statblocks["Basic Profile"].items()
+        ]
+    pyclass = [f"class {beast}:"]
+    for name, stats in statblocks.items():
+        pyclass.append(f"    class {name.replace(" ", "_")}(Warhammer):")
+        for stat, val in stats.items():
+            pyclass.append(f"        {stat} = {val}")
+        pyclass.append("")
+    return pyclass[:-1]
