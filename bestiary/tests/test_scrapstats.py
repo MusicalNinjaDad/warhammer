@@ -483,4 +483,4 @@ def test_statblocks(page: WikiPage, stats):
 
 
 def test_generate_py():
-    assert generate_class((amoeba.beast, amoeba.stats)) == amoeba.statblock_class
+    assert generate_class(amoeba.beast, amoeba.stats) == amoeba.statblock_class
