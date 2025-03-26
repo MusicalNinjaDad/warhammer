@@ -20,3 +20,9 @@ class Warhammer:
     Cl = d(100)
     WP = d(100)
     Fel = d(100)
+
+def generate_class(beast: tuple[str, dict[str, dict[str, int | str]]]) -> list[str]:
+    """Create a Warhammer StatBlock froma key, value pair of scraped results."""
+    return [f"class {beast[0]}(Warhammer):"] + [
+        f"    {stat} = {val}" for stat, val in beast[1]["Basic Profile"].items()
+    ]

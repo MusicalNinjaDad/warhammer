@@ -6,6 +6,7 @@ import requests
 from requests_file import FileAdapter
 
 from warhammer_bestiary.scraper import NPC, Beast, WikiPage
+from warhammer_bestiary.statblocks import generate_class
 
 
 class PageParam(Protocol):
@@ -426,3 +427,43 @@ def test_parse_statblock(page: WikiPage, stats: dict[str, dict[str, int]]):
 @parametrized
 def test_statblocks(page: WikiPage, stats):
     assert page.as_dict() == stats
+
+def test_generate_py():
+    statdict = (
+        "Amoeba", {
+            "Basic Profile": {
+                "M": 4,
+                "WS": 33,
+                "BS": 0,
+                "S": 3,
+                "T": 5,
+                "W": 11,
+                "I": 30,
+                "A": 3,
+                "Dex": 0,
+                "Ld": 0,
+                "Int": 0,
+                "Cl": 0,
+                "WP": 0,
+                "Fel": 0,
+            },
+        },
+    )
+    expected = [
+        "class Amoeba(Warhammer):",
+        "    M = 4",
+        "    WS = 33",
+        "    BS = 0",
+        "    S = 3", 
+        "    T = 5",
+        "    W = 11",
+        "    I = 30",
+        "    A = 3",
+        "    Dex = 0",
+        "    Ld = 0",
+        "    Int = 0",
+        "    Cl = 0",
+        "    WP = 0",
+        "    Fel = 0",
+    ]
+    assert generate_class(statdict) == expected
