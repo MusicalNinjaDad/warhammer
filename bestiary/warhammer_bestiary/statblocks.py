@@ -26,11 +26,11 @@ def generate_class(beast: str, statblocks: dict[str, dict[str, int | str]]) -> l
     if len(statblocks) == 1:
         return [f"class {beast}(Warhammer):"] + [
             f"    {stat} = {val}" for stat, val in statblocks["Basic Profile"].items()
-        ]
+        ] + [""]
     pyclass = [f"class {beast}:"]
     for name, stats in statblocks.items():
         pyclass.append(f"    class {name.replace(" ", "_")}(Warhammer):")
         for stat, val in stats.items():
             pyclass.append(f"        {stat} = {val}")
         pyclass.append("")
-    return pyclass[:-1]
+    return pyclass

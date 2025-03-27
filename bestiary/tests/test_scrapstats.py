@@ -57,6 +57,7 @@ amoeba = TestCase(
         "    Cl = 0",
         "    WP = 0",
         "    Fel = 0",
+        "",
     ],
 )
 
@@ -129,6 +130,7 @@ thugs = TestCase(
         "        Cl = 30",
         "        WP = 32",
         "        Fel = 29",
+        "",
     ],
 )
 
