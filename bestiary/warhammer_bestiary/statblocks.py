@@ -23,14 +23,18 @@ class Warhammer:
 
 def generate_class(beast: str, statblocks: dict[str, dict[str, int | str]]) -> list[str]:
     """Create a Warhammer StatBlock froma key, value pair of scraped results."""
+    INDENT = "    "  # noqa: N806
+    def safe(s: str) -> str:
+        return s.replace(" ","_")
     if len(statblocks) == 1:
-        return [f"class {beast}(Warhammer):"] + [
-            f"    {stat} = {val}" for stat, val in statblocks["Basic Profile"].items()
+        return [f"class {safe(beast)}(Warhammer):"] + [
+            f"{INDENT}{stat} = {val}" for stat, val in statblocks["Basic Profile"].items()
         ] + [""]
-    pyclass = [f"class {beast}:"]
-    for name, stats in statblocks.items():
-        pyclass.append(f"    class {name.replace(" ", "_")}(Warhammer):")
-        for stat, val in stats.items():
-            pyclass.append(f"        {stat} = {val}")
-        pyclass.append("")
-    return pyclass
+    return [f"class {safe(beast)}:"] + [
+        line 
+        for name, stats in statblocks.items()
+        for line in (
+            [f"{INDENT}class {safe(name)}(Warhammer):"] +
+            [f"{INDENT}{INDENT}{stat} = {val}" for stat, val in stats.items()] +
+            [""]
+        )]
