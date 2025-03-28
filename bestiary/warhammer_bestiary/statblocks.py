@@ -26,7 +26,7 @@ class Warhammer:
     Fel = d(100)
 
 
-def generate_class(name: str, value: dict[str, dict[str, int | str]]) -> list[str]:
+def generate_class(name: str, value: dict[str, dict | int | str] | int | str) -> list[str]:
     """Create a Warhammer StatBlock from a key, value pair of scraped results."""
     indented = partial(indent, prefix="    ")
 
