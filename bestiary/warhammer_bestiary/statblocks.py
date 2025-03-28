@@ -26,20 +26,25 @@ class Warhammer:
     Fel = d(100)
 
 
-def generate_class(beast: str, statblocks: dict[str, dict[str, int | str]]) -> list[str]:
+def generate_class(name: str, value: dict[str, dict[str, int | str]]) -> list[str]:
     """Create a Warhammer StatBlock from a key, value pair of scraped results."""
     indented = partial(indent, prefix="    ")
 
     def safe(s: str) -> str:
         return s.replace(" ", "_")
 
-    def classdef(name: str, stats: dict):
-        return [f"class {safe(name)}(Warhammer):"] + [indented(f"{stat} = {val}") for stat, val in stats.items()] + [""]
-
-    if len(statblocks) == 1:
-        stats = next(iter(statblocks.values()))
-        return classdef(beast, stats)
-
-    return [f"class {safe(beast)}:"] + [
-        indented(line) for name, stats in statblocks.items() for line in classdef(name, stats)
-    ]
+    match value:
+        case dict():
+            if len(value) == 1:
+                value = next(iter(value.values()))
+            match next(iter(value.values())):
+                case dict():
+                    base = ""
+                case _:
+                    base = "(Warhammer)"
+        case _:
+            return [f"{name} = {value}"]
+    
+    return [f"class {safe(name)}{base}:"] + [
+                indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)
+            ] + [""]
