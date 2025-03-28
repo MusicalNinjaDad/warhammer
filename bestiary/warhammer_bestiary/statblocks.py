@@ -36,6 +36,7 @@ def generate_class(name: str, value: dict[str, dict[str, int | str]]) -> list[st
     match value:
         case dict():
             if len(value) == 1:
+                # Ignore the profile name for single profile beasts and profile groupings with only one entry.
                 value = next(iter(value.values()))
             match next(iter(value.values())):
                 case dict():
@@ -44,9 +45,10 @@ def generate_class(name: str, value: dict[str, dict[str, int | str]]) -> list[st
                 case _:
                     is_grouping = False
                     base = "(Warhammer)"
+            return (
+                [f"class {safe(name)}{base}:"]
+                + [indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)]
+                + ([""] if not is_grouping else [])
+            )
         case _:
             return [f"{name} = {value}"]
-    
-    return [f"class {safe(name)}{base}:"] + [
-                indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)
-            ] + ([""] if not is_grouping else [])
