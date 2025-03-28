@@ -39,6 +39,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
                 # Ignore the profile name for single profile beasts and profile groupings with only one entry.
                 value = next(iter(value.values()))
             match next(iter(value.values())):
+                # lookahead to the first entry
                 case dict():
                     is_grouping = True
                     base = ""
