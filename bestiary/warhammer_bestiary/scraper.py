@@ -229,16 +229,17 @@ class NPC(WikiPage):
 
 
 if __name__ == "__main__":
-    log.info("Begin scraping Beasts")
-    beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris()]
-    beasts = [WikiPage(page) for page in beast_pages]
-    beastfile = Path("beasts.json")
-    beastfile.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
-    log.info("%i beasts written to %s", len(beasts), beastfile)
-
     log.info("Begin scraping NPCs")
     npc_pages = [NPC.absolute(uri) for uri in NPC.get_page_uris()]
     npcs = [WikiPage(page) for page in npc_pages]
     npcfile = Path("npcs.json")
     npcfile.write_text(json.dumps({npc.title: npc.as_dict() for npc in npcs}, indent=2))
     log.info("%i NPCs written to %s", len(npcs), npcfile)
+
+    log.info("Begin scraping Beasts")
+    beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris() if uri not in npc_pages]
+    beasts = [WikiPage(page) for page in beast_pages]
+    beastfile = Path("beasts.json")
+    beastfile.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
+    log.info("%i beasts written to %s", len(beasts), beastfile)
+
