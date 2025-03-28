@@ -39,12 +39,14 @@ def generate_class(name: str, value: dict[str, dict[str, int | str]]) -> list[st
                 value = next(iter(value.values()))
             match next(iter(value.values())):
                 case dict():
+                    is_grouping = True
                     base = ""
                 case _:
+                    is_grouping = False
                     base = "(Warhammer)"
         case _:
             return [f"{name} = {value}"]
     
     return [f"class {safe(name)}{base}:"] + [
                 indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)
-            ] + [""]
+            ] + ([""] if not is_grouping else [])
