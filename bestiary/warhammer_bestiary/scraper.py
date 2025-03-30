@@ -180,7 +180,14 @@ class WikiPage:
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """The statblocks as a dict, indexed by statblock title."""
-        return dict(statblock.parse() for statblock in self.statblocks)
+        statsdict = {}
+        for statblock in self.statblocks:
+            (group, title), stats = statblock.parse()
+            try:
+                statsdict[group][title] = stats
+            except KeyError:
+                statsdict[group] = {title:stats}
+        return statsdict
 
     @classmethod
     def absolute(cls, uri: str) -> str:

@@ -66,8 +66,8 @@ amoeba = TestCase(
 thugs = TestCase(
     beast="Thugs",
     stats={
-        "": {
-            "Thug": {
+        "Thug": {
+            "Basic Profile": {
                 "M": 4,
                 "WS": 31,
                 "BS": 25,
@@ -83,7 +83,9 @@ thugs = TestCase(
                 "WP": 29,
                 "Fel": 29,
             },
-            "Teamsters or Stevedores": {
+        },
+        "Teamsters or Stevedores": {
+            "Basic Profile": {
                 "M": 4,
                 "WS": 33,
                 "BS": 25,
