@@ -58,6 +58,48 @@ This session will be about consolidating rewards
   - Local lord is disliked by Guy & due to be replaced
   - Tournament is in 2 + D4 days, culminating with Guy taking formal control of Caucy
 
+## Montreuil-sur-Rivière
+
+A picturesque town nestled along the banks of a wide, slow-moving river.
+
+- The town is known for
+  - cobblestone streets
+  - charming timber-framed houses
+  - grand stone bridge that connects the **two halves** of the settlement
+- At its heart stands the **Baron’s manor**, a modest yet elegant structure surrounded by well-tended gardens.
+- The town thrives on **trade and agriculture**, with bustling markets and riverboats constantly coming and going.
+
+The Baron’s influence is evident everywhere, from the pristine streets to the carefully maintained public spaces. His efforts to uphold the ideals of chivalry and prosperity are clear, but so too is his detachment from the struggles of his people. The town feels like a reflection of Étienne himself—noble in intent, beautiful in appearance, but blind to the quiet hardships that ripple beneath the surface.
+
+### Narrative Description
+
+> Montreuil-sur-Rivière is a charming town that seems to embody the ideals of Bretonnian beauty and order—at least at first glance. Nestled along the banks of a wide, slow-moving river, the town is a picture of pastoral tranquility. Cobblestone streets wind gracefully between timber-framed houses painted in soft, cheerful hues, and flower boxes overflow with vibrant blooms, adding splashes of color to every corner.
+>
+> At the heart of the town stands the Baron’s manor, a modest yet elegant structure surrounded by meticulously tended gardens. The manor’s white walls gleam in the sunlight, and its golden stag emblem proudly adorns the gates, a symbol of nobility and vigilance. The river itself flows serenely beneath a grand stone bridge, its arches reflected in the water like a scene from a storybook.
+>
+>The markets are bustling but orderly, with vendors calling out their wares in melodic tones. Stalls display an abundance of fresh produce, fine textiles, and artisan goods, hinting at the region’s agricultural and trade prosperity. Children play along the riverbanks, their laughter mingling with the gentle hum of daily life.
+>
+>Yet, beneath this idyllic surface, subtle cracks begin to show. The townsfolk, while polite and welcoming, carry a quiet weariness in their eyes. Conversations often trail off into murmurs when knights or tax collectors pass by, their presence a reminder of the burdens imposed by the region’s governance. Notices of increased taxes are pinned discreetly to market boards, and a few empty stalls hint at merchants who could no longer afford their place.
+
+### The Golden Stag Inn
+
+- **Description:** A well-maintained and reputable inn located near the town center, catering to merchants, travelers, and minor nobles. Its name and decor reflect the Baron’s symbol, with golden stag motifs adorning the signboard and interior furnishings.
+- **Key Features:**
+  - **Excellent Stables**: Spacious and clean stables with attentive grooms, ideal for travelers with horses or carriages.
+  - **Comfortable Beds**: The rooms are cozy and well-furnished, with soft feather mattresses and warm blankets.
+  - **Quiet Atmosphere**: The inn is known for its peaceful ambiance, making it a favorite for those seeking rest after a long journey.
+- **Owner: Madame Clarisse**, a no-nonsense but kind-hearted woman who prides herself on maintaining high standards.
+- **Notable Dish:** Roast venison with a honey glaze, served with fresh bread and local wine.
+
+### The Laughing Lantern
+
+- **Description:** A lively and colorful inn located near the riverbank, known for its vibrant atmosphere and dual purpose as a tavern and performance venue. The inn’s sign features a grinning lantern, symbolizing joy and entertainment.
+- **Key Features:**
+  - Theatre Space: The common room doubles as a stage for wandering troupes, musicians, and storytellers. Locals gather here for performances, making it a hub of culture and gossip.
+  - Rustic Charm: The rooms are modest but clean, with simple wooden furniture and cheerful decor.
+- **Welcoming Staff:** The innkeeper, **Jacques "Lantern" Moreau**, is a **former bard** who **loves entertaining** guests with **stories** and songs.
+- **Signature Drink:** "Lantern’s Glow," a spiced cider served warm, perfect for enjoying during performances.
+
 ## Baron Étienne de Montreuil
 
 ### Symbol: A golden stag leaping over a blue river, set against a white field
@@ -101,26 +143,3 @@ This small gesture betrays his lack of confidence in his own decisions.
 **Initially**, Baron Étienne may come across as **kind and honorable**, but his inability to grasp the depth of his people’s suffering could frustrate the party.
 
 If the party presents evidence of Gérard’s corruption, Étienne might **struggle** to reconcile this with **his perception of Gérard**, leading to a moment of self-doubt and potential growth—or further denial.
-
-## Montreuil-sur-Rivière
-
-A picturesque town nestled along the banks of a wide, slow-moving river.
-
-- The town is known for
-  - cobblestone streets
-  - charming timber-framed houses
-  - grand stone bridge that connects the **two halves** of the settlement
-- At its heart stands the **Baron’s manor**, a modest yet elegant structure surrounded by well-tended gardens.
-- The town thrives on **trade and agriculture**, with bustling markets and riverboats constantly coming and going.
-
-The Baron’s influence is evident everywhere, from the pristine streets to the carefully maintained public spaces. His efforts to uphold the ideals of chivalry and prosperity are clear, but so too is his detachment from the struggles of his people. The town feels like a reflection of Étienne himself—noble in intent, beautiful in appearance, but blind to the quiet hardships that ripple beneath the surface.
-
-### Narrative Description
-
-> Montreuil-sur-Rivière is a charming town that seems to embody the ideals of Bretonnian beauty and order—at least at first glance. Nestled along the banks of a wide, slow-moving river, the town is a picture of pastoral tranquility. Cobblestone streets wind gracefully between timber-framed houses painted in soft, cheerful hues, and flower boxes overflow with vibrant blooms, adding splashes of color to every corner.
->
-> At the heart of the town stands the Baron’s manor, a modest yet elegant structure surrounded by meticulously tended gardens. The manor’s white walls gleam in the sunlight, and its golden stag emblem proudly adorns the gates, a symbol of nobility and vigilance. The river itself flows serenely beneath a grand stone bridge, its arches reflected in the water like a scene from a storybook.
->
->The markets are bustling but orderly, with vendors calling out their wares in melodic tones. Stalls display an abundance of fresh produce, fine textiles, and artisan goods, hinting at the region’s agricultural and trade prosperity. Children play along the riverbanks, their laughter mingling with the gentle hum of daily life.
->
->Yet, beneath this idyllic surface, subtle cracks begin to show. The townsfolk, while polite and welcoming, carry a quiet weariness in their eyes. Conversations often trail off into murmurs when knights or tax collectors pass by, their presence a reminder of the burdens imposed by the region’s governance. Notices of increased taxes are pinned discreetly to market boards, and a few empty stalls hint at merchants who could no longer afford their place.
