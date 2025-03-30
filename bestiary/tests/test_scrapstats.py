@@ -256,8 +256,8 @@ parametrized = pytest.mark.parametrize(
         pytest.param(
             Path("tests/assets/soldiers.html").absolute(),
             {
-                "": {
-                    "Generic Soldier": {
+                "Generic Soldier": {
+                    "Basic Profile": {
                         "M": 4,
                         "WS": 43,
                         "BS": 35,
