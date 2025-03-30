@@ -38,8 +38,8 @@ class BlockParser:
         msg = f"{cls} has not defined `filter`."
         raise NotImplementedError(msg)
 
-    def parse(self) -> tuple[str, dict[str, int | str]]:
-        """Parse the block and return `(block_title, stats)`."""
+    def parse(self) -> tuple[tuple[str, str], dict[str, int | str]]:
+        """Parse the block and return `((section_title, block_title), stats)`."""
         msg = f"{type(self)} has not defined `parse`."
         raise NotImplementedError(msg)
 
@@ -71,12 +71,13 @@ class UntitledBlock(BlockParser):
             and soup.find("tr").getText(strip=True) == cls.MAGIC_STAT_STRING
         )
 
-    def parse(self) -> tuple[str, dict[str, str | int]]:
+    def parse(self) -> tuple[tuple[str, str], dict[str, int | str]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
         try:
-            title = self.soup.find_previous_sibling("h3").find("span", class_="mw-headline").getText(strip=True)
+            group = self.soup.find_previous_sibling("h3").find("span", class_="mw-headline").getText(strip=True)
         except AttributeError:
-            title = "Basic Profile"
+            group = ""
+        title = "Basic Profile"
         tablerows = self.soup.find_all("tr")
         # TODO: add some kind of check that we only have two rows ...
         statnames = [cell.get_text(strip=True) for cell in tablerows[0].find_all("th")]
@@ -85,7 +86,7 @@ class UntitledBlock(BlockParser):
             stats = dict(zip(statnames, statvalues, strict=True))
         except ValueError:
             log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
-        return title, stats
+        return (group, title), stats
 
 class TitledBlock(BlockParser):
     """Horizontal statblocks are on NPCs and beasts with multiple blocks, some have a title."""
@@ -100,21 +101,21 @@ class TitledBlock(BlockParser):
             and cls.MAGIC_STAT_STRING in [row.getText(strip=True) for row in soup.find_all("tr")]
         )
 
-    def parse(self) -> tuple[str, dict[str, str | int]]:
+    def parse(self) -> tuple[tuple[str, str], dict[str, int | str]]:
         """No tags and no title. Need to parse a table & provide `''` as title."""
         try:
             group = self.soup.find_previous_sibling("h3").find("span", class_="mw-headline").getText(strip=True)
         except AttributeError:
             group = ""
         tablerows = self.soup.find_all("tr")
-        title = f"{group}.{tablerows[0].getText(strip=True)}"
+        title = tablerows[0].getText(strip=True)
         statnames = [cell.get_text(strip=True) for cell in tablerows[1].find_all("td")]
         statvalues = [self.parse_stat(cell.get_text(strip=True)) for cell in tablerows[2].find_all("td")]
         try:
             stats = dict(zip(statnames, statvalues, strict=True))
         except ValueError:
             log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
-        return title, stats
+        return (group, title), stats
 
 class VerticalBlock(BlockParser):
     """Vertical statblocks are on basic Beast pages."""
@@ -126,6 +127,7 @@ class VerticalBlock(BlockParser):
 
     def parse(self) -> tuple[str, dict[str, int | str]]:
         """Stat value is tagged with class `pi-data`and `data-source` attribute showing the stat name."""
+        group = ""
         title = self.soup.find(class_="pi-header").getText()
         try:
             stats = {
@@ -134,7 +136,7 @@ class VerticalBlock(BlockParser):
             }
         except Exception:
             log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
-        return title, stats
+        return (group, title), stats
 
 
 class WikiPage:

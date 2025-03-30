@@ -37,7 +37,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
         case dict():
             if len(value) == 1:
                 # Ignore the profile name for single profile beasts and profile groupings with only one entry.
-                value = next(iter(value.values()))
+                return generate_class(name, next(iter(value.values())))
             match next(iter(value.values())):
                 # lookahead to the first entry
                 case dict():
