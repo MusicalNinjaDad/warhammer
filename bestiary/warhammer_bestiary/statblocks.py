@@ -51,5 +51,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
                 + [indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)]
                 + ([""] if not is_grouping else [])
             )
+        case str():
+            return [f"{name} = {value.encode("ascii", errors="ignore").decode()}"]
         case _:
             return [f"{name} = {value}"]
