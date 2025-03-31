@@ -2,6 +2,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
+def read_lines(filepath: Path) -> str:
+    return [*filepath.read_text().splitlines(), ""]
+
 @dataclass
 class StatBlockTestCase:
     beast: str
@@ -98,7 +101,7 @@ artisans_apprentice = StatBlockTestCase(
             },
         },
     },
-    statblock_class=[],
+    statblock_class=read_lines(Path("tests/assets/artisans_apprentice.py").absolute()),
 )
 
 thugs = StatBlockTestCase(
@@ -412,5 +415,5 @@ soldiers = StatBlockTestCase(
             },
         },
     },
-    statblock_class=[*Path("tests/assets/soldiers.py").absolute().read_text().splitlines(), ""],
+    statblock_class=read_lines(Path("tests/assets/soldiers.py").absolute()),
 )
