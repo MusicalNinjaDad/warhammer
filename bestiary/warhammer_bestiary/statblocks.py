@@ -58,5 +58,8 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
             if "d" in safevalue.lower():
                 return [f'{name} = d.from_str("{safevalue.lower()}")']
             return [f"{name} = {int(safevalue)}"]
-        case _:
+        case int():
             return [f"{name} = {value}"]
+        case _:
+            msg = f"Cannot process {name} = {value}"
+            raise ValueError(msg)
