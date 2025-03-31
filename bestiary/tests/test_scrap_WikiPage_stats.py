@@ -20,31 +20,31 @@ def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
 
 
 parametrized = pytest.mark.parametrize(
-    ["page", "stats"],
+    ["page", "beast"],
     [
         pytest.param(
             Path("tests/assets/amoeba.html").absolute(),
-            amoeba.stats,
+            amoeba,
             id="Amoeba",
         ),
         pytest.param(
             Path("tests/assets/bat.html").absolute(),
-            bat.stats,
+            bat,
             id="Bat",
         ),
         pytest.param(
             Path("tests/assets/NPC-artisans_apprentice.html").absolute(),
-            artisans_apprentice.stats,
+            artisans_apprentice,
             id="Artisan's Apprentice (NPC)",
         ),
         pytest.param(
             Path("tests/assets/thugs.html").absolute(),
-            thugs.stats,
+            thugs,
             id="Thugs",
         ),
         pytest.param(
             Path("tests/assets/soldiers.html").absolute(),
-            soldiers.stats,
+            soldiers,
             id="Soldiers",
         ),
     ],
@@ -53,19 +53,18 @@ parametrized = pytest.mark.parametrize(
 
 
 @parametrized
-def test_numstatblocks(page: WikiPage, stats: dict):
-    assert len(page.statblocks) == sum(len(group) for group in stats.values())
+def test_numstatblocks(page: WikiPage, beast: StatBlockTestCase):
+    assert len(page.statblocks) == sum(len(group) for group in beast.stats.values())
 
 
 @parametrized
-def test_pagetitle(page: WikiPage, stats, request: pytest.FixtureRequest):  # noqa: ARG001
-    """Should match test id."""
-    assert page.title == request.node.callspec.id
+def test_pagetitle(page: WikiPage, beast: StatBlockTestCase):
+    assert page.title == beast.beast
 
 
 @parametrized
-def test_statblocks(page: WikiPage, stats):
-    assert page.as_dict() == stats
+def test_statblocks(page: WikiPage, beast: StatBlockTestCase):
+    assert page.as_dict() == beast.stats
 
 
 @pytest.mark.parametrize(
