@@ -3,7 +3,7 @@ from typing import Protocol
 
 import pytest
 import requests
-from assets.statblocks import StatBlockTestCase, amoeba, artisans_apprentice, bat, soldiers, thugs
+from assets.statblocks import StatBlockTestCase, amoeba, artisans_apprentice, bat, beast_of_nurgle, soldiers, thugs
 
 from warhammer_bestiary.scraper import WikiPage
 from warhammer_bestiary.statblocks import generate_class
@@ -69,7 +69,7 @@ def test_statblocks(page: WikiPage, beast: StatBlockTestCase):
 
 @pytest.mark.parametrize(
     "beast",
-    [amoeba, artisans_apprentice, thugs, soldiers],
+    [amoeba, artisans_apprentice, beast_of_nurgle, thugs, soldiers],
     ids=lambda beast: beast.beast,
 )
 def test_generate_py(beast: StatBlockTestCase):

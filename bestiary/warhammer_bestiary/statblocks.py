@@ -54,6 +54,9 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
                 + ([""] if not is_grouping else [])
             )
         case str():
-            return [f"{name} = {safe(value)}"]
+            safevalue = safe(value)
+            if "d" in safevalue.lower():
+                return [f'{name} = d.from_str("{safevalue.lower()}")']
+            return [f"{name} = {int(safevalue)}"]
         case _:
             return [f"{name} = {value}"]

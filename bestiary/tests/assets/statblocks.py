@@ -79,6 +79,31 @@ bat = StatBlockTestCase(
     statblock_class=[],
 )
 
+beast_of_nurgle = StatBlockTestCase(
+    beast="Beast Of Nurgle",
+    stats={
+        "": {
+            "Basic Profile": {
+                "M": 3,
+                "WS": 30,
+                "BS": 0,
+                "S": 3,
+                "T": 5,
+                "W": 15,
+                "I": 30,
+                "A": "D6",
+                "Dex": 6,
+                "Ld": 24,
+                "Int": 10,
+                "Cl": 89,
+                "WP": 98,
+                "Fel": 0,
+            },
+        },
+    },
+    statblock_class=read_lines(Path("tests/assets/beast_of_nurgle.py").absolute()),
+)
+
 artisans_apprentice = StatBlockTestCase(
     beast="Artisan's Apprentice (NPC)",
     stats={
