@@ -31,7 +31,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
     indented = partial(indent, prefix="    ")
 
     def safe(s: str) -> str:
-        return s.replace(" ", "_")
+        return s.replace("'","").removesuffix("(NPC)").strip().replace(" ", "_")
 
     match value:
         case dict():

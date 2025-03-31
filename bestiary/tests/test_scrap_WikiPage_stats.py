@@ -69,7 +69,7 @@ def test_statblocks(page: WikiPage, beast: StatBlockTestCase):
 
 @pytest.mark.parametrize(
     "beast",
-    [amoeba, thugs, soldiers],
+    [amoeba, artisans_apprentice, thugs, soldiers],
     ids=lambda beast: beast.beast,
 )
 def test_generate_py(beast: StatBlockTestCase):

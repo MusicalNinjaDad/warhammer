@@ -1,6 +1,6 @@
 class Artisans_Apprentice(Warhammer):
     M = 4
-    WS = 41
+    WS = 31
     BS = 25
     S = 3
     T = 3
