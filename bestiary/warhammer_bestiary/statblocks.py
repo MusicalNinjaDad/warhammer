@@ -31,7 +31,9 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
     indented = partial(indent, prefix="    ")
 
     def safe(s: str) -> str:
-        return s.replace("'","").removesuffix("(NPC)").strip().replace(" ", "_")
+        return (
+            s.encode("ascii", errors="ignore").decode().replace("'", "").removesuffix("(NPC)").strip().replace(" ", "_")
+        )
 
     match value:
         case dict():
@@ -52,6 +54,6 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
                 + ([""] if not is_grouping else [])
             )
         case str():
-            return [f"{name} = {value.encode("ascii", errors="ignore").decode()}"]
+            return [f"{name} = {safe(value)}"]
         case _:
             return [f"{name} = {value}"]
