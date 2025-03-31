@@ -164,8 +164,9 @@ inputs = ["warhammer_bestiary"]
         "F401", # Unused imports are fine: using __init__.py to expose them with implicit __ALL__
     ]
 
-    "tests/assets/expected.pyi" = [
-        "ANN001", "ANN201", # Cannot automatically generate type annotations
+    "tests/assets/**" = [
+        "INP",
+        "D",
     ]
 
     "**/*.ipynb" = [
