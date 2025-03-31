@@ -50,6 +50,56 @@ amoeba = StatBlockTestCase(
     ],
 )
 
+bat = StatBlockTestCase(
+    beast="Bat",
+    stats={
+        "": {
+            "Basic Profile": {
+                "M": 0,
+                "WS": 59,
+                "BS": 0,
+                "S": 0,
+                "T": 1,
+                "W": 1,
+                "I": 30,
+                "A": 1,
+                "Dex": 0,
+                "Ld": 14,
+                "Int": 5,
+                "Cl": 29,
+                "WP": 29,
+                "Fel": 0,
+            },
+        },
+    },
+    statblock_class=[],
+)
+
+artisans_apprentice = StatBlockTestCase(
+    beast="Artisan's Apprentice (NPC)",
+    stats={
+        "": {
+            "Basic Profile": {
+                "M": 4,
+                "WS": 31,
+                "BS": 25,
+                "S": 3,
+                "T": 3,
+                "W": 6,
+                "I": 40,
+                "A": 1,
+                "Dex": 39,
+                "Ld": 29,
+                "Int": 29,
+                "Cl": 29,
+                "WP": 29,
+                "Fel": 29,
+            },
+        },
+    },
+    statblock_class=[],
+)
+
 thugs = StatBlockTestCase(
     beast="Thugs",
     stats={

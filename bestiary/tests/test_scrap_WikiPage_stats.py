@@ -3,7 +3,7 @@ from typing import Protocol
 
 import pytest
 import requests
-from assets.statblocks import StatBlockTestCase, amoeba, soldiers, thugs
+from assets.statblocks import StatBlockTestCase, amoeba, artisans_apprentice, bat, soldiers, thugs
 
 from warhammer_bestiary.scraper import WikiPage
 from warhammer_bestiary.statblocks import generate_class
@@ -29,46 +29,12 @@ parametrized = pytest.mark.parametrize(
         ),
         pytest.param(
             Path("tests/assets/bat.html").absolute(),
-            {
-                "Basic Profile": {
-                    "M": 0,
-                    "WS": 59,
-                    "BS": 0,
-                    "S": 0,
-                    "T": 1,
-                    "W": 1,
-                    "I": 30,
-                    "A": 1,
-                    "Dex": 0,
-                    "Ld": 14,
-                    "Int": 5,
-                    "Cl": 29,
-                    "WP": 29,
-                    "Fel": 0,
-                },
-            },
+            bat.stats,
             id="Bat",
         ),
         pytest.param(
             Path("tests/assets/NPC-artisans_apprentice.html").absolute(),
-            {
-                "Basic Profile": {
-                    "M": 4,
-                    "WS": 31,
-                    "BS": 25,
-                    "S": 3,
-                    "T": 3,
-                    "W": 6,
-                    "I": 40,
-                    "A": 1,
-                    "Dex": 39,
-                    "Ld": 29,
-                    "Int": 29,
-                    "Cl": 29,
-                    "WP": 29,
-                    "Fel": 29,
-                },
-            },
+            artisans_apprentice.stats,
             id="Artisan's Apprentice (NPC)",
         ),
         pytest.param(
