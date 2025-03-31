@@ -31,9 +31,9 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
     indented = partial(indent, prefix="    ")
 
     def safe(s: str) -> str:
-        return (
-            s.encode("ascii", errors="ignore").decode().replace("'", "").removesuffix("(NPC)").strip().replace(" ", "_")
-        )
+        s = s.removesuffix("(NPC)").strip()
+        s = s.encode("ascii", errors="ignore").decode().replace(" ", "_")
+        return s if s.isidentifier() or s.isalnum() else "".join(c if c.isalnum() or c == "_" else "" for c in s)
 
     match value:
         case dict():
