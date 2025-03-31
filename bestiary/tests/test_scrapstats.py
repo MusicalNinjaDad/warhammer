@@ -729,8 +729,8 @@ parametrized = pytest.mark.parametrize(
 
 
 @parametrized
-def test_numstatblocks(page: WikiPage, stats):
-    assert len(page.statblocks) == len(stats)
+def test_numstatblocks(page: WikiPage, stats: dict):
+    assert len(page.statblocks) == sum(len(group) for group in stats.values())
 
 
 @parametrized
