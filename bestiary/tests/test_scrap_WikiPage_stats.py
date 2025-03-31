@@ -4,9 +4,8 @@ from typing import Protocol
 
 import pytest
 import requests
-from requests_file import FileAdapter
 
-from warhammer_bestiary.scraper import NPC, Beast, WikiPage
+from warhammer_bestiary.scraper import WikiPage
 from warhammer_bestiary.statblocks import generate_class
 
 
@@ -606,59 +605,10 @@ soldiers = TestCase(
 )
 
 
-@pytest.fixture(scope="module")
-def requests_session() -> requests.Session:
-    """Provide a `requests.Session` with `FileAdaptor?  and module-scoped cache."""
-    session = requests.Session()
-    session.mount("file://", FileAdapter())
-    return session
-
-
 @pytest.fixture
 def page(request: PageParam, requests_session: requests.Session) -> WikiPage:
     uri = request.param
     return WikiPage(uri=f"file://{uri}", session=requests_session)
-
-
-@pytest.mark.parametrize(
-    ["page_type", "contents_page", "num_links", "contains", "absent"],
-    [
-        pytest.param(
-            Beast,
-            Path("tests/assets/bestiary.html").absolute(),
-            126,  # Thugs and High Elf Mage are not labeled with "(NPC)"
-            ("Bat", "/wiki/Bat"),
-            r"/wiki/Artisan%27s_Apprentice_(NPC)",
-            id="Beastiary",
-        ),
-        pytest.param(
-            NPC,
-            Path("tests/assets/npcs.html").absolute(),
-            38,
-            ("Artisan's Apprentice (NPC)", r"/wiki/Artisan%27s_Apprentice_(NPC)"),
-            "/wiki/Bat",
-            id="NPC",
-        ),
-    ],
-)
-def test_get_page_uris(  # noqa: PLR0913
-    page_type: type[WikiPage],
-    contents_page: Path,
-    num_links: int,
-    contains: tuple[str, str],
-    absent: str,
-    requests_session: requests.Session,
-    monkeypatch: pytest.MonkeyPatch,
-):
-    monkeypatch.setattr(page_type, "CATEGORY_INDEX", f"file://{contents_page}", raising=True)
-    links = page_type.get_page_uris(requests_session)
-    assert len(links) == num_links
-    assert contains in links.items()
-    assert absent not in links.values()
-
-
-def test_absolute():
-    assert Beast.absolute("/wiki/Bat") == "https://wfrp1e.fandom.com/wiki/Bat"
 
 
 parametrized = pytest.mark.parametrize(
