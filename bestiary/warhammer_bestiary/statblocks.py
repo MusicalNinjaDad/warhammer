@@ -32,6 +32,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
     indented = partial(indent, prefix="    ")
 
     def safe(s: str, *, identifier: bool = False) -> str:
+        s.strip().removeprefix("+")
         s = s.encode("ascii", errors="ignore").decode().strip().replace(" ", "_")
         return s if not identifier or s.isidentifier() else "".join(c if c.isalnum() or c == "_" else "" for c in s)
 
@@ -78,3 +79,22 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
         case _:
             msg = f"Cannot process {name} = {value:r}"
             raise TypeError(msg)
+
+if __name__ == "__main__":
+    import json
+
+    from warhammer_bestiary.scraper import BEASTFILE, NPCFILE
+    
+    npcs: dict = json.loads(NPCFILE.read_text())
+    beasts: dict = json.loads(BEASTFILE.read_text())
+
+    beast_classes = BEASTFILE.with_suffix(".py")
+    npc_classes = NPCFILE.with_suffix(".py")
+
+    beast_classes.write_text(
+        "\n".join(line for beast, stats in beasts.items() if stats for line in generate_class(beast, stats)),
+    )
+
+    npc_classes.write_text(
+        "\n".join(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats)),
+    )

@@ -10,6 +10,9 @@ from typing import ClassVar, Final
 import requests
 from bs4 import BeautifulSoup
 
+BEASTFILE = Path("beasts.json")
+NPCFILE = Path("npcs.json")
+
 LOG_FILE = Path("beast_scraper.log")
 
 log = logging.getLogger(__name__)
@@ -240,18 +243,16 @@ class NPC(WikiPage):
 
 
 if __name__ == "__main__":
-    ignore = ["https://wfrp1e.fandom.com/wiki/Bestiary"]
+    ignore = ["https://wfrp1e.fandom.com/Bestiary"]
     log.info("Begin scraping NPCs")
-    npc_pages = [NPC.absolute(uri) for uri in NPC.get_page_uris() if uri not in ignore]
+    npc_pages = [NPC.absolute(uri) for uri in NPC.get_page_uris()]
+    npcs = [WikiPage(page) for page in npc_pages if page not in ignore]
+    NPCFILE.write_text(json.dumps({npc.title: npc.as_dict() for npc in npcs}, indent=2))
     ignore += npc_pages
-    npcs = [WikiPage(page) for page in npc_pages]
-    npcfile = Path("npcs.json")
-    npcfile.write_text(json.dumps({npc.title: npc.as_dict() for npc in npcs}, indent=2))
-    log.info("%i NPCs written to %s", len(npcs), npcfile)
+    log.info("%i NPCs written to %s", len(npcs), NPCFILE)
 
     log.info("Begin scraping Beasts")
-    beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris() if uri not in ignore]
-    beasts = [WikiPage(page) for page in beast_pages]
-    beastfile = Path("beasts.json")
-    beastfile.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
-    log.info("%i beasts written to %s", len(beasts), beastfile)
+    beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris()]
+    beasts = [WikiPage(page) for page in beast_pages if page not in ignore]
+    BEASTFILE.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
+    log.info("%i beasts written to %s", len(beasts), BEASTFILE)
