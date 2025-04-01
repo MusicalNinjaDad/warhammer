@@ -68,7 +68,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
                 return [f'{safename} = d.from_str("{safevalue}")']
 
             try:
-                numericalvalue = int(safevalue) # maybe we just had some wierd symbol after the value
+                numericalvalue = int(safevalue)  # maybe we just had some wierd symbol after the value
             except ValueError:
                 try:
                     numericalvalue = int(re.search(r"\d+", safevalue).group())  # get the first number (e.g. "3-5" -> 3)

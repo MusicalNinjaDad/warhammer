@@ -88,6 +88,7 @@ class UntitledBlock(BlockParser):
             log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
         return (group, title), stats
 
+
 class TitledBlock(BlockParser):
     """Horizontal statblocks are on NPCs and beasts with multiple blocks, some have a title."""
 
@@ -116,6 +117,7 @@ class TitledBlock(BlockParser):
         except ValueError:
             log.exception("Error parsing stats for %s - Blocksoup: %r", type(self).__name__, self.soup)
         return (group, title), stats
+
 
 class VerticalBlock(BlockParser):
     """Vertical statblocks are on basic Beast pages."""
@@ -186,7 +188,7 @@ class WikiPage:
             try:
                 statsdict[group][title] = stats
             except KeyError:
-                statsdict[group] = {title:stats}
+                statsdict[group] = {title: stats}
         return statsdict
 
     @classmethod
@@ -251,4 +253,3 @@ if __name__ == "__main__":
     beastfile = Path("beasts.json")
     beastfile.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
     log.info("%i beasts written to %s", len(beasts), beastfile)
-
