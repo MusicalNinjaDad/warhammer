@@ -5,6 +5,7 @@ from pathlib import Path
 def read_lines(filepath: Path) -> str:
     return [*filepath.read_text().splitlines(), ""]
 
+
 @dataclass
 class StatBlockTestCase:
     beast: str
@@ -77,6 +78,44 @@ bat = StatBlockTestCase(
         },
     },
     statblock_class=[],
+)
+
+horse = StatBlockTestCase(
+    beast="Horse",
+    stats={
+        "M": 8,
+        "WS": 33,
+        "BS": 0,
+        "S": "2-5",
+        "T": 3,
+        "W": "5/11",
+        "I": 30,
+        "A": "0/1",
+        "Dex": 0,
+        "Ld": 10,
+        "Int": 10,
+        "Cl": 10,
+        "WP": 10,
+        "Fel": 0,
+    },
+    statblock_class=[
+        "class Horse(Warhammer):",
+        "    M = 8",
+        "    WS = 33",
+        "    BS = 0",
+        "    S = 2",
+        "    T = 3",
+        "    W = 5",
+        "    I = 30",
+        "    A = 0",
+        "    Dex = 0",
+        "    Ld = 10",
+        "    Int = 10",
+        "    Cl = 10",
+        "    WP = 10",
+        "    Fel = 0",
+        "",
+    ],
 )
 
 beast_of_nurgle = StatBlockTestCase(
