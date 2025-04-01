@@ -1,4 +1,4 @@
-from warhammer_bestiary.statblocks import Warhammer
+from . import Warhammer
 
 class Amoeba(Warhammer):
     M = 4

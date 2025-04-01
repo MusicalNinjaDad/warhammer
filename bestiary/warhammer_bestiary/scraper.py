@@ -10,8 +10,8 @@ from typing import ClassVar, Final
 import requests
 from bs4 import BeautifulSoup
 
-BEASTFILE = Path("beasts.json")
-NPCFILE = Path("npcs.json")
+BEASTFILE = Path("Beasts.json")
+NPCFILE = Path("NPCs.json")
 
 LOG_FILE = Path("beast_scraper.log")
 

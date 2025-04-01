@@ -93,10 +93,17 @@ if __name__ == "__main__":
     beast_classes = BEASTFILE.with_suffix(".py")
     npc_classes = NPCFILE.with_suffix(".py")
 
+    imports = [
+        "from . import Warhammer",
+        "",
+    ]
+    
     beast_classes.write_text(
-        "\n".join(line for beast, stats in beasts.items() if stats for line in generate_class(beast, stats)),
+        "\n".join(
+            *imports, *(line for beast, stats in beasts.items() if stats for line in generate_class(beast, stats)),
+        ),
     )
 
     npc_classes.write_text(
-        "\n".join(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats)),
+        "\n".join(*imports, *(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats))),
     )
