@@ -86,7 +86,9 @@ if __name__ == "__main__":
     from warhammer_bestiary.scraper import BEASTFILE, NPCFILE
     
     npcs: dict = json.loads(NPCFILE.read_text())
-    beasts: dict = json.loads(BEASTFILE.read_text())
+    beasts: dict[str,dict] = json.loads(BEASTFILE.read_text())
+
+    _ = beasts["Chaos Beastman"].pop("Special Rules") # belongs in careers
 
     beast_classes = BEASTFILE.with_suffix(".py")
     npc_classes = NPCFILE.with_suffix(".py")
