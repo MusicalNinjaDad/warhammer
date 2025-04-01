@@ -32,17 +32,20 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
     indented = partial(indent, prefix="    ")
 
     def safe(s: str, *, identifier: bool = False) -> str:
-        s = s.removesuffix("(NPC)").strip() # TODO: this should go into the scraper when processing page title
+        s = s.removesuffix("(NPC)").strip()  # TODO: this should go into the scraper when processing page title
         s = s.encode("ascii", errors="ignore").decode().replace(" ", "_")
         return s if not identifier or s.isidentifier() else "".join(c if c.isalnum() or c == "_" else "" for c in s)
 
+    safename = safe(name, identifier=True)
+
     match value:
         case dict():
+            # Ignore the profile / group name if it is the only one:
+            # use the higher-level identifier and grab the relevant stats from down the tree
             if len(value) == 1:
-                # Ignore the profile / group name for single profile beasts and profile groupings with only one entry.
                 return generate_class(name, next(iter(value.values())))
-            match next(iter(value.values())):
-                # lookahead to the first entry
+
+            match next(iter(value.values())):  # lookahead to the first entry
                 case dict():
                     is_grouping = True
                     base = ""
@@ -50,24 +53,29 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
                     is_grouping = False
                     base = "(Warhammer)"
             return (
-                [f"class {safe(name, identifier=True)}{base}:"]
+                [f"class {safename}{base}:"]
                 + [indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)]
-                + ([""] if not is_grouping else [])
+                + ([""] if not is_grouping else [])  # blank line after each profile but no double lines after groups
             )
+
+        case int():
+            return [f"{safename} = {value}"]
+
         case str():
-            safevalue = safe(value)
-            if "d" in safevalue.lower():
-                return [f'{safe(name, identifier=True)} = d.from_str("{safevalue.lower()}")']
+            safevalue = safe(value).lower()
+
+            if "d" in safevalue:  # Assume valid ndx dice notation
+                return [f'{safename} = d.from_str("{safevalue}")']
+
             try:
-                numericalvalue = int(safevalue)
+                numericalvalue = int(safevalue) # maybe we just had some wierd symbol after the value
             except ValueError:
                 try:
-                    numericalvalue = int(re.search(r"\d+", safevalue).group()) # get the first number (e.g. "3-5" -> 3)
-                except AttributeError: # `'NoneType' object has no attribute 'group'` if no digits are present
+                    numericalvalue = int(re.search(r"\d+", safevalue).group())  # get the first number (e.g. "3-5" -> 3)
+                except AttributeError:  # if no digits are present: 'NoneType' object has no attribute 'group'
                     numericalvalue = 0
-            return [f"{safe(name, identifier=True)} = {numericalvalue}"]
-        case int():
-            return [f"{safe(name, identifier=True)} = {value}"]
+            return [f"{safename} = {numericalvalue}"]
+
         case _:
             msg = f"Cannot process {name} = {value:r}"
             raise TypeError(msg)
