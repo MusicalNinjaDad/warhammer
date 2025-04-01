@@ -167,6 +167,9 @@ inputs = ["warhammer_bestiary"]
     "tests/assets/**" = [
         "INP",
         "D",
+        "E741",
+        "F821",
+        "N801",
     ]
 
     "**/*.ipynb" = [
