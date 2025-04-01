@@ -94,16 +94,20 @@ if __name__ == "__main__":
     npc_classes = NPCFILE.with_suffix(".py")
 
     imports = [
+        "# ruff: noqa: RUF100, D100, D101, D106, E741, N801, N999",
+        "from ttrpg_dice import d  # noqa: F401",
+        "",
         "from . import Warhammer",
+        "",
         "",
     ]
     
     beast_classes.write_text(
         "\n".join(
-            *imports, *(line for beast, stats in beasts.items() if stats for line in generate_class(beast, stats)),
+            [*imports, *(line for beast, stats in beasts.items() if stats for line in generate_class(beast, stats))],
         ),
     )
 
     npc_classes.write_text(
-        "\n".join(*imports, *(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats))),
+        "\n".join([*imports, *(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats))]),
     )

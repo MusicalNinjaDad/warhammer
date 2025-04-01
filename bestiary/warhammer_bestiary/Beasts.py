@@ -1,4 +1,8 @@
+# ruff: noqa: RUF100, D100, D101, D106, E741, N801, N999
+from ttrpg_dice import d  # noqa: F401
+
 from . import Warhammer
+
 
 class Amoeba(Warhammer):
     M = 4
@@ -256,87 +260,21 @@ class Chameleoleech(Warhammer):
     WP = 14
     Fel = 0
 
-class Chaos_Beastman:
-    class (Warhammer):
-        M = 4
-        WS = 41
-        BS = 25
-        S = 3
-        T = 4
-        W = 11
-        I = 30
-        A = 1
-        Dex = 30
-        Ld = 29
-        Int = 24
-        Cl = 29
-        WP = 24
-        Fel = 10
-
-    class Special_Rules:
-        class Beastman_Shaman(Warhammer):
-            M = 0
-            WS = 10
-            BS = 0
-            S = 1
-            T = 0
-            W = 0
-            I = 0
-            A = 0
-            Dex = 0
-            Ld = 0
-            Int = 10
-            Cl = 20
-            WP = 10
-            Fel = 0
-
-        class Beastman_Shaman_Champion(Warhammer):
-            M = 0
-            WS = 10
-            BS = 0
-            S = 1
-            T = 0
-            W = d.from_str("+d6")
-            I = 10
-            A = 0
-            Dex = 0
-            Ld = 10
-            Int = 20
-            Cl = 30
-            WP = 20
-            Fel = 0
-
-        class Beastman_Shaman_Minor_Hero(Warhammer):
-            M = 0
-            WS = 20
-            BS = 0
-            S = 1
-            T = 1
-            W = d.from_str("+d6")
-            I = 20
-            A = 0
-            Dex = 10
-            Ld = 20
-            Int = 30
-            Cl = 40
-            WP = 30
-            Fel = 0
-
-        class Beastman_Shaman_Major_Hero(Warhammer):
-            M = 0
-            WS = 20
-            BS = 10
-            S = 1
-            T = 1
-            W = d.from_str("+2d6")
-            I = 30
-            A = 0
-            Dex = 20
-            Ld = 30
-            Int = 40
-            Cl = 50
-            WP = 40
-            Fel = 0
+class Chaos_Beastman(Warhammer):
+    M = 4
+    WS = 41
+    BS = 25
+    S = 3
+    T = 4
+    W = 11
+    I = 30
+    A = 1
+    Dex = 30
+    Ld = 29
+    Int = 24
+    Cl = 29
+    WP = 24
+    Fel = 10
 
 class Chimera(Warhammer):
     M = 5
