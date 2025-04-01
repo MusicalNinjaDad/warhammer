@@ -144,7 +144,7 @@ beast_of_nurgle = StatBlockTestCase(
 )
 
 artisans_apprentice = StatBlockTestCase(
-    beast="Artisan's Apprentice (NPC)",
+    beast="Artisan's Apprentice",
     stats={
         "": {
             "Basic Profile": {

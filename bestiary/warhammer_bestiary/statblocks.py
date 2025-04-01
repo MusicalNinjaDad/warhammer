@@ -32,8 +32,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
     indented = partial(indent, prefix="    ")
 
     def safe(s: str, *, identifier: bool = False) -> str:
-        s = s.removesuffix("(NPC)").strip()  # TODO: this should go into the scraper when processing page title
-        s = s.encode("ascii", errors="ignore").decode().replace(" ", "_")
+        s = s.encode("ascii", errors="ignore").decode().strip().replace(" ", "_")
         return s if not identifier or s.isidentifier() else "".join(c if c.isalnum() or c == "_" else "" for c in s)
 
     safename = safe(name, identifier=True)
