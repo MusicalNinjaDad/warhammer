@@ -43,7 +43,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
             # Ignore the profile / group name if it is the only one:
             # use the higher-level identifier and grab the relevant stats from down the tree
             if len(value) == 1:
-                return generate_class(name, next(iter(value.values())))
+                return generate_class(name if name else next(iter(value)), next(iter(value.values())))
 
             match next(iter(value.values())):  # lookahead to the first entry
                 case dict():
@@ -83,15 +83,17 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
 if __name__ == "__main__":
     import json
 
-    from warhammer_bestiary.scraper import BEASTFILE, NPCFILE
+    from warhammer_bestiary.scraper import BEASTFILE, CAREERFILE, NPCFILE
     
     npcs: dict = json.loads(NPCFILE.read_text())
     beasts: dict[str,dict] = json.loads(BEASTFILE.read_text())
+    careers: dict[str, dict] = json.loads(CAREERFILE.read_text())
 
-    _ = beasts["Chaos Beastman"].pop("Special Rules") # belongs in careers
+    careers["Chaos Beastman"] = beasts["Chaos Beastman"].pop("Special Rules") # belongs in careers
 
     beast_classes = BEASTFILE.with_suffix(".py")
     npc_classes = NPCFILE.with_suffix(".py")
+    career_classes = CAREERFILE.with_suffix(".py")
 
     imports = [
         "# ruff: noqa: RUF100, D100, D101, D106, E741, N801, N999",
@@ -110,4 +112,10 @@ if __name__ == "__main__":
 
     npc_classes.write_text(
         "\n".join([*imports, *(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats))]),
+    )
+
+    career_classes.write_text(
+        "\n".join(
+            [*imports, *(line for career, stats in careers.items() if stats for line in generate_class(career, stats))],
+        ),
     )

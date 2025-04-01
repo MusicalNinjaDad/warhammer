@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 BEASTFILE = Path("Beasts.json")
 NPCFILE = Path("NPCs.json")
+CAREERFILE = Path("Careers.json")
 
 LOG_FILE = Path("beast_scraper.log")
 
@@ -240,6 +241,16 @@ class NPC(WikiPage):
     def is_page_link(cls, tag: BeautifulSoup) -> bool:
         """No need to filter out any results."""
         return tag.name == "a" and "category-page__member-link" in tag.get("class", "")
+    
+class Careers(WikiPage):
+    """Careers."""
+
+    CATEGORY_INDEX: Final = "https://wfrp1e.fandom.com/wiki/Category:Careers"
+
+    @classmethod
+    def is_page_link(cls, tag: BeautifulSoup) -> bool:
+        """No need to filter out any results."""
+        return tag.name == "a" and "category-page__member-link" in tag.get("class", "")
 
 
 if __name__ == "__main__":
@@ -255,4 +266,12 @@ if __name__ == "__main__":
     beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris()]
     beasts = [WikiPage(page) for page in beast_pages if page not in ignore]
     BEASTFILE.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
+    ignore += beast_pages
     log.info("%i beasts written to %s", len(beasts), BEASTFILE)
+
+    log.info("Begin scraping Careers")
+    career_pages = [Careers.absolute(uri) for uri in Careers.get_page_uris()]
+    careers = [WikiPage(page) for page in career_pages if page not in ignore]
+    CAREERFILE.write_text(json.dumps({career.title: career.as_dict() for career in careers}, indent=2))
+    ignore += career_pages
+    log.info("%i Careers written to %s", len(careers), CAREERFILE)
