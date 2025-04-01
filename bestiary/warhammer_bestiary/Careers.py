@@ -1,7 +1,7 @@
 # ruff: noqa: RUF100, D100, D101, D106, E741, N801, N999
 from ttrpg_dice import d  # noqa: F401
 
-from . import Warhammer
+from .statblocks import Warhammer
 
 
 class Agitator(Warhammer):
