@@ -552,5 +552,5 @@ druidic_priest = StatBlockTestCase(
             },
         },
     },
-    statblock_class=[],
+    statblock_class=read_lines(Path("tests/assets/druidic_priest.py")),
 )

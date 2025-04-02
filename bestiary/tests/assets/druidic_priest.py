@@ -1,0 +1,68 @@
+class Druidic_Priest:
+    Level_1 = Warhammer(
+        M=0,
+        WS=0,
+        BS=0,
+        S=0,
+        T=0,
+        W=2,
+        I=10,
+        A=0,
+        Dex=0,
+        Ld=0,
+        Int=0,
+        Cl=0,
+        WP=10,
+        Fel=0,
+    )
+
+    Level_2 = Warhammer(
+        M=0,
+        WS=10,
+        BS=10,
+        S=1,
+        T=1,
+        W=3,
+        I=20,
+        A=0,
+        Dex=10,
+        Ld=10,
+        Int=10,
+        Cl=10,
+        WP=20,
+        Fel=10,
+    )
+
+    Level_3 = Warhammer(
+        M=0,
+        WS=10,
+        BS=10,
+        S=1,
+        T=1,
+        W=4,
+        I=20,
+        A=0,
+        Dex=20,
+        Ld=20,
+        Int=30,
+        Cl=20,
+        WP=20,
+        Fel=20,
+    )
+
+    Level_4 = Warhammer(
+        M=0,
+        WS=10,
+        BS=10,
+        S=1,
+        T=1,
+        W=4,
+        I=30,
+        A=0,
+        Dex=30,
+        Ld=30,
+        Int=30,
+        Cl=30,
+        WP=30,
+        Fel=30,
+    )

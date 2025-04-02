@@ -1,5 +1,6 @@
 """Warhammer Fantasy Roleplay 1st edition StatBlocks."""
 
+from enum import Enum, auto
 import re
 from functools import partial
 from textwrap import indent
@@ -30,8 +31,11 @@ class Warhammer:
 type StatsDict = dict[str, StatsValue]
 type StatsValue = int | str
 
+class ClassOrInstance(Enum):  # noqa: D101
+    classes = auto()
+    instances = auto()
 
-def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsValue) -> list[str]:
+def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsValue, generate: ClassOrInstance) -> list[str]:
     """Create a Warhammer StatBlock from a key, value pair of scraped results."""
     indented = partial(indent, prefix="    ")
 
@@ -47,7 +51,7 @@ def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsVal
             if _single_entry_dict_needs_flattening := len(value) == 1:
                 entry_name, entry_values = next(iter(value.items()))
                 best_valid_name = safename if safename else entry_name
-                return generate_class(best_valid_name, entry_values)
+                return generate_class(best_valid_name, entry_values, generate=generate)
 
             dict_of_what = next(iter(value.values()))
             match dict_of_what:
@@ -57,13 +61,22 @@ def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsVal
                 case _:
                     is_grouping = False
                     base = "(Warhammer)"
+
+            if generate is ClassOrInstance.instances and not is_grouping:
+                return (
+                    [f"{safename} = Warhammer("]
+                    + [indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat, generate=generate)]
+                    + [")", ""]
+                )
             return (
                 [f"class {safename}{base}:"]
-                + [indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat)]
+                + [indented(line) for profile_or_stat in value.items() for line in generate_class(*profile_or_stat, generate=generate)]
                 + ([""] if not is_grouping else [])  # blank line after each profile but no double lines after groups
             )
 
         case int():
+            if generate is ClassOrInstance.instances:
+                return [f"{safename}={value},"]
             return [f"{safename} = {value}"]
 
         case str():

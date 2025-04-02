@@ -16,7 +16,7 @@ from assets.statblocks import (
 )
 
 from warhammer_bestiary.scraper import WikiPage
-from warhammer_bestiary.statblocks import generate_class
+from warhammer_bestiary.statblocks import ClassOrInstance, generate_class
 
 
 class PageParam(Protocol):
@@ -83,9 +83,16 @@ def test_statblocks(page: WikiPage, beast: StatBlockTestCase):
 
 
 @pytest.mark.parametrize(
-    "beast",
-    [amoeba, artisans_apprentice, beast_of_nurgle, horse, thugs, soldiers],
-    ids=lambda beast: beast.beast,
+    ["beast", "generate"],
+    [
+        pytest.param(amoeba, ClassOrInstance.classes, id="Amoeba"),
+        pytest.param(artisans_apprentice, ClassOrInstance.classes, id="Artisan's Apprentice (NPC)"),
+        pytest.param(beast_of_nurgle, ClassOrInstance.classes, id="Beast of Nurgle"),
+        pytest.param(druidic_priest, ClassOrInstance.instances, id="Druidic Priest (Career)"),
+        pytest.param(horse, ClassOrInstance.classes, id="Horse"),
+        pytest.param(thugs, ClassOrInstance.classes, id="Thugs"),
+        pytest.param(soldiers, ClassOrInstance.classes, id="Soldiers"),
+    ],
 )
-def test_generate_py(beast: StatBlockTestCase):
-    assert generate_class(beast.beast, beast.stats) == beast.statblock_class
+def test_generate_py(beast: StatBlockTestCase, generate: bool):
+    assert generate_class(beast.beast, beast.stats, generate=generate) == beast.statblock_class
