@@ -67,14 +67,13 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
 
             if "d" in safevalue:  # Assume valid ndx dice notation
                 return [f'{safename} = d.from_str("{safevalue}")']
-
+            
+            # get the first number (e.g. "13-25" -> 13)
+            numbers_in_string = re.search(r"\d+", safevalue)
             try:
-                numericalvalue = int(safevalue)  # maybe we just had some wierd symbol after the value
-            except ValueError:
-                try:
-                    numericalvalue = int(re.search(r"\d+", safevalue).group())  # get the first number (e.g. "3-5" -> 3)
-                except AttributeError:  # if no digits are present: 'NoneType' object has no attribute 'group'
-                    numericalvalue = 0
+                numericalvalue = int(numbers_in_string.group(0))
+            except AttributeError:  # if no numbers are present: 'NoneType' object has no attribute 'group'
+                numericalvalue = 0
             return [f"{safename} = {numericalvalue}"]
 
         case _:
