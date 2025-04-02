@@ -37,8 +37,10 @@ class ClassOrInstance(Enum):  # noqa: D101
     instances = auto()
 
 
-def generate_class(  # noqa: C901
-    name: str, value: dict[str, StatsDict] | StatsDict | StatsValue, generate: ClassOrInstance,
+def generate_class(  # noqa: C901, PLR0912
+    name: str,
+    value: dict[str, StatsDict] | StatsDict | StatsValue,
+    generate: ClassOrInstance,
 ) -> list[str]:
     """Create a Warhammer StatBlock from a key, value pair of scraped results."""
     indented = partial(indent, prefix="    ")
@@ -55,9 +57,10 @@ def generate_class(  # noqa: C901
             if _single_entry_dict_needs_flattening := len(value) == 1:
                 entry_name, entry_values = next(iter(value.items()))
                 best_valid_name = safename if safename else entry_name
-                return generate_class(best_valid_name, entry_values, generate=generate)
+                return generate_class(name=best_valid_name, value=entry_values, generate=generate)
 
-            is_grouping = isinstance(next(iter(value.values())), dict)
+            first_value = next(iter(value.values()))
+            is_grouping = isinstance(first_value, dict)
             match is_grouping, generate:
                 case True, _:
                     first_line = [f"class {safename}:"]
@@ -82,24 +85,26 @@ def generate_class(  # noqa: C901
             )
 
         case int():
-            if generate is ClassOrInstance.instances:
-                return [f"{safename}={value},"]
-            return [f"{safename} = {value}"]
+            statvalue = value
 
         case str():
             safevalue = safe(value).lower()
 
             if "d" in safevalue:  # Assume valid ndx dice notation
-                return [f'{safename} = d.from_str("{safevalue}")']
+                statvalue = f'd.from_str("{safevalue}")'
 
-            # get the first number (e.g. "13-25" -> 13)
-            numbers_in_string = re.search(r"\d+", safevalue)
-            try:
-                numericalvalue = int(numbers_in_string.group(0))
-            except AttributeError:  # if no numbers are present: 'NoneType' object has no attribute 'group'
-                numericalvalue = 0
-            return [f"{safename} = {numericalvalue}"]
+            else:  # get the first number (e.g. "13-25" -> 13)
+                numbers_in_string = re.search(r"\d+", safevalue)
+                try:
+                    statvalue = int(numbers_in_string.group(0))
+                except AttributeError:  # if no numbers are present: 'NoneType' object has no attribute 'group'
+                    statvalue = 0
 
+    match generate:
+        case ClassOrInstance.instances:
+            return [f"{safename}={statvalue},"]
+        case ClassOrInstance.classes:
+            return [f"{safename} = {statvalue}"]
         case _:
-            msg = f"Cannot process {name} = {value:r}"
-            raise TypeError(msg)
+            msg = f"Cannot generate a {generate}"
+            raise ValueError(msg)
