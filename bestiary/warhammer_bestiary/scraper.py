@@ -113,7 +113,7 @@ class TitledBlock(BlockParser):
         except AttributeError:
             group = ""
         tablerows = self.soup.find_all("tr")
-        title = tablerows[0].getText(strip=True)
+        title = tablerows[0].getText(strip=True).removeprefix("Advance Scheme - ")
         statnames = [cell.get_text(strip=True) for cell in tablerows[1].find_all("td")]
         statvalues = [self.parse_stat(cell.get_text(strip=True)) for cell in tablerows[2].find_all("td")]
         try:
