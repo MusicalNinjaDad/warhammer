@@ -26,8 +26,10 @@ class Warhammer:
     WP = d(100)
     Fel = d(100)
 
+type StatsDict = dict[str, StatsValue]
+type StatsValue = int | str
 
-def generate_class(name: str, value: dict[str, dict | int | str] | int | str) -> list[str]:
+def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsValue) -> list[str]:
     """Create a Warhammer StatBlock from a key, value pair of scraped results."""
     indented = partial(indent, prefix="    ")
 
@@ -40,7 +42,7 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
 
     match value:
         case dict():
-            if _dict_with_only_one_entry_needs_flattening := len(value) == 1:
+            if _single_entry_dict_needs_flattening := len(value) == 1:
                 entry_name, entry_values = next(iter(value.items())) 
                 best_valid_name = safename if safename else entry_name
                 return generate_class(best_valid_name, entry_values)
