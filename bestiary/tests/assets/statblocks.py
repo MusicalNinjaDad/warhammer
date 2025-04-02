@@ -554,3 +554,44 @@ druidic_priest = StatBlockTestCase(
     },
     statblock_class=read_lines(Path("tests/assets/druidic_priest.py")),
 )
+
+chaos_beastman_careers = StatBlockTestCase(
+    beast="Chaos Beastman",
+    stats={
+        "Special Rules": {
+            "Beastman Shaman Minor Hero": {
+                "M": 0,
+                "WS": 20,
+                "BS": 0,
+                "S": 1,
+                "T": 1,
+                "W": "+D6",
+                "I": 20,
+                "A": 0,
+                "Dex": 10,
+                "Ld": 20,
+                "Int": 30,
+                "Cl": 40,
+                "WP": 30,
+                "Fel": 0,
+            },
+            "Beastman Shaman Major Hero": {
+                "M": 0,
+                "WS": 20,
+                "BS": 10,
+                "S": 1,
+                "T": 1,
+                "W": "+2D6",
+                "I": 30,
+                "A": 0,
+                "Dex": 20,
+                "Ld": 30,
+                "Int": 40,
+                "Cl": 50,
+                "WP": 40,
+                "Fel": 0,
+            },
+        },
+    },
+    statblock_class=read_lines(Path("tests/assets/beastman_careers.py")),
+)

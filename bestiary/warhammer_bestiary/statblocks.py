@@ -46,7 +46,7 @@ def generate_class(  # noqa: C901, PLR0912
     indented = partial(indent, prefix="    ")
 
     def safe(s: str, *, identifier: bool = False) -> str:
-        s.strip().removeprefix("+")
+        s = s.strip().removeprefix("+")
         s = s.encode("ascii", errors="ignore").decode().strip().replace(" ", "_")
         return s if not identifier or s.isidentifier() else "".join(c if c.isalnum() or c == "_" else "" for c in s)
 
