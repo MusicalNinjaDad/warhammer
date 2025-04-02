@@ -40,12 +40,13 @@ def generate_class(name: str, value: dict[str, dict | int | str] | int | str) ->
 
     match value:
         case dict():
-            # Ignore the profile / group name if it is the only one:
-            # use the higher-level identifier and grab the relevant stats from down the tree
-            if len(value) == 1:
-                return generate_class(name if name else next(iter(value)), next(iter(value.values())))
+            if _dict_with_only_one_entry_needs_flattening := len(value) == 1:
+                entry_name, entry_values = next(iter(value.items())) 
+                best_valid_name = safename if safename else entry_name
+                return generate_class(best_valid_name, entry_values)
 
-            match next(iter(value.values())):  # lookahead to the first entry
+            dict_of_what = next(iter(value.values()))
+            match dict_of_what:
                 case dict():
                     is_grouping = True
                     base = ""
