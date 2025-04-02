@@ -26,8 +26,10 @@ class Warhammer:
     WP = d(100)
     Fel = d(100)
 
+
 type StatsDict = dict[str, StatsValue]
 type StatsValue = int | str
+
 
 def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsValue) -> list[str]:
     """Create a Warhammer StatBlock from a key, value pair of scraped results."""
@@ -43,7 +45,7 @@ def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsVal
     match value:
         case dict():
             if _single_entry_dict_needs_flattening := len(value) == 1:
-                entry_name, entry_values = next(iter(value.items())) 
+                entry_name, entry_values = next(iter(value.items()))
                 best_valid_name = safename if safename else entry_name
                 return generate_class(best_valid_name, entry_values)
 
@@ -69,7 +71,7 @@ def generate_class(name: str, value: dict[str, StatsDict] | StatsDict | StatsVal
 
             if "d" in safevalue:  # Assume valid ndx dice notation
                 return [f'{safename} = d.from_str("{safevalue}")']
-            
+
             # get the first number (e.g. "13-25" -> 13)
             numbers_in_string = re.search(r"\d+", safevalue)
             try:
