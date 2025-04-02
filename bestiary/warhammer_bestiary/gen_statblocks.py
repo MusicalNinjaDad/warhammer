@@ -1,15 +1,16 @@
 """Create Warhammer Fantasy Roleplay 1st edition StatBlocks from scraped info."""
+
 if __name__ == "__main__":
     import json
 
     from .scraper import BEASTFILE, CAREERFILE, NPCFILE
-    from .statblocks import generate_class
-    
+    from .statblocks import ClassOrInstance, generate_class
+
     npcs: dict = json.loads(NPCFILE.read_text())
-    beasts: dict[str,dict] = json.loads(BEASTFILE.read_text())
+    beasts: dict[str, dict] = json.loads(BEASTFILE.read_text())
     careers: dict[str, dict] = json.loads(CAREERFILE.read_text())
 
-    careers["Chaos Beastman"] = beasts["Chaos Beastman"].pop("Special Rules") # belongs in careers
+    careers["Chaos Beastman"] = beasts["Chaos Beastman"].pop("Special Rules")  # belongs in careers
 
     beast_classes = BEASTFILE.with_suffix(".py")
     npc_classes = NPCFILE.with_suffix(".py")
@@ -21,21 +22,48 @@ if __name__ == "__main__":
         "",
         "from .statblocks import Warhammer",
         "",
-        "",
     ]
-    
+
     beast_classes.write_text(
         "\n".join(
-            [*imports, *(line for beast, stats in beasts.items() if stats for line in generate_class(beast, stats))],
+            [
+                *imports,
+                "",
+                *(
+                    line
+                    for beast, stats in beasts.items()
+                    if stats
+                    for line in generate_class(beast, stats, generate=ClassOrInstance.classes)
+                ),
+            ],
         ),
     )
 
     npc_classes.write_text(
-        "\n".join([*imports, *(line for npc, stats in npcs.items() if stats for line in generate_class(npc, stats))]),
+        "\n".join(
+            [
+                *imports,
+                "",
+                *(
+                    line
+                    for npc, stats in npcs.items()
+                    if stats
+                    for line in generate_class(npc, stats, generate=ClassOrInstance.classes)
+                ),
+            ],
+        ),
     )
 
     career_classes.write_text(
         "\n".join(
-            [*imports, *(line for career, stats in careers.items() if stats for line in generate_class(career, stats))],
+            [
+                *imports,
+                *(
+                    line
+                    for career, stats in careers.items()
+                    if stats
+                    for line in generate_class(career, stats, generate=ClassOrInstance.instances)
+                ),
+            ],
         ),
     )

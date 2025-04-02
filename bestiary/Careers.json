@@ -22,7 +22,7 @@
   },
   "Air Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -38,7 +38,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -58,7 +58,7 @@
   },
   "Alchemist": {
     "Dwarf Alchemists": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -74,7 +74,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -90,7 +90,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -106,7 +106,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -146,7 +146,7 @@
   },
   "Amber Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -162,7 +162,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -182,7 +182,7 @@
   },
   "Amethyst Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -198,7 +198,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -439,7 +439,7 @@
   },
   "Bright Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -455,7 +455,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -495,7 +495,7 @@
   },
   "Celestial Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -511,7 +511,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -551,7 +551,7 @@
   },
   "Cleric": {
     "Advance Scheme": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -567,7 +567,7 @@
         "WP": 10,
         "Fel": 10
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -583,7 +583,7 @@
         "WP": 20,
         "Fel": 10
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -599,7 +599,7 @@
         "WP": 30,
         "Fel": 20
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -679,7 +679,7 @@
   },
   "Daemonologist": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -695,7 +695,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -711,7 +711,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -727,7 +727,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -827,7 +827,7 @@
   },
   "Druidic Priest": {
     "Advance Scheme": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -843,7 +843,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -859,7 +859,7 @@
         "WP": 20,
         "Fel": 10
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -875,7 +875,7 @@
         "WP": 20,
         "Fel": 20
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -935,7 +935,7 @@
   },
   "Earth Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -951,7 +951,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -971,7 +971,7 @@
   },
   "Elementalist": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -987,7 +987,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1003,7 +1003,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1019,7 +1019,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1099,7 +1099,7 @@
   },
   "Exorcist": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -1115,7 +1115,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1131,7 +1131,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1147,7 +1147,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1368,7 +1368,7 @@
   },
   "Gold Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1384,7 +1384,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1424,7 +1424,7 @@
   },
   "Grey Wizard": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -1440,7 +1440,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1456,7 +1456,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1472,7 +1472,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1488,7 +1488,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1528,7 +1528,7 @@
   },
   "Hedge-Wizard": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -1544,7 +1544,7 @@
         "WP": 0,
         "Fel": 10
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1560,7 +1560,7 @@
         "WP": 10,
         "Fel": 10
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1576,7 +1576,7 @@
         "WP": 20,
         "Fel": 20
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1716,7 +1716,7 @@
   },
   "Illusionist": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -1732,7 +1732,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1748,7 +1748,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1764,7 +1764,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1824,7 +1824,7 @@
   },
   "Jade Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1840,7 +1840,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1920,7 +1920,7 @@
   },
   "Kislevite Shaman": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 10,
         "BS": 0,
@@ -1936,7 +1936,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1952,7 +1952,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -1968,7 +1968,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2048,7 +2048,7 @@
   },
   "Light Wizard": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -2064,7 +2064,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2080,7 +2080,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2096,7 +2096,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2112,7 +2112,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2470,7 +2470,7 @@
   },
   "Necromancer": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -2486,7 +2486,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2502,7 +2502,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -2518,7 +2518,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -3625,7 +3625,7 @@
   },
   "Water Wizard": {
     "": {
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -3641,7 +3641,7 @@
         "WP": 30,
         "Fel": 0
       },
-      "Advance Scheme - Level 5": {
+      "Level 5": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -3701,7 +3701,7 @@
   },
   "Wizard": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 0,
         "WS": 0,
         "BS": 0,
@@ -3717,7 +3717,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -3733,7 +3733,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -3749,7 +3749,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 0,
         "WS": 10,
         "BS": 10,
@@ -3789,7 +3789,7 @@
   },
   "Wood Elf Mage": {
     "": {
-      "Advance Scheme - Level 1": {
+      "Level 1": {
         "M": 1,
         "WS": 0,
         "BS": 0,
@@ -3805,7 +3805,7 @@
         "WP": 0,
         "Fel": 0
       },
-      "Advance Scheme - Level 2": {
+      "Level 2": {
         "M": 1,
         "WS": 10,
         "BS": 10,
@@ -3821,7 +3821,7 @@
         "WP": 10,
         "Fel": 0
       },
-      "Advance Scheme - Level 3": {
+      "Level 3": {
         "M": 1,
         "WS": 10,
         "BS": 10,
@@ -3837,7 +3837,7 @@
         "WP": 20,
         "Fel": 0
       },
-      "Advance Scheme - Level 4": {
+      "Level 4": {
         "M": 1,
         "WS": 10,
         "BS": 10,
