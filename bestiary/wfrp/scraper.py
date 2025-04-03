@@ -41,8 +41,13 @@ log = logging.getLogger(__name__)
 
 def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa: D103
     _raw = session.get(uri, timeout=10)
-    log.debug("Parsing %s", uri)
-    return BeautifulSoup(_raw.text, features="html.parser")
+    try:
+        _raw.raise_for_status()
+    except Exception:
+        log.exception("Error getting %s: ", uri)
+    else:
+        log.debug("Parsing %s", uri)
+        return BeautifulSoup(_raw.text, features="html.parser")
 
 
 class BlockParser:
