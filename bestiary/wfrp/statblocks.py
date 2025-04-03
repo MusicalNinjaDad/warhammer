@@ -95,10 +95,8 @@ def generate_class(  # noqa: C901, PLR0912
 
             else:  # get the first number (e.g. "13-25" -> 13)
                 numbers_in_string = re.search(r"\d+", safevalue)
-                try:
-                    statvalue = int(numbers_in_string.group(0))
-                except AttributeError:  # if no numbers are present: 'NoneType' object has no attribute 'group'
-                    statvalue = 0
+                statvalue = 0 if numbers_in_string is None else int(numbers_in_string.group(0))
+                    
 
     match generate:
         case ClassOrInstance.instances:
