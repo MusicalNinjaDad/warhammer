@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+
 """Scrap StatBlocks from https://wfrp1e.fandom.com/wiki/Category:Bestiary and save to file."""
 
 import json
 import logging
+import sys
 import urllib.parse
 from functools import cached_property
 from pathlib import Path
@@ -10,20 +13,31 @@ from typing import ClassVar, Final
 import requests
 from bs4 import BeautifulSoup
 
-BEASTFILE = Path("Beasts.json")
-NPCFILE = Path("NPCs.json")
-CAREERFILE = Path("Careers.json")
+OUTPUTDIR = Path(".scraper")
+BEASTFILE = OUTPUTDIR / "beasts.json"
+NPCFILE = OUTPUTDIR / "NPCs.json"
+CAREERFILE = OUTPUTDIR / "careers.json"
 
-LOG_FILE = Path("beast_scraper.log")
+LOG_FILE = Path(".scraper/beast_scraper.log")
+
+class MaxLevel(logging.Filter):
+    """Only log up to a specific level."""
+
+    def __init__(self, name: str = "", maxlevel: int = logging.NOTSET) -> None:
+        """
+        As per logging.Filter PLUS...
+        
+        - `maxlevel` the maximum level to be logged by this filter.
+        
+        """
+        super().__init__(name)
+        self.maxlevel = maxlevel
+
+    def filter(self, record: logging.LogRecord) -> bool:  # noqa: D102
+        return super().filter(record) and record.levelno <= self.maxlevel
+
 
 log = logging.getLogger(__name__)
-logfile = logging.FileHandler(LOG_FILE)
-logfile.setLevel(logging.INFO)
-formatter = logging.Formatter("%(asctime)s - %(levelname)s: %(message)s")
-logfile.setFormatter(formatter)
-log.addHandler(logfile)
-log.setLevel(logging.INFO)
-
 
 def get_and_parse(uri: str, session: requests.Session) -> BeautifulSoup:  # noqa: D103
     _raw = session.get(uri, timeout=10)
@@ -164,7 +178,7 @@ class WikiPage:
 
     def __init__(self, uri: str, session: requests.Session | None = None) -> None:
         """Initialise WikiPage for a given `uri`."""
-        log.info("Initialising %s for %s", type(self), uri)
+        log.debug("Initialising %s for %s", type(self), uri)
         self.uri = uri
         self.session = session or requests.Session()
 
@@ -178,7 +192,7 @@ class WikiPage:
         """The simple page title without the site details."""
         return self.soup.title.getText().split("|")[0].strip().removesuffix("(NPC)").strip()
 
-    @property
+    @cached_property
     def statblocks(self) -> list[BlockParser]:
         """All the page's statblocks."""
         log.info("Getting statblocks for %s", self.title)
@@ -187,6 +201,8 @@ class WikiPage:
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """The statblocks as a dict, indexed by statblock title."""
         statsdict = {}
+        if len(self.statblocks) == 0:
+            log.warning("No stats found for %s", self.uri)
         for statblock in self.statblocks:
             (group, title), stats = statblock.parse()
             try:
@@ -254,24 +270,52 @@ class Careers(WikiPage):
 
 
 if __name__ == "__main__":
+    log.setLevel(logging.DEBUG)
+
+    OUTPUTDIR.mkdir(parents=True, exist_ok=True)
+    logfile = logging.FileHandler(LOG_FILE)
+    logfile.setLevel(logging.DEBUG)
+
+    loginfo = logging.StreamHandler(sys.stdout)
+    loginfo.setLevel(logging.INFO)
+    loginfo.addFilter(MaxLevel(maxlevel=logging.INFO))
+
+    logerr = logging.StreamHandler()
+    logerr.setLevel(logging.WARNING)
+
+    loghandlers: list[logging.Handler] = [
+        logfile,
+        loginfo,
+        logerr,
+    ]
+
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s: %(message)s")
+    for handler in loghandlers:
+        handler.setFormatter(formatter)
+        log.addHandler(handler)
+
+    log.info("==== Scraping wfrp1e.fandom.com ====")
+    log.info("logging to: %s", logfile.baseFilename)
+    
     ignore = ["https://wfrp1e.fandom.com/Bestiary"]
+    
     log.info("Begin scraping NPCs")
     npc_pages = [NPC.absolute(uri) for uri in NPC.get_page_uris()]
     npcs = [WikiPage(page) for page in npc_pages if page not in ignore]
     NPCFILE.write_text(json.dumps({npc.title: npc.as_dict() for npc in npcs}, indent=2))
     ignore += npc_pages
-    log.info("%i NPCs written to %s", len(npcs), NPCFILE)
+    log.info("%i NPCs written to %s", len(npcs), NPCFILE.absolute())
 
     log.info("Begin scraping Beasts")
     beast_pages = [Beast.absolute(uri) for uri in Beast.get_page_uris()]
     beasts = [WikiPage(page) for page in beast_pages if page not in ignore]
     BEASTFILE.write_text(json.dumps({beast.title: beast.as_dict() for beast in beasts}, indent=2))
     ignore += beast_pages
-    log.info("%i beasts written to %s", len(beasts), BEASTFILE)
+    log.info("%i beasts written to %s", len(beasts), BEASTFILE.absolute())
 
     log.info("Begin scraping Careers")
     career_pages = [Careers.absolute(uri) for uri in Careers.get_page_uris()]
     careers = [WikiPage(page) for page in career_pages if page not in ignore]
     CAREERFILE.write_text(json.dumps({career.title: career.as_dict() for career in careers}, indent=2))
     ignore += career_pages
-    log.info("%i Careers written to %s", len(careers), CAREERFILE)
+    log.info("%i Careers written to %s", len(careers), CAREERFILE.absolute())

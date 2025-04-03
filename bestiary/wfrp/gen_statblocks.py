@@ -1,4 +1,8 @@
-"""Create Warhammer Fantasy Roleplay 1st edition StatBlocks from scraped info."""
+"""
+Create Warhammer Fantasy Roleplay 1st edition StatBlocks from scraped info.
+
+Run as a module with `python -m wfrp.gen_statblocks`
+"""
 
 if __name__ == "__main__":
     import json
