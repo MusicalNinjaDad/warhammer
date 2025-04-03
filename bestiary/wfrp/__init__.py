@@ -2,4 +2,4 @@
 
 from .statblocks import Warhammer  # noqa: I001 - Ordering important to avoid error finding Warhammer
 
-from . import Beasts, Careers, NPCs
+from . import beasts, careers, NPCs

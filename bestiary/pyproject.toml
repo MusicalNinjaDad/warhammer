@@ -1,5 +1,5 @@
 [project]
-    name = "warhammer-bestiary"
+    name = "wfrp"
     description = ""
     # readme = "README.md"
     license = { text = "MIT" }
@@ -87,7 +87,7 @@
         "--doctest-glob=*.md",
         "--ignore=tests/assets/",
     ]
-    testpaths = ["tests", "warhammer_bestiary"]
+    testpaths = ["tests", "wfrp"]
 
 [tool.coverage.run]
     branch = true
@@ -104,7 +104,7 @@ exclude_also = [
     show_contexts = true
 
 [tool.pytype]
-inputs = ["warhammer_bestiary"]
+inputs = ["wfrp"]
 
 [tool.ruff]
     line-length = 120

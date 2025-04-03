@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 import requests
 
-from warhammer_bestiary.scraper import NPC, Beast, WikiPage
+from wfrp.scraper import NPC, Beast, WikiPage
 
 
 @pytest.mark.parametrize(

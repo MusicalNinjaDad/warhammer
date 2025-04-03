@@ -16,8 +16,8 @@ from assets.statblocks import (
     thugs,
 )
 
-from warhammer_bestiary.scraper import WikiPage
-from warhammer_bestiary.statblocks import ClassOrInstance, generate_class
+from wfrp.scraper import WikiPage
+from wfrp.statblocks import ClassOrInstance, generate_class
 
 
 class PageParam(Protocol):
