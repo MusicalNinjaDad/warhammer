@@ -1,0 +1,960 @@
+{
+  "Artisan's Apprentice": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 40,
+        "A": 1,
+        "Dex": 39,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    }
+  },
+  "Beggar": {
+    "Profile 1": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 35,
+        "S": 3,
+        "T": 4,
+        "W": 6,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Profile 2": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 33,
+        "BS": 35,
+        "S": 3,
+        "T": 4,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 28,
+        "Int": 34,
+        "Cl": 32,
+        "WP": 32,
+        "Fel": 30
+      }
+    }
+  },
+  "Boatman": {
+    "Boatman": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 35,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 40,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 39,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Boatman (Captain)": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 3,
+        "T": 4,
+        "W": 9,
+        "I": 40,
+        "A": 2,
+        "Dex": 30,
+        "Ld": 30,
+        "Int": 30,
+        "Cl": 30,
+        "WP": 30,
+        "Fel": 30
+      }
+    }
+  },
+  "Bodyguard": {
+    "Profile 1": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 41,
+        "BS": 25,
+        "S": 4,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Profile 2": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 53,
+        "BS": 25,
+        "S": 4,
+        "T": 3,
+        "W": 8,
+        "I": 45,
+        "A": 2,
+        "Dex": 32,
+        "Ld": 25,
+        "Int": 33,
+        "Cl": 30,
+        "WP": 32,
+        "Fel": 30
+      }
+    }
+  },
+  "Bounty Hunter": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 3,
+        "T": 3,
+        "W": 9,
+        "I": 40,
+        "A": 2,
+        "Dex": 30,
+        "Ld": 30,
+        "Int": 30,
+        "Cl": 40,
+        "WP": 25,
+        "Fel": 30
+      }
+    }
+  },
+  "Bunko Artist": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 43,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 39,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 40
+      }
+    }
+  },
+  "Charlatan": {
+    "Medicine Show Charlatan": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 43,
+        "BS": 35,
+        "S": 3,
+        "T": 4,
+        "W": 9,
+        "I": 40,
+        "A": 1,
+        "Dex": 59,
+        "Ld": 39,
+        "Int": 43,
+        "Cl": 38,
+        "WP": 40,
+        "Fel": 59
+      }
+    }
+  },
+  "Coachman": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 42,
+        "BS": 42,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 40,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 40,
+        "WP": 30,
+        "Fel": 32
+      }
+    }
+  },
+  "Cook": {
+    "Human Cook": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 39,
+        "Fel": 29
+      }
+    },
+    "Halfling Cook": {
+      "Basic Profile": {
+        "M": 3,
+        "WS": 25,
+        "BS": 31,
+        "S": 2,
+        "T": 2,
+        "W": 5,
+        "I": 50,
+        "A": 1,
+        "Dex": 39,
+        "Ld": 19,
+        "Int": 29,
+        "Cl": 19,
+        "WP": 39,
+        "Fel": 39
+      }
+    }
+  },
+  "Dwarven Engineer": {
+    "": {
+      "Basic Profile": {
+        "M": 3,
+        "WS": 50,
+        "BS": 30,
+        "S": 3,
+        "T": 4,
+        "W": 7,
+        "I": 20,
+        "A": 1,
+        "Dex": 20,
+        "Ld": 45,
+        "Int": 30,
+        "Cl": 50,
+        "WP": 50,
+        "Fel": 20
+      }
+    }
+  },
+  "Exciseman": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 3,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 30,
+        "Int": 40,
+        "Cl": 40,
+        "WP": 25,
+        "Fel": 25
+      }
+    }
+  },
+  "Fisherman": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 30,
+        "BS": 25,
+        "S": 4,
+        "T": 3,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 45,
+        "Ld": 30,
+        "Int": 25,
+        "Cl": 30,
+        "WP": 30,
+        "Fel": 30
+      }
+    }
+  },
+  "Gambler": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 30,
+        "BS": 40,
+        "S": 3,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 45,
+        "Ld": 30,
+        "Int": 40,
+        "Cl": 25,
+        "WP": 25,
+        "Fel": 40
+      }
+    }
+  },
+  "Grave Robber": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 40,
+        "A": 1,
+        "Dex": 25,
+        "Ld": 25,
+        "Int": 30,
+        "Cl": 40,
+        "WP": 30,
+        "Fel": 25
+      }
+    }
+  },
+  "Herbalist": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    }
+  },
+  "High Elf Mage": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 51,
+        "BS": 44,
+        "S": 4,
+        "T": 4,
+        "W": 12,
+        "I": 100,
+        "A": 1,
+        "Dex": 96,
+        "Ld": 83,
+        "Int": 100,
+        "Cl": 100,
+        "WP": 100,
+        "Fel": 43
+      }
+    }
+  },
+  "Hunter": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 30,
+        "BS": 50,
+        "S": 4,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 25,
+        "Int": 30,
+        "Cl": 30,
+        "WP": 40,
+        "Fel": 25
+      }
+    }
+  },
+  "Judicial Champion": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 70,
+        "BS": 30,
+        "S": 4,
+        "T": 4,
+        "W": 12,
+        "I": 50,
+        "A": 3,
+        "Dex": 40,
+        "Ld": 30,
+        "Int": 40,
+        "Cl": 50,
+        "WP": 30,
+        "Fel": 25
+      }
+    }
+  },
+  "Labourer": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 30,
+        "BS": 25,
+        "S": 3,
+        "T": 4,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 25,
+        "Int": 30,
+        "Cl": 30,
+        "WP": 30,
+        "Fel": 30
+      }
+    }
+  },
+  "Marine": {
+    "Marine": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 4,
+        "T": 3,
+        "W": 8,
+        "I": 30,
+        "A": 2,
+        "Dex": 25,
+        "Ld": 30,
+        "Int": 30,
+        "Cl": 40,
+        "WP": 30,
+        "Fel": 30
+      }
+    },
+    "Marine Sergeant": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 50,
+        "BS": 40,
+        "S": 4,
+        "T": 4,
+        "W": 10,
+        "I": 40,
+        "A": 3,
+        "Dex": 30,
+        "Ld": 40,
+        "Int": 30,
+        "Cl": 40,
+        "WP": 30,
+        "Fel": 30
+      }
+    }
+  },
+  "Noble": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 39,
+        "Int": 29,
+        "Cl": 39,
+        "WP": 29,
+        "Fel": 39
+      }
+    }
+  },
+  "Pedlar": {
+    "Gypsy Pedlar": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 4,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 25,
+        "Int": 25,
+        "Cl": 40,
+        "WP": 30,
+        "Fel": 40
+      }
+    }
+  },
+  "Physician": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 4,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 49,
+        "Ld": 39,
+        "Int": 49,
+        "Cl": 39,
+        "WP": 39,
+        "Fel": 29
+      }
+    }
+  },
+  "Pirate": {
+    "Wrecker/Pirate": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 50,
+        "BS": 40,
+        "S": 4,
+        "T": 4,
+        "W": 10,
+        "I": 45,
+        "A": 2,
+        "Dex": 45,
+        "Ld": 50,
+        "Int": 30,
+        "Cl": 50,
+        "WP": 45,
+        "Fel": 30
+      }
+    }
+  },
+  "Pit Fighter": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 4,
+        "T": 4,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 40,
+        "Ld": 25,
+        "Int": 30,
+        "Cl": 40,
+        "WP": 30,
+        "Fel": 25
+      }
+    }
+  },
+  "Prospector": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 4,
+        "T": 4,
+        "W": 8,
+        "I": 30,
+        "A": 2,
+        "Dex": 25,
+        "Ld": 30,
+        "Int": 30,
+        "Cl": 40,
+        "WP": 25,
+        "Fel": 30
+      }
+    }
+  },
+  "Roadwarden": {
+    "Roadwarden": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 41,
+        "BS": 35,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Roadwarden Sergeant": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 51,
+        "BS": 45,
+        "S": 4,
+        "T": 4,
+        "W": 9,
+        "I": 40,
+        "A": 2,
+        "Dex": 29,
+        "Ld": 39,
+        "Int": 29,
+        "Cl": 39,
+        "WP": 29,
+        "Fel": 29
+      }
+    }
+  },
+  "Scholar": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 35,
+        "S": 3,
+        "T": 3,
+        "W": 8,
+        "I": 65,
+        "A": 1,
+        "Dex": 40,
+        "Ld": 25,
+        "Int": 60,
+        "Cl": 40,
+        "WP": 60,
+        "Fel": 40
+      }
+    }
+  },
+  "Servant": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    }
+  },
+  "Smuggler": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 3,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 30,
+        "Int": 30,
+        "Cl": 30,
+        "WP": 30,
+        "Fel": 30
+      }
+    }
+  },
+  "Spellcaster": {
+    "": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 23,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 5,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 39,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    }
+  },
+  "Thief": {
+    "Generic Thief": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 43,
+        "BS": 35,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 39,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 39
+      }
+    }
+  },
+  "Thugs": {
+    "Thug": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 4,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Teamsters or Stevedores": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 33,
+        "BS": 25,
+        "S": 3,
+        "T": 4,
+        "W": 8,
+        "I": 30,
+        "A": 1,
+        "Dex": 34,
+        "Ld": 28,
+        "Int": 33,
+        "Cl": 30,
+        "WP": 32,
+        "Fel": 29
+      }
+    }
+  },
+  "Toll-Keeper": {
+    "Toll-Keeper": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Lock-Keeper": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 3,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 30,
+        "Int": 30,
+        "Cl": 30,
+        "WP": 30,
+        "Fel": 30
+      }
+    }
+  },
+  "Townsperson": {
+    "Townsperson (Poor)": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 23,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 5,
+        "I": 30,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 29,
+        "Int": 28,
+        "Cl": 32,
+        "WP": 30,
+        "Fel": 30
+      }
+    },
+    "Townsperson (Wealthy)": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 23,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 5,
+        "I": 30,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 34,
+        "Int": 36,
+        "Cl": 32,
+        "WP": 30,
+        "Fel": 39
+      }
+    }
+  },
+  "Tutor": {
+    "": {
+      "Basic Profile": {
+        "M": 3,
+        "WS": 36,
+        "BS": 32,
+        "S": 3,
+        "T": 3,
+        "W": 6,
+        "I": 58,
+        "A": 1,
+        "Dex": 34,
+        "Ld": 30,
+        "Int": 68,
+        "Cl": 36,
+        "WP": 50,
+        "Fel": 29
+      }
+    }
+  },
+  "Watchman": {
+    "Watchman": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 41,
+        "BS": 25,
+        "S": 4,
+        "T": 3,
+        "W": 7,
+        "I": 40,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Watch Sergeant": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 51,
+        "BS": 35,
+        "S": 4,
+        "T": 3,
+        "W": 8,
+        "I": 40,
+        "A": 2,
+        "Dex": 29,
+        "Ld": 39,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    }
+  },
+  "Yokel": {
+    "Profile 1": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 31,
+        "BS": 25,
+        "S": 4,
+        "T": 4,
+        "W": 6,
+        "I": 30,
+        "A": 1,
+        "Dex": 29,
+        "Ld": 29,
+        "Int": 29,
+        "Cl": 29,
+        "WP": 29,
+        "Fel": 29
+      }
+    },
+    "Profile 2": {
+      "Basic Profile": {
+        "M": 4,
+        "WS": 33,
+        "BS": 25,
+        "S": 3,
+        "T": 3,
+        "W": 7,
+        "I": 30,
+        "A": 1,
+        "Dex": 30,
+        "Ld": 30,
+        "Int": 32,
+        "Cl": 28,
+        "WP": 26,
+        "Fel": 30
+      }
+    }
+  }
+}
