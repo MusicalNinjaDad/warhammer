@@ -56,7 +56,7 @@ def generate_class(  # noqa: C901, PLR0912
         case dict():
             if _single_entry_dict_needs_flattening := len(value) == 1:
                 entry_name, entry_values = next(iter(value.items()))
-                best_valid_name = safename if safename else entry_name
+                best_valid_name = safename or entry_name
                 return generate_class(name=best_valid_name, value=entry_values, generate=generate)
 
             first_value = next(iter(value.values()))
