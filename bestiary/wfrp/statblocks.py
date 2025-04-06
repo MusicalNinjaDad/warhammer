@@ -4,6 +4,7 @@ import re
 from enum import Enum, auto
 from functools import partial
 from textwrap import indent
+from typing import Any, Self
 
 from ttrpg_dice import d, statblock
 
@@ -26,6 +27,10 @@ class Warhammer:
     Cl = d(100)
     WP = d(100)
     Fel = d(100)
+
+    def _pre_init_(self, /, careers: dict[str, Self] | None = None, **kwargs: Any) -> dict[int | d]:
+        self.careers = careers or {}
+        return kwargs
 
 
 type StatsDict = dict[str, StatsValue]
