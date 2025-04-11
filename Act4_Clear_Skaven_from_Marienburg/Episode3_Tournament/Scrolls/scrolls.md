@@ -12,7 +12,7 @@
   - Dove: Cl = 10
   - Squeek (was 24 in early y2 of game, adult is 66 - but he's a pygmy): Cl = 24 + d(20)
 
-## Heal (L3)
+## Heal Injury (L3)
 
 - Written on a piece of lint
 - Ink must include troll blood & be mixed by someone with manuf. potions
