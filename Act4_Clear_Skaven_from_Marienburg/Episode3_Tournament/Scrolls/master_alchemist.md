@@ -11,12 +11,6 @@ One merchant's keen voice cuts through the market's bustle, drawing attention to
   - **SL < +2:** charges for ingredients
   - **SL < -3:** will charge for his time.
 
-- When he hears of her abilities with **L3 heal injury** he's **astounded**:
-  - "I've heard of the spell but never heard of it being so flexible. Usually it will just help with a broken bone or something like that".
-  - "You must be particularly talented".
-
-- **Read/Write**: "What's important is to impart the meaning of the spell into the scroll - most people have to use words for that, some even have to write in arcane Magik - and that can make it hard for others to understand and use the scroll. But if you can do that without words, then that's amazing".
-
 - Notices her **purple ribbon** - "Interesting: I've not seen one of those in years and then two in one week!"
 
 ## Quirks & Mannerisms
