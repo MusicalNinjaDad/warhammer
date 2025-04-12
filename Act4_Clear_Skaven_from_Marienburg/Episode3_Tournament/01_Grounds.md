@@ -2,9 +2,9 @@
 
 ## First Sight of the Tournament Grounds
 
-As you crest the borw of a small hill on the morning of the 4th day of riding, you catch your first glimpse of the sea. The midday sun sparkles on the waves which crash up against high, grey cliffs. A beatiful stone castle stands windsewpt, surrounded on 3 sdies by vertical cliffs, Silver and blue pennants fly from the turrents of the castle, and enormous banners cascade down its towers, their deep blue and silver fabric rippling in the salt breeze, each emblazoned with golden crossed swords.
+As you crest the brow of a small hill on the morning of the 4th day of riding, you catch your first glimpse of the sea. The midday sun sparkles on the waves which crash up against high, grey cliffs. A beatiful stone castle stands windswept at the edge of the land, surrounded on 3 sides by vertical cliffs. Silver and blue pennants fly from the turrents of the castle, and enormous banners cascade down its towers, their deep blue and silver fabric rippling in the salt breeze, each emblazoned with golden crossed swords.
 
-As awe inspring as Robert's family home is, you can't help but be drawn to the sprawling mass of the tournament grounds in front of it: strewn across the still-somewhat green fields surrounding the castle, lies a vast tent city that transforms the landscape into a living tapestry of color and movement. The tournament grounds are clearly divided into distinct areas, as you ride closer you begin to make out more and more details, and become more aware of the sounds _and smells_ of what must be hundreds of people, if not over a thousand.
+As awe-inspring as Robert's family home is, you can't help but be drawn to the sprawling mass of the tournament grounds in front of it: strewn across the still-somewhat green fields to the right of the road, lies a vast tent city that transforms the landscape into a living tapestry of color and movement. The tournament grounds are clearly divided into distinct areas, as you ride closer you begin to make out more and more details, and become more aware of the sounds _and smells_ of what must be hundreds of people, if not over a thousand.
 
 ### The Lists
 
