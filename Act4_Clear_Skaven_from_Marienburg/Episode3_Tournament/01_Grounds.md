@@ -59,4 +59,6 @@ The church has established a significant presence - their white tents arranged i
 
 ### Common Ground
 
-The largest section spreads outward from the center - a sprawling, organic growth of smaller tents and campfires where common folk gather. Here, wandering entertainers practice their acts, the sound of laughter and music mixing with the smell of cookfires. Children dart between tents flying makeshift banners, while dogs chase each other through the crowds.
+- The **largest section** spreads outward from the center - a sprawling, organic growth of **smaller tents and campfires** where common folk gather.
+- Here, **wandering entertainers** practice their acts, the sound of **laughter and music** mixing with the **smell of cookfires** wafting on the breeze which thankfully covers the worst of the sweat.
+- **Children** dart between tents flying **makeshift banners** and holding **branches** between their legs **pretending** they are **knights on horses**. Dogs chase each other through the crowds.
