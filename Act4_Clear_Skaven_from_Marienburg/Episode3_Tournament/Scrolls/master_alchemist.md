@@ -1,4 +1,4 @@
-# Étienne Beaufort ("The Wise Trader")
+# Olivier Beaufort ("The Wise Trader")
 
 Human, male, super-numerate
 
@@ -31,12 +31,6 @@ As you turn to look at him you see a tall lady with long silver hair and flowing
 ## Benefit
 
 His notes and analytical mind can help notice the machinations of Guy across the region and which groups & people his is manipulating / setting up to take over.
-
-## Narrative Description
-
-"You looking for a love potion, ... no - that's not your problem, maybe a de-lusting? ... ah a Shallyan - a scroll or potion to help with healing?" The merchant's keen voice cuts through the market's bustle, drawing attention to one of the more prominent stalls at the crossroads. Its striped awning billows like a noble's banner above rows of gleaming brass scales and meticulously arranged wares. The sharp scent of imported spices mingles with the earthier aroma of local herbs, while strings of dried flowers dance in the breeze alongside hanging crystals that catch and scatter the sunlight. Behind his polished oak counter stands Étienne Beaufort himself, a lean man with calculating eyes and ink-stained fingers, his merchant's robe adorned with small pouches and that ever-present chain of mysterious keys.
-
-Beaufort's stall commands attention at the market's crossroads, its striped awning billowing like a noble's banner above rows of gleaming brass scales and meticulously arranged wares. The sharp scent of imported spices mingles with the earthier aroma of local herbs, while strings of dried flowers dance in the breeze alongside hanging crystals that catch and scatter the sunlight. Behind his polished oak counter stands Étienne himself, a lean man with calculating eyes and ink-stained fingers, his merchant's robe adorned with small pouches and that ever-present chain of mysterious keys.
 
 ## Backstory
 
