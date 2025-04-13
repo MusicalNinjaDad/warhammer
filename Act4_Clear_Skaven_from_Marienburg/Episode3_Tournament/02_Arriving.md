@@ -29,6 +29,6 @@ The whole scene is alive with movement and sound - from the snap of countless ba
 
 ## 3. Ellis contact options
 
-- [Needs help forging](Underworld/factions.md/#4-the-sommeliers-secret) - Marcel can advise on suitable Noble to impersonate
-- [Seen thieving](Underworld/factions.md/#1-the-twins-proposition)
-- [Forgery skills needed again](Underworld/factions.md/#3-copperscales-ledger)
+- [Needs help forging](Underworld/factions.md#4-the-sommeliers-secret) - Marcel can advise on suitable Noble to impersonate
+- [Seen thieving](Underworld/factions.md#1-the-twins-proposition)
+- [Forgery skills needed again](Underworld/factions.md#3-copperscales-ledger)
