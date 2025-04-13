@@ -2590,16 +2590,16 @@ wheels = [
 
 [[package]]
 name = "ttrpg-dice"
-version = "0.6.0"
+version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "matplotlib" },
     { name = "tabulate2" },
     { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6a/0b/957fbbcd28c454b815fd418c693335beffa427898bcceafa07a381351d5c/ttrpg_dice-0.6.0.tar.gz", hash = "sha256:1f669223ae3b09a6bf188980462761e8a0c4ec0a26765b9fbc0f73092ff65a94", size = 18324 }
+sdist = { url = "https://files.pythonhosted.org/packages/80/01/db95bd1fdec452b9575c35da1657bbccd4873bbd38a86835b56075f8003d/ttrpg_dice-0.7.0.tar.gz", hash = "sha256:01ebe6f925a5fb2a29a26ae22814197a65f3cbd9f13700a532edb2de914810c9", size = 18392 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/83/6a/d07beab004c707a363ef30fdd4cda16dd4aeb4316db8fd7f34390f40ec7f/ttrpg_dice-0.6.0-py3-none-any.whl", hash = "sha256:169574b659a15a831513e5a06a6268e7e485f847d2480b39a134b5356dd3bc1d", size = 19534 },
+    { url = "https://files.pythonhosted.org/packages/63/7f/4764df939d5b8ae9937721b23b1f1b399de16d7c6f8d24d78771bae478f9/ttrpg_dice-0.7.0-py3-none-any.whl", hash = "sha256:5b81aad56a5f504cd29180a46fd63f5e7dd567c496d7ec8e1cb93bc3f0d284ea", size = 19635 },
 ]
 
 [[package]]
@@ -2762,7 +2762,7 @@ typing = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "ttrpg-dice", specifier = ">=0.4.0" }]
+requires-dist = [{ name = "ttrpg-dice", specifier = ">=0.7.0" }]
 
 [package.metadata.requires-dev]
 cov = [
