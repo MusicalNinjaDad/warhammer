@@ -1,8 +1,12 @@
 # Étienne Beaufort ("The Wise Trader")
 
+Human, male, super-numerate
+
 Calls out to Raya: "You looking for a love potion, ... no - that's not your problem, maybe a de-lusting? ... ah a Shallyan - a scroll or potion to help with healing?"
 
 One merchant's keen voice cuts through the market's bustle, drawing attention to one of the more prominent stalls at the crossroads. Its striped awning billows like a noble's banner above rows of gleaming brass scales and meticulously arranged wares. The sharp scent of imported spices mingles with the earthier aroma of local herbs and something a little less pleasant, while strings of dried flowers dance in the breeze alongside hanging crystals that catch and scatter the sunlight. Behind his polished oak counter stands a lean man with calculating eyes and ink-stained fingers, his merchant's robe adorned with small pouches and around his neck hangs a metal chain tucked into his flowing robes.
+
+As you turn to look at him you see a tall lady with long silver hair and flowing robes of deep indigo, trimmed with silver embroidery in intricate arcane patterns gracefully gliding away from the stall. "Elf" spits Karga, Robert leans in and whispers "That's Magister Elenara, my father trusted her greatly as his high mage - I'm surprised she is still working for Guy".
 
 ## Interactions
 
@@ -23,6 +27,10 @@ One merchant's keen voice cuts through the market's bustle, drawing attention to
 
 - **Primary:** Profit through clever trading and information gathering
 - **Secondary:** Secretly documents local folklore and trading histories in leather-bound journals, believing that understanding the past leads to predicting future market trends
+
+## Benefit
+
+His notes and analytical mind can help notice the machinations of Guy across the region and which groups & people his is manipulating / setting up to take over.
 
 ## Narrative Description
 
