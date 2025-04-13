@@ -20,7 +20,7 @@ Play until other yields
   - 81-90: near leg
   - 91-00: horse
 
-- Wounds: **D6 + S + 2 - T - Armour**
+- Wounds: **HALF (D6 + S + 2 - T - Armour)** (Half due to blunted lances)
   - Broken Lance: **Natural 6**
   - Unhorsed: **S** Test (**fail by >= W taken**)
     - option for **Ld / Dex** saving throw

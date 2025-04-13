@@ -20,7 +20,7 @@ The whole scene is alive with movement and sound - from the snap of countless ba
   
   - Either Eliot or Sir L will **fail** to be accepted and require written support from a nobel sponsor
     - "I must insist on proper sponsorship. Perhaps one of the lords or ladies here will take pity on your plight. Or perhaps not."
-    - "Of course, I only accept authentic sponsorships. But I am not an expert in handwriting… as long as it looks convincing."
+    - "Of course, I only accept authentic sponsorships. But I am not an expert in handwriting... as long as it looks convincing."
     - Sir L: Will be hard to find, may well be easier to forge a document, Sir L has an idea where he could find someone to help
 
 ## 2. Pass through market on way to camp
