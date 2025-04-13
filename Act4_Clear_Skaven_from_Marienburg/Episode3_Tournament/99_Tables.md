@@ -4,18 +4,18 @@
 
 ### Male Names
 
-| d100 | 00    | 10      | 20       | 30        | 40      | 50      | 60      | 70      | 80      | 90      |
-|------|-------|---------|----------|-----------|---------|---------|---------|---------|---------|---------|
-| 0    | Abel  | Bastien | Charles  | Daniel    | Edmond  | Felix   | Gaspar  | Henri   | Igor    | Jean    |
-| 1    | Adam  | Benoit  | Claude   | David     | Emile   | Firmin  | Georges | Herbert | Isaac   | Joseph  |
-| 2    | Alain | Bernard | Clement  | Denis     | Ernest  | Florent | Gerard  | Herve   | Ivan    | Jules   |
-| 3    | Alan  | Bertram | Conrad   | Didier    | Etienne | Francis | Gilbert | Honore  | Jacques | Laurent |
-| 4    | Andre | Blaise  | Constant | Dominique | Eugene  | Francois| Gilles  | Hubert  | Jerome  | Leon    |
-| 5    | Ansel | Bruno   | Cyril    | Dorian    | Eustace | Fredric | Godfroy | Hugo    | Joel    | Louis   |
-| 6    | Anton | Cecil   | Damien   | Durand    | Everard | Gabriel | Gregory | Hugues  | Julien  | Luc     |
-| 7    | Arnaud| Charles | Denis    | Edmond    | Fabien  | Gautier | Guy     | Humbert | Justin  | Marc    |
-| 8    | Aubert| Clement | Desire   | Eduard    | Felix   | Gerard  | Gaston  | Hugh    | Lucien  | Martin  |
-| 9    | Aymon | Colin   | Dimitri  | Elias     | Fernand | Gerald  | Guillaume| Henri  | Ludwig  | Michel  |
+| d100 | 00        | 10        | 20        | 30        | 40        | 50        | 60        | 70        | 80        | 90        |
+|------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| 0    | Abel      | Bastien   | Charles   | Daniel    | Edmond    | Felix     | Gaspar    | Henri     | Igor      | Jean      |
+| 1    | Adam      | Benoit    | Claude    | David     | Emile     | Firmin    | Georges   | Herbert   | Isaac     | Joseph    |
+| 2    | Alain     | Bernard   | Clement   | Denis     | Ernest    | Florent   | Gerard    | Herve     | Ivan      | Jules     |
+| 3    | Alan      | Bertram   | Conrad    | Didier    | Etienne   | Francis   | Gilbert   | Honore    | Jacques   | Laurent   |
+| 4    | Andre     | Blaise    | Constant  | Dominique | Eugene    | Francois  | Gilles    | Hubert    | Jerome    | Leon      |
+| 5    | Ansel     | Bruno     | Cyril     | Dorian    | Eustace   | Fredric   | Godfroy   | Hugo      | Joel      | Louis     |
+| 6    | Anton     | Cecil     | Damien    | Durand    | Everard   | Gabriel   | Gregory   | Hugues    | Julien    | Luc       |
+| 7    | Arnaud    | Charles   | Denis     | Edmond    | Fabien    | Gautier   | Guy       | Humbert   | Justin    | Marc      |
+| 8    | Aubert    | Clement   | Desire    | Eduard    | Felix     | Gerard    | Gaston    | Hugh      | Lucien    | Martin    |
+| 9    | Aymon     | Colin     | Dimitri   | Elias     | Fernand   | Gerald    | Guillaume | Henri     | Ludwig    | Michel    |
 
 | d100 | 00        | 10        | 20        | 30        | 40        | 50        | 60        | 70        | 80        | 90        |
 |------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
