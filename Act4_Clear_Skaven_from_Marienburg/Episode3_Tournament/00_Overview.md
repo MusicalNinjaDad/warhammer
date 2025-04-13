@@ -26,12 +26,14 @@ Style of play: A bit different - the tournament will last a few days (and sessio
 
 ### Ellis: Progress as a forger
 
-- Sir Laurent
+- Sir Laurent and/or Eliot
 - Underworld
 
 ### Elliot: Win Championship
 
 - Competition
+- Develop swordsmanship & shieldfighting skills
+- earns the whispered nickname `Hibou` (the Owl)
 
 ## Tournament
 
