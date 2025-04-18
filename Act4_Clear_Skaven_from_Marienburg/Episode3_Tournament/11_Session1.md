@@ -1,5 +1,10 @@
 # Session 1 notes
 
+- **Arrival**
+- **First Afternoon**
+  - Eliot
+  - Raya
+
 - Party arrived at the tournament late morning
 - Eliot was accepted to the lists
 - Sir Laurance was not
@@ -17,3 +22,11 @@
   - 0SL fail on Fel
   - begrudgingly allowed her to accompany to the castle
   - needs something related to plants
+
+## Need to check
+
+- Armour for Storm?
+
+## Up next
+
+- First afternoon Ellis

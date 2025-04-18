@@ -24,6 +24,10 @@
 
 - Written on a piece of lint
 - Ink must include troll blood & be mixed by someone with manuf. potions
+- There is a similar spell at L4 - which needs a bit of troll brain
+  - trolls are nasty:
+    - their stomach juice can disolve anything or anyone very fast
+    - they can regenerate even when nearly dead (must remove head - see use of petuitary gland)
 
 ## Raya's chances
 
