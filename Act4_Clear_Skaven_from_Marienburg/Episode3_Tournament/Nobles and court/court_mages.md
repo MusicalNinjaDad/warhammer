@@ -40,7 +40,7 @@ Cryptic hints:
 
 - secretly directly working for Guy
 - in league with ratcatchers & twilight thorns
-- casting mind control on Robert's mentor who is still high up in Guy's court, due to his popularity with (nobles/military/church TBD as story develops)
+- casting mind control on Robert's mentor (**Henri-Gaston**) who is still high up in Guy's court, due to his popularity with (nobles/military/church TBD as story develops)
 - Guy intends to replace senior mage with 2nd in command
 
 ### Elenara needs a **Larme de Lune** ("Moon’s Tear") to brew a potion to reduce the effects
