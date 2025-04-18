@@ -12,11 +12,15 @@ High Elf, Female
 
 Elenara is serene and composed, rarely showing emotion beyond a faint smile or a raised brow. She speaks with precision and deliberation, often pausing to consider her words carefully. While she is deeply knowledgeable in the arcane arts, she is also pragmatic, understanding the complexities of court politics and the need for subtlety. She is loyal to the ideals of justice and balance, but her long life has taught her the necessity of compromise.
 
-## Mentor Opportunity for Raya
+## Relationship with Ellis
 
-Elenara **recognizes Raya's potential** and offers to teach her the art of scroll creation, but only if Raya can **prove her dedication and discipline**.
-
-> "The creation of scrolls is not merely a craft but an art that requires focus, patience, and an understanding of the weave of magic itself. Show me you are worthy of such knowledge."
+- Initial reaction: short, a little impatient, disinterested
+  - is very busy right now
+- Needs support with some plants
+- Will respond well over time
+  - sees something of her old self in her
+  - likely to suggest to Ellis that she is less "forthright" in the company of nobles
+  - but is a breath of fresh air, when she is not over tired
 
 ## Benefit
 
@@ -38,3 +42,21 @@ court mage 2nd in command is:
 - in league with ratcatchers & twilight thorns
 - casting mind control on Robert's mentor who is still high up in Guy's court, due to his popularity with (nobles/military/church TBD as story develops)
 - Guy intends to replace senior mage with 2nd in command
+
+Elenara needs a specific plant to brew a potion to reduce the effects
+
+- the plant is rare and specimens in the castle gardens are mysteriously growing badly
+- has been sabotaged by 2nd in command
+- **?? Ellis can communicate with plant ??**
+
+boy in garden:
+
+- working in the rose bed
+- is a petal (shadows of rose)
+- can show her the plants in question
+- can give low-down on underworld factions & politics
+- "talk to Marcel" (Sommelier - coppers) for best insights into the nobles interests and schemes
+
+?? Name of 2nd in command
+?? Name of boy (petal)
+?? name of plant
