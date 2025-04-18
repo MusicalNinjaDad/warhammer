@@ -2,7 +2,7 @@
 
 - **d2** hours per level
 - **WP** test every hr
-- Can use **MP** to help with failed WP tests `(SL * d(2*level) )`
+- Can use **MP** to help with failed WP tests `(1 + SL) * d(2*level)`
 
 ## Remarks to Raya
 
