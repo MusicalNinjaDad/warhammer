@@ -35,6 +35,6 @@ Cryptic hints:
 court mage 2nd in command is:
 
 - secretly directly working for Guy
-- in league with ratcatchers & underworld-gang-2
+- in league with ratcatchers & twilight thorns
 - casting mind control on Robert's mentor who is still high up in Guy's court, due to his popularity with (nobles/military/church TBD as story develops)
 - Guy intends to replace senior mage with 2nd in command
