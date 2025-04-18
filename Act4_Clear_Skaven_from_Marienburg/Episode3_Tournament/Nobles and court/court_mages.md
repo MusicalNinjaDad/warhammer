@@ -47,7 +47,7 @@ Cryptic hints:
 
 - the plant is rare and specimens in the castle gardens are mysteriously growing badly
 - has been sabotaged by 2nd in command
-- **?? Ellis can communicate with plant ??**
+- **Ellis can communicate with plant**
 
 ### boy in garden - Jean-Louis
 
