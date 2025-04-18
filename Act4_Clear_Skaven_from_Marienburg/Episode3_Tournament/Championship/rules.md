@@ -39,20 +39,6 @@ In later rounds
 
 Battle on ground until other yields (will happen at W <= 2)
 
-## First Opponent - Lucien Marinier
-
-### Lucien
-
-|   M |   WS |   BS |   S |   T |   W |   I |   A |   Dex |   Ld |   Int |   Cl |   WP |   Fel |
-| --: | ---: | ---: | --: | --: | --: | --: | --: | ----: | ---: | ----: | ---: | ---: | ----: |
-|   4 |   50 |   38 |   4 |   4 |  11 |  50 |   3 |    39 |   39 |    29 |   40 |   29 |    30 |
-
-### His Horse
-
-|   M |   WS |   BS |   S |   T |   W |   I |   A |   Dex |   Ld |   Int |   Cl |   WP |   Fel |
-| --: | ---: | ---: | --: | --: | --: | --: | --: | ----: | ---: | ----: | ---: | ---: | ----: |
-|   8 |   33 |    0 |   5 |   3 |  11 |  30 |   1 |     0 |   10 |    10 |   10 |   10 |     0 |
-
 ## Summary play
 
 Roll for wounds taken (roll table TBD after we see how the first round plays out)
