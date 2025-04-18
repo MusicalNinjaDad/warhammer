@@ -57,3 +57,18 @@
 | 7    | Martine   | Nicole    | Olivia    | Paulette  | Phyllis   | Regina    | Rose      | Sylvie    | Victoria  | Yvette    |
 | 8    | Mathilde  | Nina      | Olympe    | Pauline   | Prisca    | Renee     | Roseline  | Therese   | Violette  | Yvonne    |
 | 9    | Melanie   | Noelle    | Ondine    | Peggy     | Priscille | Rosalie   | Ruth      | Toinette  | Virginia  | Zoe       |
+
+## Characteristics
+
+| d100 | 00 face   | 10 hair  | 20 body   | 30 clothes | 40 smell  | 50 voice  | 60 action | 70 personality | 80 secret | 90 other |
+|------|-----------|----------|-----------|------------|-----------|-----------|-----------|----------------|-----------|----------|
+| 0    | scar      | bald     | athletic  | fancy      | perfume   | deep      | fidgets   | optimistic     | murderer  | limp     |
+| 1    | freckles  | grey     | fat       | torn       | sweat     | rough     | yawns     | pessimistic    | thief     | blind    |
+| 2    | mole      | white    | thin      | dirty      | alcohol   | smooth    | scratches | friendly       | spy       | deaf     |
+| 3    | wrinkles  | brown    | muscular  | clean      | tobacco   | quiet     | stretches | hostile        | cultist   | mute     |
+| 4    | birthmark | black    | tall      | expensive  | flowers   | loud      | paces     | shy            | witch     | wealthy  |
+| 5    | burn      | blonde   | short     | common     | food      | squeaky   | twitches  | outgoing       | werewolf  | poor     |
+| 6    | tattoo    | red      | stocky    | colorful   | soap      | raspy     | trembles  | nervous        | vampire   | educated |
+| 7    | piercing  | curly    | lanky     | plain      | incense   | stutters  | blinks    | confident      | noble     | foreign  |
+| 8    | smooth    | straight | broad     | dark       | medicine  | whispers  | coughs    | suspicious     | outlaw    | famous   |
+| 9    | pockmarks | dyed     | slender   | bright     | nothing   | sings     | sneezes   | trustworthy    | charlatan | cursed   |
