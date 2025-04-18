@@ -11,9 +11,10 @@ Play until other yields
 
 - Roll to hit:
   - **WS + 10**
-  - Horse **Dex** & Rider **Ld** for bonus
+  - HIT SAVING BONUS (**fail**): Horse **Dex** & Rider **Ld**
+  - EXTRA POWER BONUS (**pass >= 3SL**): Horse **S** + half rider **S**
 
-- Location:
+- Location (pass >= 2SL can choose):
   - 01-15: Head
   - 16-35: far arm
   - 35-80: shield
