@@ -7,6 +7,7 @@
 
 - Party arrived at the tournament late morning
 - Eliot was accepted to the lists
+  - bought padding & chainmail (+2) for Storm's flanks
 - Sir Laurance was not
   - Eliot and Sir Laurence visited Baron Étienne & persuaded him to sponsor sir L.
 - Eliot fought a qualifying match against Lucien Marinier
@@ -22,10 +23,6 @@
   - 0SL fail on Fel
   - begrudgingly allowed her to accompany to the castle
   - needs something related to plants
-
-## Need to check
-
-- Armour for Storm?
 
 ## Up next
 
