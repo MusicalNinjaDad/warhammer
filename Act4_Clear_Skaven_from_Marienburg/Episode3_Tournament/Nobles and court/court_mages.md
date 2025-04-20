@@ -38,6 +38,8 @@ Cryptic hints:
 
 ## Raoul Morel - Court mage 2nd in command
 
+- has a limp
+- does not do his own grunt-work: uses others for that
 - secretly directly working for Guy
 - in league with ratcatchers & twilight thorns
 - casting mind control on Robert's mentor (**Henri-Gaston**) who is still high up in Guy's court, due to his popularity with (nobles/military/church TBD as story develops)

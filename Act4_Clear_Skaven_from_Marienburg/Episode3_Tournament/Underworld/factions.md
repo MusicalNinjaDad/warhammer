@@ -62,41 +62,27 @@ A splinter group from the Shadows of the Rose, focused on more aggressive acquis
 
 ### Notable Members
 
-- **"The Butcher"**: Former knight turned enforcer
+- **"The Butcher"**: Kitchen worker & enforcer, in castle
 - **Lady Midnight**: Runs their gambling operations
 - **"Ratwhisper"**: Their connection to the corrupted ratcatchers
 
-## Underworld Plot Hooks
+## Plot Hooks - known to party
 
-### 1. The Twin's Proposition
+### The Twin's Proposition
 
-- The Copper Vipers' halfling duo spots Ellis's talents
-- Offer to share intel about Guy's plans in exchange for help infiltrating a noble's pavilion
-- Twist: The target is actually loyal to Robert, but the Twins don't know this
-- Could lead to: Finding evidence of mind control over Robert's mentor
+- The Copper Vipers' halfling attempt to pickpocket Ellis
+- Ellis declined offer "no hard feelings" & threats "We are the copper's be careful!"
 
-### 2. Twilight's Challenge
+### Copperscale's access to cellars
 
-- Lady Midnight sets up an exclusive high-stakes gambling den
-- Challenges Ellis to prove herself by marking cards or running a rigged game
-- Real purpose: Testing her loyalty while gathering blackmail material on noble players
-- Warning sign: "Ratwhisper" lurks in the shadows, watching too intently
+- Catherine "Copperscale" needs a copy of the ratcatcher's seal
+- Castle cellar's are off limits to all without stamped authority & the castle his _her territory_
+- Thorns are able to access cellars
+- Risk: "The Butcher" is watching Marcel, may have noticed him talking to Ellis
 
-### 3. Copperscale's Ledger
+## Plot Hooks - unknown but in action
 
-- Catherine "Copperscale" needs a forger to alter records in her trading ledger
-- Claims it's to hide legitimate profits from taxation
-- Actually contains evidence of rat-folk activity in the castle cellars
-- Dilemma: The altered records could protect or expose the truth
-
-### 4. The Sommelier's Secret
-
-- Marcel (Copper Vipers' castle infiltrator) leaves coded wine orders
-- Ellis could intercept/decode messages about noble movements
-- Opportunity to plant false information benefiting Robert
-- Risk: "The Butcher" is watching Marcel, suspecting a leak
-
-### 5. Tournament Market Tensions
+### Tournament Market Tensions
 
 - Twilight Thorns demanding protection money from market vendors
 - Copper Vipers offering cheaper "insurance"
@@ -105,4 +91,13 @@ A splinter group from the Shadows of the Rose, focused on more aggressive acquis
   - Help protect innocent merchants
   - Potentially expose Thorns' connection to ratcatchers
   - Create division between criminal factions
+
+## Plot Hooks - potential ideas for future
+
+### Twilight's Challenge
+
+- Lady Midnight sets up an exclusive high-stakes gambling den
+- Challenges Ellis to prove herself by marking cards or running a rigged game
+- Real purpose: Testing her loyalty while gathering blackmail material on noble players
+- Warning sign: "Ratwhisper" lurks in the shadows, watching too intently
   
