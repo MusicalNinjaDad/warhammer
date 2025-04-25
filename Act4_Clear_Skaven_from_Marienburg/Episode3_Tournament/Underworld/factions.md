@@ -8,10 +8,69 @@ Alongside the largest "Shadows of the Rose" there are two additional factions ac
   - could be **allys**
 
 - **Twilight Thorns**
-  - Common grounds and market square
+  - Trying to take over all territories
   - Splinter group from shadows of the rose
   - supporting Guy
   - in league with HN
+
+## Shadows of the Rose (members are known as "Petals" and the organisation is ofter refered to as "the petals")
+
+- In general the Petals are the larger underground organisation in northern Bretonnia.
+- They allow the coppers to specialise in providing services to and keeping informed about the nobility (incl the higher-end merchants who deal with the nobles).
+- They expect the coppers to share information and not challenge the petals' position.
+- Nothing happens in the underworld without their knowledge and approval.
+
+## Shadows of the Rose – Key Representatives at the Tournament
+
+### Madame Rose (Halfling, Female)
+
+- Runs a **popular food stall** in the common area
+- Is a different Mme Rose from the one they met in first village
+- **Role:** Senior guildmistress and coordinator for the Shadows at the tournament.
+- **Appearance:** Petite, always impeccably dressed with a rose motif somewhere on her person. Warm smile, sharp eyes.
+- **Personality:** Maternal but shrewd, balances kindness with a steely resolve. Speaks in gentle tones but never wastes words.
+- **Quirk:** Offers tea or sweets to anyone she meets, even in tense situations.
+- **Function:** Oversees all Petals, mediates disputes, and negotiates with other factions.
+
+### Thierry “L’Ombre” (Human, Male)
+
+- **Role:** Field leader and enforcer.
+- **Appearance:** Lean, dark-haired, quick-moving, with a perpetual shadow under his eyes.
+- **Personality:** Wry, cautious, and fiercely loyal to the guild. Prefers subtlety and cleverness over brute force.
+- **Quirk:** Communicates with a secret sign language among Petals.
+- **Function:** Handles security, intelligence gathering, and discipline among the Petals.
+
+### Jean-Louis
+
+(in castle gardens)
+
+### Albert-Girome (Human, Male, Teenager)
+
+- **Role:** Young Petal, apprentice and messenger.
+- **Appearance:** Freckled, quick-footed, always a little dirty from garden work.
+- **Personality:** Eager, curious, and brave, but sometimes too bold for his own good.
+- **Quirk:** Always bouncing, eyes darting around. Talks too much.
+- **Function:** Runs messages, scouts, and keeps tabs on the market.
+
+### Mireille “La Plume” (Human, Female)
+
+- **Role:** Scribe and forger.
+- **Appearance:** Slender, ink-stained fingers, always with a quill tucked behind her ear.
+- **Personality:** Quiet, observant, and highly intelligent. Rarely speaks unless necessary.
+- **Quirk:** Writes coded notes in the margins of official documents.
+- **Function:** Handles all written communications, forgeries, and secret codes for the Shadows.
+
+### Armand “Le Chardon” (Human, Male)
+
+- **Role:** Enforcer and bodyguard.
+- **Appearance:** Broad-shouldered, scarred, with a perpetual scowl and a battered shield.
+- **Personality:** Gruff, protective, and surprisingly gentle with children and animals.
+- **Quirk:** Carries a dried thistle as a lucky charm.
+- **Function:** Protects Madame Rose and other key members, handles physical threats.
+
+---
+
+These characters provide a range of personalities and skills for the Shadows of the Rose at the tournament, allowing for intrigue, negotiation, and action.
 
 ## The Copper Vipers
 
