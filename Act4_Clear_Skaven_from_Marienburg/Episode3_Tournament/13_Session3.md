@@ -1,4 +1,4 @@
-# Session 2 - To Lunch, day 1 of actual tournament
+# Session 3 - afternoon day 1 of actual tournament
 
 ## prep
 
@@ -12,3 +12,19 @@
   - Greeted with some suspicion when hands over Copper's token
   - Asked to show her Petal credentials
   - given some respect for gold status
+
+## notes
+
+- Ellis
+  - chat with Catherine, learned about thorns, will make her a seal
+  - town is empty, took a notice from a sealed sewer
+  - got scraps from smithy in tournament grounds (Fel 09 - 3+SL)
+  - made seal on 2nd attempt (after dinner)
+- Raya
+  - Meditated
+  - Watched Elliot's fight
+  - Healed Elliot & Betram
+- Elliot
+  - Visited Baron Etiènne - 7SL Fel - He will find out more about nobles interests
+  - Hard battle vs Bertram who refused to yield on first opportunity
+  - Fel 4SL after fight & healing
