@@ -103,9 +103,9 @@ A splinter group from the Shadows of the Rose, focused on more aggressive acquis
 ### Structure
 
 - **Leadership**: Council of three ("The Thorns")
-  - Master of Coin
-  - Master of Shadows
-  - Master of Whispers
+  - Master of Coin ("The Butcher")
+  - Master of Shadows ("Lady Midnight")
+  - Master of Whispers ("Ratwhisper")
 - **Operations**:
   - Protection rackets in the tournament grounds
   - Gambling operations
