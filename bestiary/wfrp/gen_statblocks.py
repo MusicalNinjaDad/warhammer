@@ -15,6 +15,7 @@ if __name__ == "__main__":
     careers: dict[str, dict] = json.loads(CAREERFILE.read_text())
 
     careers["Chaos Beastman"] = beasts["Chaos Beastman"].pop("Special Rules")  # belongs in careers
+    npcs["Soldiers"] = beasts.pop("Soldiers") # belongs in NPCs
 
     beast_classes = BEASTFILE.with_suffix(".py")
     npc_classes = NPCFILE.with_suffix(".py")
