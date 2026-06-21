@@ -117,6 +117,9 @@ inputs = ["wfrp"]
     flake8-pytest-style.parametrize-names-type = "list"
     flake8-annotations.mypy-init-return = true
     extend-ignore = [
+        "F401",   # unused imports in ipynb
+        "F403",   # start imports
+        "F405",   # unknown due to star imports
         "E701",   # One-line ifs are not great, one-liners with suppression are worse
         "ERA001", # pytype suppression blocks are identified as commented-out code
         "ANN202", # Return type annotation for private functions
